@@ -29,6 +29,7 @@ export default function SourcesPage({ isOpen, onClose }: SourcesPageProps) {
   const [selectedTag, setSelectedTag] = useState<string | 'all'>('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [showFilters, setShowFilters] = useState(false);
+  const [sortBy, setSortBy] = useState<'title' | 'type' | 'reliability'>('reliability');
 
   const pageVariants = {
     hidden: { 
@@ -55,7 +56,7 @@ export default function SourcesPage({ isOpen, onClose }: SourcesPageProps) {
     }
   };
 
-  // Filter sources based on current filters
+  // Filter and sort sources based on current filters
   const getFilteredSources = (): Source[] => {
     let filtered = sourcesDatabase;
 
@@ -74,7 +75,20 @@ export default function SourcesPage({ isOpen, onClose }: SourcesPageProps) {
       filtered = filtered.filter(source => source.tags.includes(selectedTag));
     }
 
-    return filtered;
+    // Apply sorting
+    return filtered.sort((a, b) => {
+      switch (sortBy) {
+        case 'title':
+          return a.title.localeCompare(b.title);
+        case 'type':
+          return a.type.localeCompare(b.type);
+        case 'reliability':
+          const reliabilityOrder = { 'High': 0, 'Medium': 1, 'Low': 2 };
+          return reliabilityOrder[a.reliability] - reliabilityOrder[b.reliability];
+        default:
+          return 0;
+      }
+    });
   };
 
   const filteredSources = getFilteredSources();
@@ -155,7 +169,7 @@ export default function SourcesPage({ isOpen, onClose }: SourcesPageProps) {
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: 'auto' }}
                     exit={{ opacity: 0, height: 0 }}
-                    className="grid grid-cols-1 md:grid-cols-2 gap-4 overflow-hidden"
+                    className="grid grid-cols-1 md:grid-cols-3 gap-4 overflow-hidden"
                   >
                     {/* Type Filter */}
                     <div>
@@ -186,6 +200,20 @@ export default function SourcesPage({ isOpen, onClose }: SourcesPageProps) {
                             {tag.replace('-', ' ')}
                           </option>
                         ))}
+                      </select>
+                    </div>
+
+                    {/* Sort Filter */}
+                    <div>
+                      <label className="block text-sm font-medium text-white/90 mb-2">Sort By</label>
+                      <select
+                        value={sortBy}
+                        onChange={(e) => setSortBy(e.target.value as 'title' | 'type' | 'reliability')}
+                        className="w-full p-2 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-white/50"
+                      >
+                        <option value="reliability" className="text-gray-900">Reliability (High to Low)</option>
+                        <option value="title" className="text-gray-900">Title (A-Z)</option>
+                        <option value="type" className="text-gray-900">Type</option>
                       </select>
                     </div>
                   </motion.div>

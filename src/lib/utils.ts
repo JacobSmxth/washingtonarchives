@@ -15,3 +15,4 @@ export function hexToRgba(hex: string, alpha: number) {
   const b = parseInt(hex.slice(5, 7), 16)
   return `rgba(${r}, ${g}, ${b}, ${alpha})`
 }
+

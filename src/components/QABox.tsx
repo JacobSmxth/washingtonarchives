@@ -33,3 +33,4 @@ export default function QABox({ question, answer, delay = 0 }: QABoxProps) {
     </motion.div>
   );
 }
+

@@ -517,22 +517,35 @@ export const sections: Section[] = [
     id: "washington-humor",
     title: "Washington's Humor",
     content: {
-      intro: "Despite his reputation for serious dignity, Washington had a dry wit and enjoyed wordplay. These stories reveal his lighter side and ability to find humor even in difficult circumstances.",
+      intro: "George Washington's public image was one of stern dignity and unwavering seriousness, yet his personal correspondence reveals a dry wit and remarkable ability to find humor even in the darkest circumstances. Unlike the humorless marble statues that later immortalized him, the real Washington appreciated wordplay, told jokes, and used sarcasm with precision.",
+      paragraphs: [
+        "These glimpses of Washington's lighter side remind us that the \"Father of His Country\" was actually a human being with a sense of humor. His wit ranged from gentle irony to sharp sarcasm, particularly when dealing with bureaucratic frustrations or military incompetence."
+      ],
       subsections: [
         {
-          id: "rumors-death",
-          title: "Rumors of His Death (1755)",
-          content: "After the Battle of Monongahela, Washington joked to his brother that although people were circulating a full account of his \"death and dying Speech,\" he had not yet written it — because he was very much alive."
+          id: "rumors-wit",
+          title: "Rumors of Death: A Classic Example (1755)",
+          content: "After the bloody Battle of Monongahela in 1755, rumors spread that Washington had been killed. In a letter to his brother, he displayed his characteristic dry humor: 'You may, indeed, tell the world that I have heard the bullets whistle; and believe me, there is something charming in the sound.' When word of his supposed death circulated in Virginia, he joked that 'though people were kindly circulating a full account of my death and dying Speech, I have not yet written it—because I was very much alive.'"
         },
         {
-          id: "advice-nephew",
-          title: "Advice to His Nephew (1783)",
-          content: "In a letter to Bushrod Washington, George warned against vanity and gambling: \"Do not conceive that fine Clothes make fine Men … avoid Gaming — This is a vice which is productive of every possible evil.\""
+          id: "presidential-reluctance",
+          title: "Presidential Melodrama (1789)",
+          content: "Washington's famous description of his inauguration reveals his theatrical flair and self-awareness: 'My movements to the chair of government will be accompanied by feelings not unlike those of a culprit who is going to the place of his execution.' This dramatic comparison shows Washington's ability to turn even reluctant heroism into compelling narrative."
         },
         {
-          id: "becoming-president",
-          title: "On Becoming President (1789)",
-          content: "Washington described his inauguration as \"feelings not unlike those of a culprit who is going to the place of his execution,\" showing his reluctance to accept power."
+          id: "nephew-wisdom",
+          title: "Uncle George's Practical Advice (1783)",
+          content: "To his nephew Bushrod, Washington offered both guidance and gentle humor about youthful vanity: 'Do not conceive that fine Clothes make fine Men, any more than fine feathers make fine Birds. A man who has been dressing all his life has more in his head than his heels.' His warning about gambling included a particularly witty observation: 'This is a vice which is productive of every possible evil,' mixing moral advice with practical wisdom."
+        },
+        {
+          id: "military-sarcasm",
+          title: "Military Frustrations and Sarcasm",
+          content: "Washington's wit often emerged in response to military bureaucracy and incompetence. During the Revolutionary War, he once wrote of an incompetent officer: 'There are some men who would rather lose friends than lose their opinions.' On another occasion, reflecting on the Continental Army's challenges, he observed: 'The reflection upon my situation and that of this Army produces many an uneasy hour when all around me are wrapped in sleep.' This blend of personal reflection and institutional criticism shows his sophisticated sense of irony."
+        },
+        {
+          id: "social-graces",
+          title: "Social Humor and Grace",
+          content: "Washington's Rules of Civility, which he copied as a youth, provided the foundation for both proper conduct and clever conversation. Despite maintaining formal dignity, he could deliver subtle compliments and sarcastic observations with precision. When a French officer complimented his height, Washington reportedly replied: 'We have been working hard for America, and our stature shows it.' His ability to turn even physical descriptions into patriotic statements demonstrates his wit at work."
         }
       ],
       quote: {
@@ -563,22 +576,35 @@ export const sections: Section[] = [
     id: "battle-record",
     title: "Washington's Battle Record",
     content: {
-      intro: "Washington's military career spanned over 40 years, from the French and Indian War through the Revolutionary War. His record shows both stunning victories and instructive defeats that shaped his character and America's destiny.",
+      intro: "George Washington's military career spanned over four decades, from the French and Indian War through the Revolutionary War. His battle record reveals a commander who learned from defeats, capitalized on victories, and ultimately emerged with one of history's most consequential military legacies.",
+      paragraphs: [
+        "Washington's willingness to learn from his mistakes transformed him from a young, inexperienced officer into one of the most capable military leaders of his era. His defeats proved as valuable as his victories in shaping both his character and America's destiny."
+      ],
       subsections: [
         {
-          id: "victories",
-          title: "Major Victories",
-          content: "Washington's greatest triumphs include the Christmas night crossing at Trenton (1776), which revived patriot morale, the follow-up victory at Princeton (1777), and the decisive siege of Yorktown (1781) that effectively ended the Revolutionary War."
+          id: "early-career",
+          title: "Early Military Career (1752-1758)",
+          content: "Washington began his military service in the Virginia militia at age 20, quickly rising to command positions despite his lack of formal military education. His early campaigns in the French and Indian War provided crucial experience that would later prove invaluable during the Revolution."
         },
         {
-          id: "defeats",
-          title: "Learning from Defeat",
-          content: "His defeats were equally instructive: Fort Necessity (1754) was his only surrender, Long Island (1776) required a skillful nighttime evacuation, and Brandywine (1777) failed to stop the British advance on Philadelphia."
+          id: "decisive-victories",
+          title: "Decisive Victories That Changed History",
+          content: "Washington's most important victories came at critical moments. At Trenton (December 1776), his daring Christmas night crossing revived a collapsing cause. At Princeton (January 1777), his follow-up victory convinced Congress and the French that America could win. At Yorktown (October 1781), his siege with French allies trapped Cornwallis and effectively ended the war."
         },
         {
-          id: "mixed-outcomes",
-          title: "Mixed Outcomes",
-          content: "Battles like Monmouth (1778) and Germantown (1777) demonstrated both the challenges he faced and the gradual improvement of his forces, showing his ability to adapt and learn from experience."
+          id: "strategic-defeats",
+          title: "Strategic Defeats and Lessons Learned",
+          content: "Fort Necessity (1754) taught Washington about supply lines and siege warfare—his only formal surrender. Long Island (August 1776) showed his skill at preserving an army through retreat. Brandywine (September 1777) revealed the challenge of defending against British flanking tactics."
+        },
+        {
+          id: "evolution-tactics",
+          title: "Evolution of Tactics and Strategy",
+          content: "Washington gradually shifted from European linear tactics to adapted American warfare. He learned to avoid pitched battles when possible, harass enemy supply lines, and concentrate forces for decisive strikes. His emphasis on army preservation over territorial control ultimately won the war."
+        },
+        {
+          id: "continental-army",
+          title: "Building the Continental Army",
+          content: "Perhaps Washington's greatest achievement was transforming a collection of militia units into a professional Continental Army. Through Valley Forge's crucible, he imposed discipline, improved tactics, and created a military force capable of standing against British regulars."
         }
       ],
       quote: {
@@ -624,22 +650,30 @@ export const sections: Section[] = [
     id: "washington-quarter",
     title: "Washington on the Quarter",
     content: {
-      intro: "Washington's image has graced the quarter for over 90 years, making it one of the most enduring symbols of American currency and his lasting legacy in everyday American life.",
+      intro: "George Washington's portrait has appeared on the United States quarter for nearly a century, making it one of the most recognizable symbols of American currency and history. From the 200-year anniversary of his birth in 1932 to today, Washington's stern, dignified profile has remained largely unchanged, becoming an enduring part of American daily life.",
+      paragraphs: [
+        "The Washington quarter represents more than just currency—it's a daily reminder of the nation's founding and Washington's role as the \"Father of His Country.\" Every time Americans see this coin, they encounter Washington's likeness, ensuring his memory remains woven into the fabric of American life."
+      ],
       subsections: [
         {
-          id: "first-appearance",
-          title: "First Appearance (1932)",
-          content: "Washington replaced Liberty on the U.S. quarter in 1932 to mark the bicentennial of his birth, creating one of America's most recognizable coin designs."
+          id: "anniversary-design",
+          title: "1932: 200-Year Anniversary Design",
+          content: "The Washington quarter was first minted in 1932 to commemorate the 200-year anniversary of Washington's birth (1732). This special commemorative coin replaced the longstanding \"Liberty Head\" design that had been used since 1892. The choice of Washington reflected his unique status as America's preeminent founding figure."
         },
         {
-          id: "design-origins",
-          title: "Design Origins",
-          content: "Sculptor John Flanagan modeled Washington's portrait on the famous 1785 bust by French sculptor Jean-Antoine Houdon, ensuring artistic authenticity."
+          id: "houdon-bust",
+          title: "Artistic Heritage: The Houdon Bust",
+          content: "Sculptor John Flanagan based Washington's quarter portrait on Houdon's famous 1785 marble bust, considered the most accurate likeness of Washington created during his lifetime. Houdon spent two weeks at Mount Vernon studying Washington's features, creating what historians call the definitive portrait of the first president."
         },
         {
-          id: "evolution",
-          title: "Evolution of the Quarter",
-          content: "Quarters were struck in 90% silver until 1964, when the Mint switched to copper-nickel clad due to rising silver costs. Despite material changes, Washington's profile has remained constant for over 90 years."
+          id: "material-changes",
+          title: "From Silver to Clad: Material Evolution",
+          content: "Originally minted in 90% silver, quarters remained precious metal currency until 1965, when rising silver costs forced the U.S. Mint to switch to copper-nickel clad composition. This change reflected broader economic shifts while preserving Washington's iconic profile design."
+        },
+        {
+          id: "cultural-impact",
+          title: "Cultural Impact and Recognition",
+          content: "The Washington quarter has become so ubiquitous that most Americans can instantly recognize Washington's profile by memory. The coin appears in countless films, photographs, and documents, making Washington one of the most frequently encountered historical figures in modern America."
         }
       ],
       quote: {

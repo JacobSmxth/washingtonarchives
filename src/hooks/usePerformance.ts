@@ -51,3 +51,4 @@ export function useIntersectionObserver(
     return () => observer.disconnect();
   }, [callback, options]);
 }
+
