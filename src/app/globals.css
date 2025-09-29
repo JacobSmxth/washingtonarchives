@@ -39,7 +39,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Enhanced scrollbar for better UX */
+
 ::-webkit-scrollbar {
   width: 12px;
 }
@@ -63,12 +63,12 @@ html {
   scroll-behavior: auto;
 }
 
-/* Prevent automatic scrolling to hash anchors */
+
 html:target {
   scroll-behavior: auto;
 }
 
-/* Additional enhancements for layered design */
+
 .layered-bg {
   position: relative;
 }
@@ -90,13 +90,13 @@ html:target {
   background-size: 20px 20px;
 }
 
-/* Ensure images are always visible */
+
 img {
   opacity: 1 !important;
   visibility: visible !important;
 }
 
-/* Force image loading and visibility */
+
 .enhanced-image {
   opacity: 1;
   visibility: visible;
@@ -108,7 +108,7 @@ img {
   opacity: 0;
 }
 
-/* Advanced Animations */
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -191,7 +191,7 @@ img {
   }
 }
 
-/* Animation Classes */
+
 .animate-fade-in-up {
   animation: fadeInUp 0.8s ease-out forwards;
 }
@@ -222,7 +222,7 @@ img {
   animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
-/* Stagger animations */
+
 .stagger-children > * {
   opacity: 0;
   animation: fadeInUp 0.6s ease-out forwards;
@@ -235,7 +235,7 @@ img {
 .stagger-children > *:nth-child(5) { animation-delay: 0.5s; }
 .stagger-children > *:nth-child(6) { animation-delay: 0.6s; }
 
-/* Hover effects */
+
 .hover-lift {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -245,14 +245,14 @@ img {
   box-shadow: 0 20px 40px rgba(0,0,0,0.15);
 }
 
-/* Loading skeleton */
+
 .skeleton {
   background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
   background-size: 200% 100%;
   animation: shimmer 1.5s infinite;
 }
 
-/* Text reveal animation */
+
 .text-reveal {
   overflow: hidden;
 }
@@ -262,7 +262,7 @@ img {
   animation: slideInFromBottom 0.8s ease-out forwards;
 }
 
-/* Image zoom on hover */
+
 .image-zoom-hover {
   overflow: hidden;
   border-radius: 10px;
@@ -276,7 +276,7 @@ img {
   transform: scale(1.1);
 }
 
-/* Gradient text */
+
 .gradient-text {
   background: linear-gradient(135deg, #0f172a, #1e293b);
   -webkit-background-clip: text;
@@ -284,14 +284,14 @@ img {
   background-clip: text;
 }
 
-/* Glass morphism effect */
+
 .glass-morphism {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* Glowing border effect */
+
 .glow-border {
   position: relative;
   border-radius: 10px;

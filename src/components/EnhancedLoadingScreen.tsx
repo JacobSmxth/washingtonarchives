@@ -93,7 +93,7 @@ export default function EnhancedLoadingScreen({ onComplete }: LoadingScreenProps
           exit="exit"
           className="fixed inset-0 z-[10000] bg-gradient-to-br from-museum-navy via-museum-navy-light to-museum-gold flex flex-col items-center justify-center text-white overflow-hidden"
         >
-          {/* Background Pattern */}
+          
           <div className="absolute inset-0 opacity-10">
             <div 
               className="absolute inset-0 bg-repeat"
@@ -103,7 +103,7 @@ export default function EnhancedLoadingScreen({ onComplete }: LoadingScreenProps
             />
           </div>
 
-          {/* Floating Decorative Elements */}
+          
           <motion.div
             className="absolute top-20 left-20 opacity-20"
             animate={{
@@ -135,9 +135,9 @@ export default function EnhancedLoadingScreen({ onComplete }: LoadingScreenProps
             <Feather className="w-12 h-12" />
           </motion.div>
 
-          {/* Main Content */}
+          
           <div className="relative z-10 text-center space-y-8 px-8">
-            {/* Logo */}
+            
             <motion.div variants={logoVariants} initial="initial" animate="animate">
               <div className="relative">
                 <motion.div
@@ -156,7 +156,7 @@ export default function EnhancedLoadingScreen({ onComplete }: LoadingScreenProps
                   />
                 </motion.div>
                 
-                {/* Orbiting Elements */}
+                
                 <motion.div
                   className="absolute inset-0"
                   animate={{ rotate: -360 }}
@@ -174,7 +174,7 @@ export default function EnhancedLoadingScreen({ onComplete }: LoadingScreenProps
               </div>
             </motion.div>
 
-            {/* Title */}
+            
             <motion.div variants={textVariants} initial="initial" animate="animate">
               <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold drop-shadow-2xl">
                 George Washington
@@ -184,7 +184,7 @@ export default function EnhancedLoadingScreen({ onComplete }: LoadingScreenProps
               </p>
             </motion.div>
 
-            {/* Loading Facts */}
+            
             <motion.div
               className="h-16 flex items-center justify-center"
               variants={textVariants}
@@ -205,7 +205,7 @@ export default function EnhancedLoadingScreen({ onComplete }: LoadingScreenProps
               </AnimatePresence>
             </motion.div>
 
-            {/* Progress Bar */}
+            
             <motion.div
               className="w-full max-w-md mx-auto"
               initial={{ opacity: 0, scale: 0.8 }}
@@ -213,7 +213,7 @@ export default function EnhancedLoadingScreen({ onComplete }: LoadingScreenProps
               transition={{ delay: 1, duration: 0.6 }}
             >
               <div className="relative">
-                {/* Progress Track */}
+                
                 <div className="w-full h-3 bg-white/20 rounded-full overflow-hidden backdrop-blur-sm">
                   <motion.div
                     className="h-full bg-gradient-to-r from-museum-gold to-white rounded-full shadow-museum-glow"
@@ -223,7 +223,7 @@ export default function EnhancedLoadingScreen({ onComplete }: LoadingScreenProps
                   />
                 </div>
                 
-                {/* Progress Text */}
+                
                 <div className="flex justify-between items-center mt-3">
                   <span className="text-sm opacity-75">Loading Exhibition</span>
                   <span className="text-sm font-semibold">{progress}%</span>
@@ -231,7 +231,7 @@ export default function EnhancedLoadingScreen({ onComplete }: LoadingScreenProps
               </div>
             </motion.div>
 
-            {/* Subtitle */}
+            
             <motion.p
               className="font-body text-base opacity-60 max-w-lg mx-auto"
               initial={{ opacity: 0 }}
@@ -242,7 +242,7 @@ export default function EnhancedLoadingScreen({ onComplete }: LoadingScreenProps
             </motion.p>
           </div>
 
-          {/* Bottom Decoration */}
+          
           <motion.div
             className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
             initial={{ opacity: 0, y: 20 }}

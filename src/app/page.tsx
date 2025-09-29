@@ -40,7 +40,6 @@ export default function Home() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [activeSection, mounted]);
 
-  // Ensure we start at the top of the page
   useEffect(() => {
     if (!mounted) return;
     window.scrollTo(0, 0);
@@ -48,7 +47,6 @@ export default function Home() {
 
   const handleSectionChange = (sectionId: string) => {
     setActiveSection(sectionId);
-    // Always ensure we're at the top of the page
     window.scrollTo(0, 0);
   };
 
@@ -57,7 +55,7 @@ export default function Home() {
   };
 
   if (!mounted) {
-    return null; // Prevent hydration mismatch
+    return null;
   }
 
   if (isLoading) {
@@ -88,15 +86,14 @@ export default function Home() {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5, duration: 0.8 }}
       >
-        {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-5">
-          <div 
-            className="absolute inset-0 bg-repeat"
-            style={{
-              backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23f59e0b' fill-opacity='0.4'%3E%3Cpath d='M20 20c0-11.046-8.954-20-20-20v20h20z'/%3E%3C/g%3E%3C/svg%3E")`,
-            }}
-          />
-        </div>
+            <div className="absolute inset-0 opacity-5">
+              <div 
+                className="absolute inset-0 bg-repeat"
+                style={{
+                  backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23f59e0b' fill-opacity='0.4'%3E%3Cpath d='M20 20c0-11.046-8.954-20-20-20v20h20z'/%3E%3C/g%3E%3C/svg%3E")`,
+                }}
+              />
+            </div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
           <motion.div
@@ -120,9 +117,7 @@ export default function Home() {
             className="max-w-4xl mx-auto"
           >
             <p className="font-body text-base opacity-80 italic leading-relaxed">
-              This digital archive presents Washington's life through primary sources and historical analysis, 
-              exploring both his achievements and contradictions as a man of his time. Created for HIST 2111 
-              to demonstrate rigorous historical research and digital presentation methods.
+              Created for HIST 2111 to show off George Washington. I did so much research because I thought if I was making a website, I should make it portfolio worthy.
             </p>
           </motion.div>
           
@@ -150,7 +145,6 @@ export default function Home() {
         </div>
       </motion.footer>
       
-      {/* Attribution Button */}
       <AttributionButton />
     </div>
   );

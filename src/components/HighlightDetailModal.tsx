@@ -75,7 +75,7 @@ export default function HighlightDetailModal({ highlight, isOpen, onClose }: Hig
           animate="visible"
           exit="exit"
         >
-          {/* Backdrop */}
+          
           <motion.div
             className="absolute inset-0 bg-museum-ink/70 backdrop-blur-sm"
             onClick={onClose}
@@ -84,7 +84,7 @@ export default function HighlightDetailModal({ highlight, isOpen, onClose }: Hig
             exit={{ opacity: 0 }}
           />
           
-          {/* Modal Content */}
+          
           <motion.div
             className="relative w-full max-w-4xl bg-white rounded-2xl shadow-2xl my-auto"
             variants={modalVariants}
@@ -93,7 +93,7 @@ export default function HighlightDetailModal({ highlight, isOpen, onClose }: Hig
             exit="exit"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Header */}
+            
             <div className={cn(
               "relative px-8 py-6 bg-gradient-to-r text-white",
               categoryColor
@@ -139,10 +139,10 @@ export default function HighlightDetailModal({ highlight, isOpen, onClose }: Hig
               </div>
             </div>
 
-            {/* Scrollable Content */}
+            
             <div className="overflow-y-auto max-h-[calc(90vh-160px)]">
               <div className="p-8 space-y-8">
-                {/* Description */}
+                
                 <motion.div
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -156,7 +156,7 @@ export default function HighlightDetailModal({ highlight, isOpen, onClose }: Hig
                   </p>
                 </motion.div>
 
-                {/* Key Points */}
+                
                 {highlight.keyPoints && (
                   <motion.div
                     initial={{ opacity: 0, y: 30 }}
@@ -183,7 +183,7 @@ export default function HighlightDetailModal({ highlight, isOpen, onClose }: Hig
                   </motion.div>
                 )}
 
-                {/* Historical Context */}
+                
                 {highlight.historicalContext && (
                   <motion.div
                     initial={{ opacity: 0, y: 30 }}
@@ -204,7 +204,7 @@ export default function HighlightDetailModal({ highlight, isOpen, onClose }: Hig
               </div>
             </div>
 
-            {/* Footer */}
+            
             <div className="px-8 py-4 bg-museum-parchment border-t border-museum-navy/10">
               <div className="flex justify-between items-center">
                 <p className="text-sm text-museum-sepia font-body">

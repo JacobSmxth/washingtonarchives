@@ -259,7 +259,7 @@ export default function SourcesPage({ isOpen, onClose }: SourcesPageProps) {
       animate="visible"
       exit="exit"
     >
-      {/* Backdrop */}
+      
       <motion.div
         className="absolute inset-0 bg-museum-ink/70 backdrop-blur-sm"
         onClick={onClose}
@@ -268,7 +268,7 @@ export default function SourcesPage({ isOpen, onClose }: SourcesPageProps) {
         exit={{ opacity: 0 }}
       />
       
-      {/* Page Content */}
+      
       <motion.div
         className="relative w-full max-w-6xl max-h-[90vh] overflow-hidden bg-white rounded-2xl shadow-2xl"
         variants={pageVariants}
@@ -277,7 +277,7 @@ export default function SourcesPage({ isOpen, onClose }: SourcesPageProps) {
         exit="exit"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Header */}
+        
         <div className="relative px-8 py-6 bg-gradient-to-r from-museum-navy to-museum-navy-light text-white">
           <motion.button
             onClick={onClose}
@@ -299,10 +299,10 @@ export default function SourcesPage({ isOpen, onClose }: SourcesPageProps) {
           </div>
         </div>
 
-        {/* Scrollable Content */}
+        
         <div className="overflow-y-auto max-h-[calc(90vh-120px)]">
           <div className="p-8 space-y-12">
-            {/* Introduction */}
+            
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -315,7 +315,7 @@ export default function SourcesPage({ isOpen, onClose }: SourcesPageProps) {
               </p>
             </motion.div>
 
-            {/* Primary Sources */}
+            
             <motion.section
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -369,7 +369,7 @@ export default function SourcesPage({ isOpen, onClose }: SourcesPageProps) {
               </div>
             </motion.section>
 
-            {/* Secondary Sources */}
+            
             <motion.section
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -433,7 +433,7 @@ export default function SourcesPage({ isOpen, onClose }: SourcesPageProps) {
               </div>
             </motion.section>
 
-            {/* Research Methodology Note */}
+            
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -462,7 +462,7 @@ export default function SourcesPage({ isOpen, onClose }: SourcesPageProps) {
               </div>
             </motion.div>
 
-            {/* Source Reliability Note */}
+            
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -487,7 +487,7 @@ export default function SourcesPage({ isOpen, onClose }: SourcesPageProps) {
               </div>
             </motion.div>
 
-            {/* Citation Note */}
+            
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -511,7 +511,7 @@ export default function SourcesPage({ isOpen, onClose }: SourcesPageProps) {
           </div>
         </div>
 
-        {/* Footer */}
+        
         <div className="px-8 py-4 bg-museum-parchment border-t border-museum-navy/10">
           <div className="flex justify-between items-center">
             <p className="text-sm text-museum-sepia font-body">

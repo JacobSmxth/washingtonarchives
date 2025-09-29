@@ -36,7 +36,7 @@ export default function ImageModal({ src, alt, onClose }: ImageModalProps) {
       onClick={onClose}
     >
       <div className="relative max-w-7xl max-h-[90vh] animate-in zoom-in duration-500">
-        {/* Close Button */}
+        
         <button
           onClick={onClose}
           className="absolute -top-12 right-0 w-10 h-10 bg-white/20 hover:bg-white/30 
@@ -47,7 +47,7 @@ export default function ImageModal({ src, alt, onClose }: ImageModalProps) {
           ×
         </button>
 
-        {/* Image */}
+        
         <img
           src={src}
           alt={alt}
@@ -55,7 +55,7 @@ export default function ImageModal({ src, alt, onClose }: ImageModalProps) {
           onClick={(e) => e.stopPropagation()}
         />
 
-        {/* Caption */}
+        
         <p className="text-white text-center mt-4 font-body italic text-lg">
           {alt}
         </p>

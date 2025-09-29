@@ -24,9 +24,7 @@ export default function EnhancedSection({ section, isActive, sectionIndex }: Sec
   const [selectedHighlight, setSelectedHighlight] = useState<Highlight | null>(null);
   const [exploredHighlights, setExploredHighlights] = useState<Set<string>>(new Set());
   
-  // Simplified without scroll-based transforms to prevent visibility issues
 
-  // Helper functions for highlights functionality
   const handleHighlightClick = (highlight: Highlight) => {
     setSelectedHighlight(highlight);
     setExploredHighlights(prev => new Set([...prev, highlight.id]));
@@ -98,7 +96,7 @@ export default function EnhancedSection({ section, isActive, sectionIndex }: Sec
             exit="exit"
             className="relative"
           >
-            {/* Background Pattern */}
+            
             <div className="absolute inset-0 opacity-5">
               <div 
                 className="absolute inset-0 bg-repeat"
@@ -108,25 +106,25 @@ export default function EnhancedSection({ section, isActive, sectionIndex }: Sec
               />
             </div>
 
-            {/* Home Section - Hero Layout */}
+            
             {section.id === 'home' && (
               <motion.div
                 variants={itemVariants}
                 className="relative z-10"
               >
                 <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center min-h-[80vh]">
-                  {/* Hero Image with Layered Effects */}
+                  
                   {section.content.images && section.content.images[0] && (
                     <motion.div 
                       className="relative order-2 lg:order-1"
                       whileHover={{ scale: 1.02 }}
                       transition={{ duration: 0.3 }}
                     >
-                      {/* Background Layers */}
+                      
                       <div className="absolute -inset-4 bg-gradient-to-r from-museum-navy/20 to-museum-gold/20 rounded-3xl blur-2xl" />
                       <div className="absolute -inset-2 bg-gradient-to-r from-museum-navy/10 to-museum-navy-light/10 rounded-2xl" />
                       
-                      {/* Main Image Container */}
+                      
                       <div className="relative bg-white rounded-2xl p-6 shadow-layered">
                         <motion.img
                           src={section.content.images[0].src}
@@ -140,12 +138,11 @@ export default function EnhancedSection({ section, isActive, sectionIndex }: Sec
                           whileHover={{ scale: 1.02 }}
                           transition={{ duration: 0.3 }}
                           onLoad={(e) => {
-                            // Ensure image is visible immediately
                             e.currentTarget.style.opacity = '1';
                           }}
                         />
                         
-                        {/* Image Overlay Button */}
+                        
                         <motion.button
                           className="absolute top-8 right-8 p-3 bg-black/50 backdrop-blur-sm rounded-full text-white opacity-0 hover:opacity-100 transition-opacity"
                           whileHover={{ scale: 1.1 }}
@@ -161,7 +158,7 @@ export default function EnhancedSection({ section, isActive, sectionIndex }: Sec
                     </motion.div>
                   )}
                   
-                  {/* Hero Text */}
+                  
                   <motion.div 
                     className="order-1 lg:order-2 space-y-8"
                     variants={itemVariants}
@@ -207,13 +204,13 @@ export default function EnhancedSection({ section, isActive, sectionIndex }: Sec
                   </motion.div>
                 </div>
 
-                {/* Enhanced Highlights Section */}
+                
                 {section.content.highlights && (
                   <motion.div
                     className="mt-24 relative"
                     variants={itemVariants}
                   >
-                    {/* Section Header */}
+                    
                     <div className="text-center mb-16">
                       <motion.div
                         initial={{ width: 0 }}
@@ -228,7 +225,7 @@ export default function EnhancedSection({ section, isActive, sectionIndex }: Sec
                         Discover the remarkable journey of America&apos;s first president through interactive exhibits
                       </p>
                       
-                      {/* Progress Indicator */}
+                      
                       <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -253,7 +250,7 @@ export default function EnhancedSection({ section, isActive, sectionIndex }: Sec
                     </div>
 
 
-                    {/* Highlights Display */}
+                    
                     <motion.div 
                       className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6"
                       variants={containerVariants}
@@ -279,19 +276,19 @@ export default function EnhancedSection({ section, isActive, sectionIndex }: Sec
               </motion.div>
             )}
 
-            {/* Other Sections - Enhanced Layout */}
+            
             {section.id !== 'home' && (
               <motion.div
                 variants={containerVariants}
                 className="relative z-10"
               >
                 <div className="grid lg:grid-cols-3 gap-12 lg:gap-16">
-                  {/* Main Content */}
+                  
                   <motion.div 
                     className="lg:col-span-2 space-y-12"
                     variants={itemVariants}
                   >
-                    {/* Section Header */}
+                    
                     <div className="space-y-6">
                       <motion.div
                         initial={{ width: 0 }}
@@ -311,7 +308,7 @@ export default function EnhancedSection({ section, isActive, sectionIndex }: Sec
                       )}
                     </div>
 
-                    {/* Main Content Paragraphs */}
+                    
                     {section.content.paragraphs && (
                       <div className="space-y-6">
                         {section.content.paragraphs.map((paragraph, index) => (
@@ -326,7 +323,7 @@ export default function EnhancedSection({ section, isActive, sectionIndex }: Sec
                       </div>
                     )}
 
-                    {/* Q&A Boxes */}
+                    
                     {section.content.qaItems && (
                       <div className="grid gap-6 lg:grid-cols-2">
                         {section.content.qaItems.map((qaItem, index) => (
@@ -340,8 +337,8 @@ export default function EnhancedSection({ section, isActive, sectionIndex }: Sec
                       </div>
                     )}
 
-                    {/* Legacy Subsections (for sections not yet converted) */}
-                    {section.content.subsections && !section.content.paragraphs && (
+                    
+                    {section.content.subsections && (
                       <div className="space-y-10">
                         {section.content.subsections.map((subsection, index) => (
                           <motion.div
@@ -356,13 +353,51 @@ export default function EnhancedSection({ section, isActive, sectionIndex }: Sec
                               <p className="text-museum-sepia leading-relaxed font-body text-lg">
                                 {subsection.content}
                               </p>
+                              
+                              
+                              {subsection.highlights && (
+                                <div className="mt-6 space-y-4">
+                                  <h3 className="font-display text-lg font-semibold text-museum-ink">
+                                    Battles & Engagements
+                                  </h3>
+                                  <div className="grid gap-3">
+                                    {subsection.highlights.map((battle) => (
+                                      <div
+                                        key={battle.id}
+                                        className="bg-white/40 rounded-lg p-4 border border-museum-navy/10"
+                                      >
+                                        <div className="flex justify-between items-start mb-2">
+                                          <h4 className="font-medium text-museum-ink">
+                                            {battle.title}
+                                          </h4>
+                                          <span className={`px-2 py-1 rounded text-xs font-medium ${
+                                            battle.result === 'American Victory' 
+                                              ? 'bg-green-100 text-green-800'
+                                              : battle.result === 'British Victory'
+                                              ? 'bg-red-100 text-red-800'
+                                              : 'bg-gray-100 text-gray-800'
+                                          }`}>
+                                            {battle.result}
+                                          </span>
+                                        </div>
+                                        <p className="text-sm text-museum-sepia mb-1">
+                                          <strong>Location:</strong> {battle.location}
+                                        </p>
+                                        <p className="text-sm text-museum-sepia">
+                                          <strong>Opponent:</strong> {battle.opponent}
+                                        </p>
+                                      </div>
+                                    ))}
+                                  </div>
+                                </div>
+                              )}
                             </div>
                           </motion.div>
                         ))}
                       </div>
                     )}
 
-                    {/* Quote */}
+                    
                     {section.content.quote && (
                       <motion.div variants={itemVariants}>
                         <EnhancedQuoteBlock quote={section.content.quote} />
@@ -370,7 +405,7 @@ export default function EnhancedSection({ section, isActive, sectionIndex }: Sec
                     )}
                   </motion.div>
 
-                  {/* Sidebar with Images */}
+                  
                   <motion.div 
                     className="space-y-8"
                     variants={itemVariants}
@@ -382,10 +417,10 @@ export default function EnhancedSection({ section, isActive, sectionIndex }: Sec
                         whileHover={{ scale: 1.02 }}
                         transition={{ duration: 0.3 }}
                       >
-                        {/* Background Layer */}
+                        
                         <div className="absolute -inset-2 bg-gradient-to-r from-museum-navy/10 to-museum-gold/10 rounded-2xl blur-xl group-hover:blur-2xl transition-all" />
                         
-                        {/* Image Container */}
+                        
                         <div className="relative bg-white rounded-xl p-4 shadow-museum group-hover:shadow-museum-hover transition-all">
                           <motion.img
                             src={image.src}
@@ -396,17 +431,16 @@ export default function EnhancedSection({ section, isActive, sectionIndex }: Sec
                             whileHover={{ scale: 1.02 }}
                             transition={{ duration: 0.3 }}
                             onLoad={(e) => {
-                              // Ensure image is visible immediately
                               e.currentTarget.style.opacity = '1';
                             }}
                           />
                           
-                          {/* Image Caption */}
+                          
                           <p className="text-sm text-museum-sepia italic mt-4 font-body">
                             {image.caption}
                           </p>
                           
-                          {/* Hover Overlay */}
+                          
                           <motion.div
                             className="absolute inset-4 rounded-lg bg-black/50 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
                             initial={false}
@@ -424,7 +458,7 @@ export default function EnhancedSection({ section, isActive, sectionIndex }: Sec
                       </motion.div>
                     ))}
 
-                    {/* Sources Sidebar */}
+                    
                     {(() => {
                       const sectionSources = getSourcesBySection(section.id);
                       return sectionSources.length > 0 && (
@@ -471,7 +505,7 @@ export default function EnhancedSection({ section, isActive, sectionIndex }: Sec
         </div>
       </motion.section>
 
-      {/* Enhanced Image Modal */}
+      
       {selectedImage && (
         <EnhancedImageModal 
           src={selectedImage.src} 
@@ -480,7 +514,7 @@ export default function EnhancedSection({ section, isActive, sectionIndex }: Sec
         />
       )}
 
-      {/* Highlight Detail Modal */}
+      
       <HighlightDetailModal
         highlight={selectedHighlight}
         isOpen={Boolean(selectedHighlight)}

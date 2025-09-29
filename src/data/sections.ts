@@ -13,7 +13,8 @@ export const navigationItems: NavigationItem[] = [
   { id: "mount-vernon", label: "Mount Vernon" },
   { id: "washington-humor", label: "Washington's Humor" },
   { id: "battle-record", label: "Battle Record" },
-  { id: "washington-quarter", label: "On the Quarter" },
+  { id: "washington-currency", label: "On the Currency" },
+  { id: "additional-facts", label: "Additional Facts" },
 ];
 
 export const sections: Section[] = [
@@ -307,6 +308,11 @@ export const sections: Section[] = [
           content: "Washington created the first presidential cabinet and appointed capable leaders such as Alexander Hamilton, Thomas Jefferson and Henry Knox. He exercised executive authority with fairness and integrity; Thomas Jefferson said his justice was 'the most inflexible I have ever known.'"
         },
         {
+          id: "title-precedents",
+          title: "Presidential Title Precedents",
+          content: "Washington added the phrase \"So help me God\" to the Presidential Oath of Office during his inauguration, and it was his idea to call the chief executive \"Mr. President.\" These decisions shaped presidential tradition for centuries, establishing the formal language and titles that continue to define the office today."
+        },
+        {
           id: "domestic-challenges",
           title: "Domestic Challenges: The Whiskey Rebellion",
           content: "In an address to Congress on December 8, 1795, Washington reported that the region that had recently rebelled against the whiskey tax was now peaceful and that he had pardoned most offenders. He explained that while he would exercise constitutional powers firmly, he believed it was consistent with the public good to 'mingle in the operations of government every degree of moderation and tenderness.'"
@@ -431,7 +437,8 @@ export const sections: Section[] = [
       paragraphs: [
         "At Washington's death in 1799, more than 300 enslaved people labored at his Mount Vernon estate, which encompassed about 8,000 acres with five farms. He owned 123 enslaved people outright and held another 153 through his wife's estate. According to historian Philip Morgan, Washington tied himself into \"moral knots\" over slavery, reportedly calling the practice \"an abomination\" while also being known as a \"stern taskmaster.\"",
         "The reality of slavery at Mount Vernon was harsh. Enslaved people developed specialized skills and worked from daybreak through dusk, making the estate self-sufficient and enriching Washington. About fifty slaves escaped over the years, though many were recaptured. Washington's actions could be severe: he threatened to hang slaves' dogs to prevent escape and bought teeth from enslaved people for his dentures.",
-        "In his will, Washington emancipated the 123 enslaved people that he personally owned after Martha's death, making him unique among the leading founders. However, this did not free the majority of enslaved people at Mount Vernon, who were \"dower\" slaves belonging to the Custis estate and could not legally be freed by Washington."
+        "In his will, Washington emancipated the 123 enslaved people that he personally owned after Martha's death, making him unique among the leading founders. However, this did not free the majority of enslaved people at Mount Vernon, who were \"dower\" slaves belonging to the Custis estate and could not legally be freed by Washington.",
+        "Washington's contradictory attitudes toward slavery are one of the great mysteries of his life and legacy. At his death, 317 enslaved people lived at Mount Vernon, and in his will he ordered those he directly owned to be freed. This contradiction between fighting for liberty while benefiting from slavery represents one of the fundamental tensions in his legacy."
       ],
       qaItems: [
         {
@@ -470,7 +477,7 @@ export const sections: Section[] = [
         {
           id: "washington-home",
           title: "Washington's Home",
-          content: "Mount Vernon was more than just Washington's home—it was his refuge, his laboratory for agricultural innovation, and the center of his world. The estate reflects both his personal tastes and his role as a Virginia planter."
+          content: "Mount Vernon was more than just Washington's home. It was his refuge, his laboratory for agricultural innovation, and the center of his world. The estate reflects both his personal tastes and his role as a Virginia planter."
         },
         {
           id: "acquisition-development",
@@ -490,7 +497,7 @@ export const sections: Section[] = [
         {
           id: "life-mount-vernon",
           title: "Life at Mount Vernon",
-          content: "Mount Vernon was a working plantation where Washington managed his business affairs, entertained guests, and found peace from the demands of public life. It was here that he could be himself—a Virginia planter, husband, and stepfather."
+          content: "Mount Vernon was a working plantation where Washington managed his business affairs, entertained guests, and found peace from the demands of public life. It was here that he could be himself: a Virginia planter, husband, and stepfather."
         },
         {
           id: "modern-preservation",
@@ -523,33 +530,43 @@ export const sections: Section[] = [
       ],
       subsections: [
         {
-          id: "rumors-wit",
-          title: "Rumors of Death: A Classic Example (1755)",
-          content: "After the bloody Battle of Monongahela in 1755, rumors spread that Washington had been killed. In a letter to his brother, he displayed his characteristic dry humor: 'You may, indeed, tell the world that I have heard the bullets whistle; and believe me, there is something charming in the sound.' When word of his supposed death circulated in Virginia, he joked that 'though people were kindly circulating a full account of my death and dying Speech, I have not yet written it—because I was very much alive.'"
+          id: "death-rumors-humor",
+          title: "Humor About His Own Death (1755)",
+          content: "After the bloody Battle of Monongahela in 1755, rumors spread that Washington had been killed. In a letter to his brother, he displayed his characteristic dry humor: 'You may, indeed, tell the world that I have heard the bullets whistle; and believe me, there is something charming in the sound.' When word of his supposed death circulated in Virginia, he joked that 'though people were kindly circulating a full account of my death and dying Speech, I have not yet written it because I was very much alive.'"
         },
         {
-          id: "presidential-reluctance",
-          title: "Presidential Melodrama (1789)",
+          id: "presidential-drama",
+          title: "Presidential Inauguration Drama (1789)",
           content: "Washington's famous description of his inauguration reveals his theatrical flair and self-awareness: 'My movements to the chair of government will be accompanied by feelings not unlike those of a culprit who is going to the place of his execution.' This dramatic comparison shows Washington's ability to turn even reluctant heroism into compelling narrative."
         },
         {
-          id: "nephew-wisdom",
-          title: "Uncle George's Practical Advice (1783)",
+          id: "nephew-advice-humor",
+          title: "Witty Advice to His Nephew (1783)",
           content: "To his nephew Bushrod, Washington offered both guidance and gentle humor about youthful vanity: 'Do not conceive that fine Clothes make fine Men, any more than fine feathers make fine Birds. A man who has been dressing all his life has more in his head than his heels.' His warning about gambling included a particularly witty observation: 'This is a vice which is productive of every possible evil,' mixing moral advice with practical wisdom."
         },
         {
-          id: "military-sarcasm",
-          title: "Military Frustrations and Sarcasm",
+          id: "military-sarcasm-examples",
+          title: "Military Sarcasm and Wit",
           content: "Washington's wit often emerged in response to military bureaucracy and incompetence. During the Revolutionary War, he once wrote of an incompetent officer: 'There are some men who would rather lose friends than lose their opinions.' On another occasion, reflecting on the Continental Army's challenges, he observed: 'The reflection upon my situation and that of this Army produces many an uneasy hour when all around me are wrapped in sleep.' This blend of personal reflection and institutional criticism shows his sophisticated sense of irony."
         },
         {
-          id: "social-graces",
-          title: "Social Humor and Grace",
+          id: "social-humor-examples",
+          title: "Social Humor and Clever Responses",
           content: "Washington's Rules of Civility, which he copied as a youth, provided the foundation for both proper conduct and clever conversation. Despite maintaining formal dignity, he could deliver subtle compliments and sarcastic observations with precision. When a French officer complimented his height, Washington reportedly replied: 'We have been working hard for America, and our stature shows it.' His ability to turn even physical descriptions into patriotic statements demonstrates his wit at work."
+        },
+        {
+          id: "farming-humor",
+          title: "Farming and Agricultural Humor",
+          content: "Washington often used humor when discussing his beloved Mount Vernon. He once wrote to a friend about his agricultural experiments: 'I am endeavoring to get into the mode of farming, but I confess I find it a very difficult task.' His self-deprecating humor about farming contrasted sharply with his military and political confidence, showing his human side."
+        },
+        {
+          id: "political-humor",
+          title: "Political Humor and Irony",
+          content: "Washington's political humor often revealed his frustration with the new government's challenges. He once joked about the difficulty of finding qualified people for government positions: 'I am much at a loss to know what to do with the applications for office. I have not yet learned to say no with a good grace.' This shows his ability to find humor even in the most serious of circumstances."
         }
       ],
       quote: {
-        text: "Do not conceive that fine Clothes make fine Men … avoid Gaming — This is a vice which is productive of every possible evil.",
+        text: "Do not conceive that fine Clothes make fine Men. Avoid Gaming. This is a vice which is productive of every possible evil.",
         author: "George Washington to Bushrod Washington",
         year: "1783"
       },
@@ -582,29 +599,170 @@ export const sections: Section[] = [
       ],
       subsections: [
         {
-          id: "early-career",
-          title: "Early Military Career (1752-1758)",
-          content: "Washington began his military service in the Virginia militia at age 20, quickly rising to command positions despite his lack of formal military education. His early campaigns in the French and Indian War provided crucial experience that would later prove invaluable during the Revolution."
+          id: "revolutionary-war-battles",
+          title: "Revolutionary War Battles",
+          content: "Washington commanded American forces in numerous engagements during the Revolutionary War, learning from defeats and capitalizing on victories. His strategic leadership transformed a collection of militia units into a professional Continental Army capable of standing against British regulars.",
+          highlights: [
+            {
+              id: "battle-of-brandywine",
+              title: "Battle of Brandywine",
+              location: "Chadds Ford, Pennsylvania",
+              opponent: "Gen. Sir William Howe (with Lt. Gen. Charles Cornwallis)",
+              result: "British Victory"
+            },
+            {
+              id: "battle-of-the-clouds",
+              title: "Battle of the Clouds",
+              location: "Near Malvern, Pennsylvania",
+              opponent: "Gen. Sir William Howe (action aborted by torrential rain)",
+              result: "Inconclusive"
+            },
+            {
+              id: "battle-of-fort-washington",
+              title: "Battle of Fort Washington",
+              location: "Northern Manhattan, New York",
+              opponent: "Lt. Gen. Wilhelm von Knyphausen and Gen. Sir William Howe",
+              result: "British Victory"
+            },
+            {
+              id: "battle-of-germantown",
+              title: "Battle of Germantown",
+              location: "Germantown (Philadelphia), Pennsylvania",
+              opponent: "Gen. Sir William Howe",
+              result: "British Victory"
+            },
+            {
+              id: "battle-of-harlem-heights",
+              title: "Battle of Harlem Heights",
+              location: "Morningside Heights/West Harlem, Manhattan, New York",
+              opponent: "Maj. Gen. Alexander Leslie (British light infantry)",
+              result: "American Victory"
+            },
+            {
+              id: "battle-of-long-island",
+              title: "Battle of Long Island (Brooklyn)",
+              location: "Brooklyn, New York",
+              opponent: "Gen. Sir William Howe and Lt. Gen. Charles Cornwallis",
+              result: "British Victory"
+            },
+            {
+              id: "battle-of-monmouth",
+              title: "Battle of Monmouth",
+              location: "Monmouth County near Freehold, New Jersey",
+              opponent: "Gen. Sir Henry Clinton (with Lt. Gen. Charles Cornwallis)",
+              result: "Inconclusive"
+            },
+            {
+              id: "battle-of-princeton",
+              title: "Battle of Princeton",
+              location: "Princeton, New Jersey",
+              opponent: "Lt. Col. Charles Mawhood",
+              result: "American Victory"
+            },
+            {
+              id: "battle-of-assunpink-creek",
+              title: "Battle of the Assunpink Creek (Second Trenton)",
+              location: "Trenton, New Jersey",
+              opponent: "Lt. Gen. Charles Cornwallis",
+              result: "American Victory"
+            },
+            {
+              id: "battle-of-trenton",
+              title: "Battle of Trenton",
+              location: "Trenton, New Jersey",
+              opponent: "Col. Johann Rall (Hessian)",
+              result: "American Victory"
+            },
+            {
+              id: "battle-of-white-marsh",
+              title: "Battle of White Marsh (Edge Hill)",
+              location: "Whitemarsh Township, Pennsylvania",
+              opponent: "Gen. Sir William Howe with Lt. Gen. Charles Cornwallis and Lt. Gen. Wilhelm von Knyphausen",
+              result: "Inconclusive"
+            },
+            {
+              id: "battle-of-white-plains",
+              title: "Battle of White Plains",
+              location: "White Plains, New York",
+              opponent: "Gen. Sir William Howe",
+              result: "British Victory"
+            },
+            {
+              id: "fortification-of-dorchester-heights",
+              title: "Fortification of Dorchester Heights",
+              location: "Boston, Massachusetts",
+              opponent: "Gen. William Howe (relieving Gen. Thomas Gage)",
+              result: "American Victory"
+            },
+            {
+              id: "landing-at-kips-bay",
+              title: "Landing at Kip's Bay",
+              location: "East River shore, Manhattan, New York",
+              opponent: "Gen. Sir William Howe (amphibious landing covered by Royal Navy)",
+              result: "British Victory"
+            },
+            {
+              id: "siege-of-boston",
+              title: "Siege of Boston",
+              location: "Boston, Massachusetts",
+              opponent: "Gen. Thomas Gage (until Sept 1775) and Gen. William Howe (to Mar 1776)",
+              result: "American Victory"
+            },
+            {
+              id: "siege-of-yorktown",
+              title: "Siege of Yorktown",
+              location: "Yorktown, Virginia",
+              opponent: "Lt. Gen. Charles Cornwallis",
+              result: "American Victory"
+            }
+          ]
         },
         {
-          id: "decisive-victories",
-          title: "Decisive Victories That Changed History",
-          content: "Washington's most important victories came at critical moments. At Trenton (December 1776), his daring Christmas night crossing revived a collapsing cause. At Princeton (January 1777), his follow-up victory convinced Congress and the French that America could win. At Yorktown (October 1781), his siege with French allies trapped Cornwallis and effectively ended the war."
+          id: "french-indian-war-battles",
+          title: "French and Indian War Battles",
+          content: "Washington's early military experience in the French and Indian War provided crucial lessons that shaped his later leadership. These early campaigns taught him about frontier warfare, supply lines, and the challenges of commanding in difficult terrain.",
+          highlights: [
+            {
+              id: "battle-of-fort-ligonier",
+              title: "Battle of Fort Ligonier (Loyalhanna)",
+              location: "Present-day Ligonier, Pennsylvania",
+              opponent: "Capt. Charles Philippe Aubry (French) and Delaware allies",
+              result: "British Victory"
+            },
+            {
+              id: "battle-of-fort-necessity",
+              title: "Battle of Fort Necessity (Great Meadows)",
+              location: "Near Farmington, Pennsylvania",
+              opponent: "Louis Coulon de Villiers (French)",
+              result: "French Victory"
+            },
+            {
+              id: "battle-of-jumonville-glen",
+              title: "Battle of Jumonville Glen",
+              location: "Near present-day Uniontown, Pennsylvania",
+              opponent: "Joseph Coulon de Villiers de Jumonville (French)",
+              result: "British Victory"
+            },
+            {
+              id: "battle-of-monongahela",
+              title: "Battle of the Monongahela (Braddock's Defeat)",
+              location: "Near present-day Braddock, Pennsylvania",
+              opponent: "Capt. Daniel Liénard de Beaujeu (killed early), succeeded by Capt. Jean-Daniel Dumas",
+              result: "French Victory"
+            },
+            {
+              id: "skirmish-near-loyalhanna",
+              title: "Skirmish near Loyalhanna (friendly-fire incident during the Forbes Expedition)",
+              location: "Near Fort Ligonier, Pennsylvania",
+              opponent: "French raiding party; later accidental exchange of fire with Virginia troops",
+              result: "Inconclusive"
+            }
+          ]
         },
         {
-          id: "strategic-defeats",
-          title: "Strategic Defeats and Lessons Learned",
-          content: "Fort Necessity (1754) taught Washington about supply lines and siege warfare—his only formal surrender. Long Island (August 1776) showed his skill at preserving an army through retreat. Brandywine (September 1777) revealed the challenge of defending against British flanking tactics."
-        },
-        {
-          id: "evolution-tactics",
-          title: "Evolution of Tactics and Strategy",
-          content: "Washington gradually shifted from European linear tactics to adapted American warfare. He learned to avoid pitched battles when possible, harass enemy supply lines, and concentrate forces for decisive strikes. His emphasis on army preservation over territorial control ultimately won the war."
-        },
-        {
-          id: "continental-army",
-          title: "Building the Continental Army",
-          content: "Perhaps Washington's greatest achievement was transforming a collection of militia units into a professional Continental Army. Through Valley Forge's crucible, he imposed discipline, improved tactics, and created a military force capable of standing against British regulars."
+          id: "strategic-operations",
+          title: "Strategic Operations and Sieges",
+          content: "Beyond individual battles, Washington excelled at strategic operations, sieges, and army preservation. His ability to maintain his forces through difficult winters and strategic withdrawals proved as important as battlefield victories."
         }
       ],
       quote: {
@@ -647,34 +805,39 @@ export const sections: Section[] = [
     }
   },
   {
-    id: "washington-quarter",
-    title: "Washington on the Quarter",
+    id: "washington-currency",
+    title: "Washington on the Currency",
     content: {
-      intro: "George Washington's portrait has appeared on the United States quarter for nearly a century, making it one of the most recognizable symbols of American currency and history. From the 200-year anniversary of his birth in 1932 to today, Washington's stern, dignified profile has remained largely unchanged, becoming an enduring part of American daily life.",
+      intro: "George Washington's image has graced American currency for over 150 years, making him one of the most recognizable faces in American history. From the $1 bill to the quarter, Washington's stern, dignified portrait appears in the hands of nearly every American daily, ensuring his memory remains woven into the fabric of American life.",
       paragraphs: [
-        "The Washington quarter represents more than just currency—it's a daily reminder of the nation's founding and Washington's role as the \"Father of His Country.\" Every time Americans see this coin, they encounter Washington's likeness, ensuring his memory remains woven into the fabric of American life."
+        "Washington's presence on American currency represents more than just historical recognition. It's a daily reminder of the nation's founding and Washington's role as the \"Father of His Country.\" Every time Americans handle money, they encounter Washington's likeness, making him one of the most frequently encountered historical figures in modern America."
       ],
       subsections: [
         {
-          id: "anniversary-design",
-          title: "1932: 200-Year Anniversary Design",
+          id: "dollar-bill-history",
+          title: "The $1 Bill: Washington's Most Common Image",
+          content: "Washington's portrait has appeared on the $1 bill since 1869, making him one of the most recognizable faces in America. His placement on the lowest denomination bill ensures that nearly every American handles his image regularly, a fitting tribute to the \"Father of His Country.\" The $1 bill features Washington's portrait on the front and the Great Seal of the United States on the back, symbolizing his role in the nation's founding. The portrait is based on Gilbert Stuart's famous \"Athenaeum\" portrait from 1796, an unfinished work that became the most reproduced image of Washington."
+        },
+        {
+          id: "quarter-anniversary",
+          title: "The Quarter: 200-Year Anniversary Design",
           content: "The Washington quarter was first minted in 1932 to commemorate the 200-year anniversary of Washington's birth (1732). This special commemorative coin replaced the longstanding \"Liberty Head\" design that had been used since 1892. The choice of Washington reflected his unique status as America's preeminent founding figure."
         },
         {
-          id: "houdon-bust",
+          id: "artistic-heritage",
           title: "Artistic Heritage: The Houdon Bust",
-          content: "Sculptor John Flanagan based Washington's quarter portrait on Houdon's famous 1785 marble bust, considered the most accurate likeness of Washington created during his lifetime. Houdon spent two weeks at Mount Vernon studying Washington's features, creating what historians call the definitive portrait of the first president."
+          content: "The Washington quarter portrait is based on Jean-Antoine Houdon's famous 1785 marble bust, considered the most accurate likeness of Washington created during his lifetime. Houdon spent two weeks at Mount Vernon studying Washington's features, creating what historians call the definitive portrait of the first president. The quarter design was created by John Flanagan in 1932, though his design was controversial as Treasury Secretary Andrew Mellon selected it over Laura Gardin Fraser's winning entry."
         },
         {
-          id: "material-changes",
-          title: "From Silver to Clad: Material Evolution",
-          content: "Originally minted in 90% silver, quarters remained precious metal currency until 1965, when rising silver costs forced the U.S. Mint to switch to copper-nickel clad composition. This change reflected broader economic shifts while preserving Washington's iconic profile design."
+          id: "design-elements",
+          title: "Design Elements and Symbolism",
+          content: "Washington's currency designs incorporate various symbolic elements. The $1 bill includes the Great Seal, an eagle, and the phrase \"In God We Trust.\" The quarter features an eagle on the reverse side. These elements reflect the values and symbols that Washington helped establish for the new nation."
         },
         {
-          id: "cultural-impact",
-          title: "Cultural Impact and Recognition",
-          content: "The Washington quarter has become so ubiquitous that most Americans can instantly recognize Washington's profile by memory. The coin appears in countless films, photographs, and documents, making Washington one of the most frequently encountered historical figures in modern America."
-        }
+          id: "cultural-significance",
+          title: "Cultural Significance and Recognition",
+          content: "Washington's currency presence has become so ubiquitous that most Americans can instantly recognize his profile by memory. His image appears in countless films, photographs, and documents, making Washington one of the most frequently encountered historical figures in modern America. The phrase \"In God We Trust\" and \"E Pluribus Unum\" that appear on currency reflect the values Washington helped establish for the nation."
+        },
       ],
       quote: {
         text: "I had rather be on my farm than be emperor of the world.",
@@ -683,6 +846,12 @@ export const sections: Section[] = [
       },
       images: [
         {
+          id: "washington-dollar-bill",
+          src: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.marshu.com%2Farticles%2Fimages-website%2Farticles%2Fpresidents-on-us-paper-money%2Fone-dollar-bill-large.jpg&f=1&nofb=1&ipt=799358f8d1bc42df46682dd243b1b64ea42c0bf5ed96322024e800e1d7c91ffe",
+          alt: "Washington on the $1 Bill",
+          caption: "George Washington on the $1 bill, the most common currency in America"
+        },
+        {
           id: "washington-quarter-image",
           src: "/quarter.png",
           alt: "Washington Quarter",
@@ -690,6 +859,11 @@ export const sections: Section[] = [
         }
       ],
       sources: [
+        {
+          title: "How George Ended Up on the $1 Bill",
+          url: "https://livesandlegaciesblog.org/2019/08/08/how-george-ended-up-on-the-1-bill/",
+          type: "Historical Analysis"
+        },
         {
           title: "Washington Quarter History",
           url: "https://www.usmint.gov/learn/coins-and-medals/circulating-coins/quarter",
@@ -701,6 +875,122 @@ export const sections: Section[] = [
           type: "Reference Source"
         }
       ]
+    }
+  },
+  {
+    id: "additional-facts",
+    title: "Additional Facts",
+    content: {
+      intro: "Beyond the myths and legends, George Washington's life was filled with fascinating details that reveal the complex man behind the marble monuments. These additional facts separate truth from fiction and showcase Washington's remarkable achievements, personal quirks, and lasting impact on American history.",
+      paragraphs: [
+        "From debunking popular myths to revealing little-known achievements, these facts paint a more complete picture of America's first president. Washington's life was far more interesting than the simplified stories we often hear."
+      ],
+      subsections: [
+        {
+          id: "foundational-facts",
+          title: "Foundational & Debunking Facts",
+          content: "Many popular stories about Washington are actually myths created after his death. The real facts are often more interesting than the legends."
+        },
+        {
+          id: "teeth-myth",
+          title: "The Teeth Myth",
+          content: "Washington's false teeth were made from gold, ivory, carved animal bone, and human teeth purchased from enslaved people he owned, not wood. This fact reveals both the medical practices of the era and Washington's complex relationship with slavery."
+        },
+        {
+          id: "cherry-tree-myth",
+          title: "The Cherry Tree Myth",
+          content: "The famous \"I cannot tell a lie\" story was fabricated by biographer Mason Weems in the 5th edition of his book, published seven years after Washington's death, with no primary sources supporting it. This myth became so popular that many Americans still believe it today."
+        },
+        {
+          id: "unanimous-president",
+          title: "Unanimous President",
+          content: "Washington is the only president to receive all electoral votes unanimously, achieving this for both of his terms. This remarkable achievement reflects his unique status and the trust placed in him by the new nation."
+        },
+        {
+          id: "white-house-fact",
+          title: "White House Connection",
+          content: "Washington was the only president who never lived in the White House, though he oversaw its construction and specified its location in 1791. The building wasn't completed until after his presidency ended."
+        },
+        {
+          id: "education-fact",
+          title: "Limited Formal Education",
+          content: "Washington's formal schooling ended when he was 11 years old after his father died, cutting him off from the opportunity to be educated abroad in England like his older half-brothers. Despite this, he became one of the most learned men of his era through self-education."
+        },
+        {
+          id: "military-rank",
+          title: "Highest Military Rank",
+          content: "In 1976, during the Nation's Bicentennial, Washington was posthumously promoted to General of the Armies of the United States, the highest rank in the U.S. military. This honor recognizes his crucial role in the nation's founding."
+        },
+        {
+          id: "title-precedents",
+          title: "Presidential Precedents",
+          content: "Washington added the phrase \"So help me God\" to the Presidential Oath of Office during his inauguration, and it was his idea to call the chief executive \"Mr. President.\" These decisions shaped presidential tradition for centuries."
+        },
+        {
+          id: "no-political-party",
+          title: "No Political Party",
+          content: "Washington opposed political factionalism and remained non-partisan throughout his presidency, making him the only United States president to do so. His Farewell Address specifically warned against the dangers of political parties."
+        },
+        {
+          id: "slaveholder-complexity",
+          title: "Slaveholder Complexity",
+          content: "Washington's contradictory attitudes toward slavery are one of the great mysteries of his life and legacy. At his death, 317 enslaved people lived at Mount Vernon, and in his will he ordered those he directly owned to be freed."
+        },
+        {
+          id: "first-veto",
+          title: "First Presidential Veto",
+          content: "In 1792, Washington issued the very first presidential veto on an apportionment bill, establishing this important check on congressional power. The veto was overridden, but the precedent was set."
+        },
+        {
+          id: "no-middle-name",
+          title: "No Middle Name",
+          content: "His full legal name was simply George Washington. Middle names were uncommon in colonial Virginia, and Washington never adopted one despite his later fame."
+        },
+        {
+          id: "delaware-crossing-reality",
+          title: "Delaware Crossing Reality",
+          content: "The iconic painting misrepresents the event. In reality, thousands of troops crossed the Delaware River in a coordinated operation on Christmas night, 1776. The famous painting shows Washington standing in a small boat, but the actual crossing involved many boats and careful planning."
+        }
+      ],
+      qaItems: [
+        {
+          question: "What was Washington's most surprising personal habit?",
+          answer: "Washington was an excellent horseman and bred dogs with humorous names like \"Drunkard,\" \"Tipsy,\" and \"Sweet Lips.\" He also loved to dance and often stayed at balls until late into the night."
+        },
+        {
+          question: "How did Washington's height compare to others of his era?",
+          answer: "Washington was about 6'2\", which was tall for his era, but later stories inflated him to nearly 6'6\". His height contributed to his commanding presence and leadership image."
+        },
+        {
+          question: "What was Washington's favorite food?",
+          answer: "Washington loved hoecakes, cornmeal pancakes served with butter and honey, often for breakfast. This simple frontier food remained his preference throughout his life."
+        },
+        {
+          question: "Did Washington wear a wig?",
+          answer: "No, Washington's white hair was his own. He powdered it, rather than wearing a wig, as was the fashion of the time. This was part of his careful attention to appearance and dignity."
+        },
+        {
+          question: "What was Washington's only trip abroad?",
+          answer: "Washington left North America only once, sailing to Barbados in 1751 with his half-brother Lawrence. There he contracted smallpox and survived, leaving him immune for life, a crucial advantage during the Revolutionary War."
+        },
+        {
+          question: "How did Washington die?",
+          answer: "On December 13, 1799, Washington developed a sore throat and died within 48 hours, likely from acute epiglottitis. His death was sudden and shocked the nation."
+        },
+        {
+          question: "Why does Washington have two birthdays?",
+          answer: "Washington was born on February 11, 1731, but after adoption of the Gregorian calendar, his birthday shifted to February 22, 1732, the date still celebrated today."
+        },
+        {
+          question: "What illnesses did Washington survive?",
+          answer: "Washington survived smallpox, tuberculosis, malaria, dysentery, and pneumonia, yet lived to 67, which was quite old for his era. His survival through multiple diseases shows his remarkable constitution."
+        }
+      ],
+      quote: {
+        text: "I had rather be on my farm than be emperor of the world.",
+        author: "George Washington to Marquis de Lafayette",
+        year: "1797"
+      }
     }
   }
 ];

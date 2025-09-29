@@ -16,28 +16,28 @@ const navigationGroups = [
   {
     title: "Early Life",
     icon: User,
-    items: navigationItems.slice(0, 3), // Home, Youth, Early Military
+    items: navigationItems.slice(0, 3),
   },
   {
     title: "Revolutionary Leader", 
     icon: Scroll,
-    items: navigationItems.slice(3, 5), // Revolutionary War, Constitutional Convention
+    items: navigationItems.slice(3, 5),
   },
   {
     title: "Presidential Legacy",
     icon: Landmark,
-    items: navigationItems.slice(5, 8), // Presidency, Farewell Address, Legacy
+    items: navigationItems.slice(5, 8),
   },
   {
     title: "Complex History",
     icon: Scroll,
-    items: navigationItems.slice(8, 10), // Slavery, Mount Vernon
+    items: navigationItems.slice(8, 10),
   },
-  {
-    title: "Fun Facts",
-    icon: Smile,
-    items: navigationItems.slice(10), // Washington's Humor, Battle Record, On the Quarter
-  }
+      {
+        title: "Fun Facts",
+        icon: Smile,
+        items: navigationItems.slice(10),
+      }
 ];
 
 export default function EnhancedNavigation({ activeSection, onSectionChange }: NavigationProps) {
@@ -62,7 +62,7 @@ export default function EnhancedNavigation({ activeSection, onSectionChange }: N
 
   return (
     <>
-      {/* Main Navigation */}
+      
       <motion.header
         initial={{ y: -100 }}
         animate={{ y: 0 }}
@@ -75,7 +75,7 @@ export default function EnhancedNavigation({ activeSection, onSectionChange }: N
       >
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
-            {/* Logo */}
+            
             <motion.button 
               className="flex items-center space-x-4 text-left"
               onClick={() => onSectionChange("home")}
@@ -110,7 +110,7 @@ export default function EnhancedNavigation({ activeSection, onSectionChange }: N
               </div>
             </motion.button>
 
-            {/* Desktop Navigation */}
+            
             <div className="hidden lg:flex items-center space-x-1">
               {navigationGroups.map((group) => (
                 <div
@@ -134,7 +134,7 @@ export default function EnhancedNavigation({ activeSection, onSectionChange }: N
                     <ChevronDown className="w-3 h-3" />
                   </motion.button>
 
-                  {/* Dropdown */}
+                  
                   <AnimatePresence>
                     {hoveredGroup === group.title && (
                       <motion.div
@@ -169,7 +169,7 @@ export default function EnhancedNavigation({ activeSection, onSectionChange }: N
                 </div>
               ))}
               
-              {/* Sources Button */}
+              
               <motion.button
                 onClick={() => setIsSourcesOpen(true)}
                 className={cn(
@@ -186,7 +186,7 @@ export default function EnhancedNavigation({ activeSection, onSectionChange }: N
               </motion.button>
             </div>
 
-            {/* Mobile Menu Button */}
+            
             <motion.button
               className={cn(
                 "lg:hidden p-2 rounded-lg transition-colors",
@@ -226,11 +226,11 @@ export default function EnhancedNavigation({ activeSection, onSectionChange }: N
         </nav>
       </motion.header>
 
-      {/* Mobile Navigation Menu */}
+      
       <AnimatePresence>
         {isMobileMenuOpen && (
           <>
-            {/* Backdrop */}
+            
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -239,7 +239,7 @@ export default function EnhancedNavigation({ activeSection, onSectionChange }: N
               onClick={() => setIsMobileMenuOpen(false)}
             />
 
-            {/* Mobile Menu */}
+            
             <motion.div
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
@@ -248,7 +248,7 @@ export default function EnhancedNavigation({ activeSection, onSectionChange }: N
               className="fixed top-0 right-0 h-full w-80 bg-museum-parchment shadow-museum-deep z-50 lg:hidden overflow-y-auto"
             >
               <div className="p-6">
-                {/* Mobile Header */}
+                
                 <div className="flex items-center justify-between mb-8">
                   <div className="flex items-center space-x-3">
                     <div className="w-10 h-10 rounded-full bg-gradient-to-br from-museum-navy to-museum-navy-dark flex items-center justify-center shadow-museum-glow">
@@ -273,7 +273,7 @@ export default function EnhancedNavigation({ activeSection, onSectionChange }: N
                   </motion.button>
                 </div>
 
-                {/* Mobile Navigation Groups */}
+                
                 <div className="space-y-6">
                   {navigationGroups.map((group, groupIndex) => (
                     <motion.div
@@ -311,7 +311,7 @@ export default function EnhancedNavigation({ activeSection, onSectionChange }: N
                     </motion.div>
                   ))}
                   
-                  {/* Mobile Sources Button */}
+                  
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -338,7 +338,7 @@ export default function EnhancedNavigation({ activeSection, onSectionChange }: N
         )}
       </AnimatePresence>
 
-      {/* Sources Page Modal */}
+      
       <SourcesPage 
         isOpen={isSourcesOpen} 
         onClose={() => setIsSourcesOpen(false)} 

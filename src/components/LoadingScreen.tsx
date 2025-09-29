@@ -27,7 +27,7 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
   return (
     <div className="fixed inset-0 z-[10000] bg-gradient-to-br from-museum-brown to-museum-brown-light 
                     flex flex-col items-center justify-center text-white">
-      {/* Main Content */}
+      
       <div className="text-center space-y-6 animate-in fade-in duration-1000">
         <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold 
                        drop-shadow-2xl animate-in slide-in-from-bottom duration-1000 delay-300">
@@ -39,7 +39,7 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
         </p>
       </div>
 
-      {/* Progress Bar */}
+      
       <div className="mt-12 w-64 md:w-80 animate-in slide-in-from-bottom duration-1000 delay-700">
         <div className="w-full bg-white/20 rounded-full h-2 mb-2">
           <div 
@@ -52,7 +52,7 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
         </p>
       </div>
 
-      {/* Decorative Elements */}
+      
       <div className="absolute top-10 left-10 w-20 h-20 border border-white/20 rounded-full 
                       animate-pulse" />
       <div className="absolute bottom-10 right-10 w-16 h-16 border border-white/20 rounded-full 

@@ -74,7 +74,7 @@ export default function EnhancedImageModal({ src, alt, onClose }: ImageModalProp
         className="fixed inset-0 z-[9999] bg-museum-ink/90 backdrop-blur-xl flex items-center justify-center p-4"
         onClick={onClose}
       >
-        {/* Background Pattern */}
+        
         <div className="absolute inset-0 opacity-10">
           <div 
             className="absolute inset-0 bg-repeat"
@@ -92,7 +92,7 @@ export default function EnhancedImageModal({ src, alt, onClose }: ImageModalProp
           className="relative max-w-7xl max-h-[90vh] w-full"
           onClick={(e) => e.stopPropagation()}
         >
-          {/* Control Bar */}
+          
           <motion.div 
             className="absolute -top-16 left-0 right-0 flex items-center justify-between z-10"
             initial={{ opacity: 0, y: -20 }}
@@ -133,14 +133,14 @@ export default function EnhancedImageModal({ src, alt, onClose }: ImageModalProp
             </motion.button>
           </motion.div>
 
-          {/* Image Container */}
+          
           <motion.div 
             className="relative bg-white/5 backdrop-blur-sm rounded-2xl p-6 shadow-museum-deep border border-white/10"
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2, duration: 0.4 }}
           >
-            {/* Decorative Corner Elements */}
+            
             <div className="absolute top-4 left-4 w-8 h-8 border-l-2 border-t-2 border-museum-gold/60 rounded-tl-lg" />
             <div className="absolute top-4 right-4 w-8 h-8 border-r-2 border-t-2 border-museum-gold/60 rounded-tr-lg" />
             <div className="absolute bottom-4 left-4 w-8 h-8 border-l-2 border-b-2 border-museum-gold/60 rounded-bl-lg" />
@@ -156,7 +156,7 @@ export default function EnhancedImageModal({ src, alt, onClose }: ImageModalProp
             />
           </motion.div>
 
-          {/* Caption */}
+          
           <motion.div 
             className="text-center mt-6"
             initial={{ opacity: 0, y: 20 }}
@@ -169,7 +169,7 @@ export default function EnhancedImageModal({ src, alt, onClose }: ImageModalProp
             <div className="mt-2 w-24 h-px bg-gradient-to-r from-transparent via-museum-gold to-transparent mx-auto" />
           </motion.div>
 
-          {/* Keyboard Hint */}
+          
           <motion.div 
             className="absolute -bottom-12 left-0 right-0 text-center"
             initial={{ opacity: 0 }}

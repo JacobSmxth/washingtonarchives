@@ -15,13 +15,13 @@ export default function AttributionButton() {
       className="fixed bottom-4 right-4 z-50 group"
     >
       <div className="relative">
-        {/* Background with layered effects */}
+        
         <div className="absolute -inset-1 bg-gradient-to-r from-museum-navy/20 to-museum-gold/20 rounded-2xl blur-lg group-hover:blur-xl transition-all sm:-inset-2 sm:blur-xl sm:group-hover:blur-2xl" />
         <div className="absolute -inset-0.5 bg-gradient-to-r from-museum-navy/10 to-museum-gold/10 rounded-xl sm:-inset-1" />
         
-        {/* Main container */}
+        
         <div className="relative bg-white/95 backdrop-blur-sm border border-museum-navy/20 rounded-xl shadow-museum group-hover:shadow-museum-hover transition-all">
-          {/* Mobile collapsed state */}
+          
           <div className="sm:hidden">
             <AnimatePresence mode="wait">
               {isCollapsed ? (
@@ -86,10 +86,10 @@ export default function AttributionButton() {
             </AnimatePresence>
           </div>
 
-          {/* Desktop state (unchanged) */}
+          
           <div className="hidden sm:block p-4">
             <div className="flex items-center space-x-3">
-              {/* Text content */}
+              
               <div className="text-right">
                 <p className="text-xs text-museum-sepia uppercase tracking-wide font-medium">
                   Made by
@@ -107,10 +107,10 @@ export default function AttributionButton() {
                 </motion.a>
               </div>
               
-              {/* Divider */}
+              
               <div className="w-px h-8 bg-museum-navy/20" />
               
-              {/* GitHub link */}
+              
               <motion.a
                 href="https://github.com/jacobsmxth"
                 target="_blank"
@@ -124,7 +124,7 @@ export default function AttributionButton() {
               </motion.a>
             </div>
             
-            {/* Decorative element */}
+            
             <motion.div
               className="absolute -top-1 left-4 right-4 h-px bg-gradient-to-r from-transparent via-museum-navy/30 to-transparent"
               initial={{ scaleX: 0 }}

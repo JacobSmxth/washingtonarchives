@@ -12,7 +12,7 @@ export default function QuoteBlock({ quote }: QuoteBlockProps) {
       shadow-[--shadow-museum] hover:shadow-[--shadow-museum-hover]
       transition-all duration-300 group
     ">
-      {/* Quote Icon */}
+      
       <div className="absolute -top-3 -left-3 w-6 h-6 bg-museum-brown rounded-full 
                       flex items-center justify-center text-white text-sm font-bold
                       group-hover:scale-110 transition-transform duration-300">

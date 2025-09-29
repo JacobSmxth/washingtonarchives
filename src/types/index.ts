@@ -14,7 +14,7 @@ export interface SectionContent {
   highlights?: Highlight[];
   images?: Image[];
   sources?: SourceReference[];
-  sourceIds?: string[]; // References to centralized sources database
+  sourceIds?: string[];
 }
 
 export interface SourceReference {
@@ -32,6 +32,15 @@ export interface Subsection {
   id: string;
   title: string;
   content: string;
+  highlights?: BattleHighlight[];
+}
+
+export interface BattleHighlight {
+  id: string;
+  title: string;
+  location: string;
+  opponent: string;
+  result: string;
 }
 
 export interface Quote {

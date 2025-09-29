@@ -4,7 +4,7 @@ export interface Source {
   url: string;
   description: string;
   source: string;
-  type: "Primary Source" | "Secondary Source" | "Museum Resource" | "Reference Work" | "Academic Paper" | "Academic Research" | "Official Government Source" | "Historical Analysis" | "Educational Resource" | "Military History";
+  type: "Primary Source" | "Secondary Source" | "Museum Resource" | "Historical Analysis" | "Educational Resource" | "Reference Work" | "Official Government Source";
   tags: string[];
   period?: string;
   reliability: "High" | "Medium" | "Low";
@@ -13,7 +13,6 @@ export interface Source {
 }
 
 export const sourcesDatabase: Source[] = [
-  // Primary Sources
   {
     id: "founders-inaugural-address",
     title: "First Inaugural Address",
@@ -123,14 +122,13 @@ export const sourcesDatabase: Source[] = [
     relatedSections: ["mount-vernon", "legacy"]
   },
 
-  // Secondary Sources - Academic
   {
     id: "ndu-press-strategy",
     title: "Washington as National Security Strategist",
     url: "https://ndupress.ndu.edu/Portals/68/Documents/jfq/jfq-109/jfq-109_33-40_Arnold.pdf?ver=apK3ap1248pELVj_kF1n_Q%3D%3D",
     description: "Academic analysis of Washington's strategic thinking and national security approach.",
     source: "National Defense University Press",
-    type: "Academic Paper",
+    type: "Historical Analysis",
     tags: ["strategy", "national-security", "military", "leadership"],
     period: "Analysis",
     reliability: "High",
@@ -142,14 +140,13 @@ export const sourcesDatabase: Source[] = [
     url: "https://hub.jhu.edu/2016/02/19/george-washington-slavery-mount-vernon/",
     description: "Academic examination of Washington's complex relationship with slavery.",
     source: "Johns Hopkins University",
-    type: "Academic Research",
+    type: "Historical Analysis",
     tags: ["slavery", "mount-vernon", "contradiction", "morality"],
     period: "Analysis",
     reliability: "High",
     relatedSections: ["slavery", "mount-vernon"]
   },
 
-  // Museum Resources
   {
     id: "mount-vernon-biography",
     title: "George Washington Biography",
@@ -178,7 +175,7 @@ export const sourcesDatabase: Source[] = [
     id: "mount-vernon-fort-necessity",
     title: "Fort Necessity",
     url: "https://www.mountvernon.org/library/digitalhistory/digital-encyclopedia/article/fort-necessity",
-    description: "Washington's constructed fort at Great Meadows, attacked and forced to surrender — his only military surrender.",
+    description: "Washington's constructed fort at Great Meadows, attacked and forced to surrender, his only military surrender.",
     source: "Mount Vernon Digital Encyclopedia",
     type: "Museum Resource",
     tags: ["fort-necessity", "surrender", "french-indian-war", "defeat"],
@@ -211,7 +208,6 @@ export const sourcesDatabase: Source[] = [
     relatedSections: ["mount-vernon"]
   },
 
-  // Reference Works
   {
     id: "britannica-biography",
     title: "George Washington Biography",
@@ -240,7 +236,7 @@ export const sourcesDatabase: Source[] = [
     id: "britannica-jumonville-glen",
     title: "Battle of Jumonville Glen",
     url: "https://www.britannica.com/event/Battle-of-Jumonville-Glen",
-    description: "A skirmish in which Washington's men ambushed a French scouting party — often considered the opening military action of the French & Indian War.",
+    description: "A skirmish in which Washington's men ambushed a French scouting party, often considered the opening military action of the French & Indian War.",
     source: "Encyclopedia Britannica",
     type: "Reference Work",
     tags: ["jumonville-glen", "french-indian-war", "ambush", "first-battle"],
@@ -285,7 +281,6 @@ export const sourcesDatabase: Source[] = [
     relatedSections: ["washington-quarter"]
   },
 
-  // Historical Analysis
   {
     id: "smithsonian-reluctant-president",
     title: "George Washington - The Reluctant President",
@@ -323,7 +318,6 @@ export const sourcesDatabase: Source[] = [
     relatedSections: ["presidency", "legacy"]
   },
 
-  // Educational Resources
   {
     id: "history-com-washington",
     title: "George Washington Biography",
@@ -337,21 +331,19 @@ export const sourcesDatabase: Source[] = [
     relatedSections: ["all"]
   },
 
-  // Military History
   {
     id: "battlefields-trust",
     title: "Military Career and Battlefields",
     url: "https://www.battlefields.org/learn/biographies/george-washington",
     description: "Focus on Washington's military career and the battlefields where he served.",
     source: "American Battlefield Trust",
-    type: "Military History",
+    type: "Historical Analysis",
     tags: ["military", "battlefields", "career", "service"],
     period: "1754-1783",
     reliability: "High",
     relatedSections: ["military-early", "revolutionary-war", "battle-record"]
   },
 
-  // Official Government Sources
   {
     id: "us-mint-quarter",
     title: "Washington Quarter History",
@@ -363,10 +355,310 @@ export const sourcesDatabase: Source[] = [
     period: "1932-present",
     reliability: "High",
     relatedSections: ["washington-quarter"]
+  },
+
+  {
+    id: "boston-tea-party-facts",
+    title: "George Washington Facts",
+    url: "https://www.bostonteapartyship.com/george-washington-facts",
+    description: "Comprehensive collection of Washington facts including teeth, unanimous election, military rank, and personal details.",
+    source: "Boston Tea Party Ship & Museum",
+    type: "Educational Resource",
+    tags: ["teeth", "unanimous-election", "military-rank", "personal-facts", "fun-facts"],
+    period: "1732-1799",
+    reliability: "Medium",
+    relatedSections: ["fun-facts"]
+  },
+  {
+    id: "wallbuilders-facts",
+    title: "Ten Facts About George Washington",
+    url: "https://wallbuilders.com/ten-facts-about-george-washington",
+    description: "Historical facts about Washington including cherry tree myth debunking and height details.",
+    source: "WallBuilders",
+    type: "Historical Analysis",
+    tags: ["cherry-tree-myth", "height", "myths", "debunking"],
+    period: "Analysis",
+    reliability: "Medium",
+    relatedSections: ["fun-facts"]
+  },
+  {
+    id: "lawline-fun-facts",
+    title: "George Washington Top Ten Fun Facts",
+    url: "https://blog.lawline.com/george-washington-top-ten-fun-facts",
+    description: "Collection of interesting Washington facts including White House, birthday, and personal quirks.",
+    source: "Lawline Blog",
+    type: "Educational Resource",
+    tags: ["white-house", "birthday", "personal", "fun-facts"],
+    period: "1732-1799",
+    reliability: "Medium",
+    relatedSections: ["fun-facts"]
+  },
+  {
+    id: "history-little-known-facts",
+    title: "George Washington Little Known Facts",
+    url: "https://www.history.com/news/george-washington-little-known-facts",
+    description: "Historical facts about Washington's education and lesser-known aspects of his life.",
+    source: "History.com",
+    type: "Educational Resource",
+    tags: ["education", "little-known", "facts"],
+    period: "1732-1799",
+    reliability: "High",
+    relatedSections: ["fun-facts", "youth"]
+  },
+  {
+    id: "history-presidential-veto",
+    title: "Washington Exercises First Presidential Veto",
+    url: "https://www.history.com/this-day-in-history/April-5/washington-exercises-first-presidential-veto",
+    description: "Historical account of Washington's first presidential veto in 1792.",
+    source: "History.com",
+    type: "Historical Analysis",
+    tags: ["presidential-veto", "precedents", "government"],
+    period: "1792",
+    reliability: "High",
+    relatedSections: ["fun-facts", "presidency"]
+  },
+  {
+    id: "mount-vernon-middle-name",
+    title: "George Washington's Middle Name",
+    url: "https://www.mountvernon.org/george-washington/middle-name",
+    description: "Explanation of Washington's lack of a middle name and naming conventions of the era.",
+    source: "Mount Vernon",
+    type: "Museum Resource",
+    tags: ["middle-name", "naming", "personal"],
+    period: "1732",
+    reliability: "High",
+    relatedSections: ["fun-facts", "youth"]
+  },
+  {
+    id: "historynet-delaware-crossing",
+    title: "What's Wrong with Washington Crossing the Delaware",
+    url: "https://www.historynet.com/whats-wrong-washington-crossing-delaware/",
+    description: "Analysis of the famous painting's inaccuracies and the reality of the Delaware crossing.",
+    source: "HistoryNet",
+    type: "Historical Analysis",
+    tags: ["delaware-crossing", "painting", "myths", "revolutionary-war"],
+    period: "1776",
+    reliability: "High",
+    relatedSections: ["fun-facts", "revolutionary-war"]
+  },
+  {
+    id: "mount-vernon-spymaster",
+    title: "George Washington Spymaster",
+    url: "https://www.mountvernon.org/george-washington/the-revolutionary-war/spying-and-espionage/george-washington-spymaster",
+    description: "Detailed account of Washington's intelligence network and espionage activities during the Revolution.",
+    source: "Mount Vernon",
+    type: "Museum Resource",
+    tags: ["spying", "espionage", "intelligence", "agent-711"],
+    period: "1775-1783",
+    reliability: "High",
+    relatedSections: ["fun-facts", "revolutionary-war"]
+  },
+  {
+    id: "allegany-museum-whiskey-rebellion",
+    title: "Washington's Last Visit to Cumberland - The Only Time a Sitting President Has Led Troops into Battle",
+    url: "https://allegany-museum.org/washingtons-last-visit-to-cumberland-the-only-time-a-sitting-president-has-led-troops-into-battle/",
+    description: "Historical account of Washington leading troops during the Whiskey Rebellion as sitting president.",
+    source: "Allegany Museum",
+    type: "Museum Resource",
+    tags: ["whiskey-rebellion", "commander-in-chief", "presidency", "military"],
+    period: "1794",
+    reliability: "High",
+    relatedSections: ["fun-facts", "presidency"]
+  },
+  {
+    id: "history-smallpox-inoculation",
+    title: "Smallpox and George Washington in the Revolutionary War",
+    url: "https://www.history.com/articles/smallpox-george-washington-revolutionary-war",
+    description: "Account of Washington's mass inoculation campaign against smallpox in 1777.",
+    source: "History.com",
+    type: "Historical Analysis",
+    tags: ["smallpox", "inoculation", "public-health", "revolutionary-war"],
+    period: "1777",
+    reliability: "High",
+    relatedSections: ["fun-facts", "revolutionary-war"]
+  },
+  {
+    id: "world-history-edu-third-term",
+    title: "Why Did George Washington Refuse a Third Term in Office",
+    url: "https://worldhistoryedu.com/why-did-george-washington-refuse-a-third-term-in-office/",
+    description: "Analysis of Washington's decision to step down after two terms and its democratic significance.",
+    source: "World History Edu",
+    type: "Historical Analysis",
+    tags: ["third-term", "democratic-precedents", "presidency"],
+    period: "1796",
+    reliability: "Medium",
+    relatedSections: ["fun-facts", "presidency", "legacy"]
+  },
+  {
+    id: "constitution-center-fascinating-facts",
+    title: "Fascinating Facts About George Washington for His Real Birthday",
+    url: "https://constitutioncenter.org/blog/fascinating-facts-about-george-washington-for-his-real-birthday",
+    description: "Collection of interesting Washington facts including distillery and death details.",
+    source: "Constitution Center",
+    type: "Educational Resource",
+    tags: ["distillery", "death", "birthday", "fascinating-facts"],
+    period: "1732-1799",
+    reliability: "High",
+    relatedSections: ["fun-facts", "mount-vernon"]
+  },
+  {
+    id: "funkids-washington-facts",
+    title: "Top 10 Facts About George Washington",
+    url: "https://www.funkidslive.com/learn/top-10-facts-about-george-washington",
+    description: "Fun facts about Washington including his love of dancing and social activities.",
+    source: "Fun Kids UK",
+    type: "Educational Resource",
+    tags: ["dancing", "social", "personal", "fun-facts"],
+    period: "1732-1799",
+    reliability: "Medium",
+    relatedSections: ["fun-facts"]
+  },
+  {
+    id: "tinybeans-hair-facts",
+    title: "Fun Facts About George Washington",
+    url: "https://tinybeans.com/fun-facts-about-george-washington",
+    description: "Personal facts about Washington including his hair style and grooming habits.",
+    source: "Tinybeans",
+    type: "Educational Resource",
+    tags: ["hair", "grooming", "personal", "appearance"],
+    period: "1732-1799",
+    reliability: "Medium",
+    relatedSections: ["fun-facts"]
+  },
+  {
+    id: "patrick-henry-college-barbados",
+    title: "7 Facts About George Washington",
+    url: "https://www.phc.edu/news/2017/02/20/7-facts-about-george-washington",
+    description: "Facts about Washington including his only trip abroad to Barbados and smallpox immunity.",
+    source: "Patrick Henry College",
+    type: "Educational Resource",
+    tags: ["barbados", "smallpox", "travel", "immunity"],
+    period: "1751",
+    reliability: "High",
+    relatedSections: ["fun-facts", "youth"]
+  },
+  {
+    id: "pbs-medical-chart",
+    title: "George Washington's Medical Chart",
+    url: "https://www.pbs.org/newshour/health/george-washingtons-medical-chart",
+    description: "Medical analysis of Washington's various illnesses and survival through multiple diseases.",
+    source: "PBS NewsHour",
+    type: "Educational Resource",
+    tags: ["medical", "illnesses", "health", "survival"],
+    period: "1732-1799",
+    reliability: "High",
+    relatedSections: ["fun-facts"]
+  },
+  {
+    id: "public-historian-napoleon",
+    title: "Napoleon and Washington",
+    url: "https://publichistorian.com/2018/06/08/napoleon-washington/",
+    description: "Analysis of Napoleon's admiration for Washington and their leadership comparison.",
+    source: "Public Historian",
+    type: "Historical Analysis",
+    tags: ["napoleon", "admiration", "leadership", "global-fame"],
+    period: "Analysis",
+    reliability: "Medium",
+    relatedSections: ["fun-facts", "legacy"]
+  },
+  {
+    id: "heritage-foundation-kingship",
+    title: "The Man Who Would Not Be King",
+    url: "https://www.heritage.org/commentary/the-man-who-would-not-be-king",
+    description: "Analysis of Washington's refusal of kingship and commitment to republican government.",
+    source: "Heritage Foundation",
+    type: "Historical Analysis",
+    tags: ["kingship", "republic", "democracy", "refusal"],
+    period: "1783",
+    reliability: "High",
+    relatedSections: ["fun-facts", "legacy", "presidency"]
+  },
+  {
+    id: "lives-legacies-dollar-bill",
+    title: "How George Ended Up on the $1 Bill",
+    url: "https://livesandlegaciesblog.org/2019/08/08/how-george-ended-up-on-the-1-bill/",
+    description: "Historical analysis of how Washington's portrait came to appear on the $1 bill since 1869.",
+    source: "Lives and Legacies Blog",
+    type: "Historical Analysis",
+    tags: ["dollar-bill", "currency", "portrait", "recognition"],
+    period: "1869-present",
+    reliability: "Medium",
+    relatedSections: ["washington-currency"]
+  },
+  {
+    id: "usacoinbook-flanagan-designer",
+    title: "John Flanagan - Coin Engraver and Designer - Washington Quarter",
+    url: "https://www.usacoinbook.com/encyclopedia/coin-designers/john-flanagan/",
+    description: "Detailed account of John Flanagan's design process for the 1932 Washington quarter, based on Jean-Antoine Houdon's 1785 bust of Washington. Covers the controversial design competition where Treasury Secretary Andrew Mellon selected Flanagan's design over Laura Gardin Fraser's winning entry.",
+    source: "USA Coin Book Encyclopedia",
+    type: "Educational Resource",
+    tags: ["flanagan", "quarter-design", "houdon-bust", "design-competition", "1932", "laura-fraser", "mellon"],
+    period: "1931-1932",
+    reliability: "Medium",
+    relatedSections: ["washington-currency", "additional-facts"]
+  },
+  {
+    id: "pcgs-quarter-faces",
+    title: "The Many Faces of the George Washington Quarter",
+    url: "https://www.pcgs.com/news/the-many-faces-of-the-george-washington-quarter",
+    description: "Comprehensive history of Washington quarter design evolution from Flanagan's 1932 original through modern variants. Details the Houdon bust basis, William Cousins' 1999 modifications for State Quarters, and Laura Fraser's 2022 appearance on the American Women Quarters.",
+    source: "PCGS (Professional Coin Grading Service)",
+    type: "Educational Resource",
+    tags: ["quarter", "design-evolution", "flanagan", "houdon-bust", "state-quarters", "fraser-design"],
+    period: "1932-present",
+    reliability: "High",
+    relatedSections: ["washington-currency"]
+  },
+  {
+    id: "time-dollar-design-history",
+    title: "On the Money: A US Dollar Bill's Design History and Meaning",
+    url: "https://time.com/5383055/dollar-bill-design-history/",
+    description: "Historical analysis of U.S. dollar bill design from colonial currency through modern security features. Covers Continental Currency, Civil War greenbacks, the 1929 size reduction, and the evolution of Washington's portrait placement.",
+    source: "TIME Magazine",
+    type: "Historical Analysis",
+    tags: ["dollar-bill", "currency-evolution", "design-history", "greenbacks", "continental-currency"],
+    period: "1775-2018",
+    reliability: "High",
+    relatedSections: ["washington-currency"]
+  },
+  {
+    id: "mount-vernon-gilbert-stuart",
+    title: "Gilbert Stuart (1755-1828)",
+    url: "https://www.mountvernon.org/library/digitalhistory/digital-encyclopedia/article/gilbert-stuart-1755-1828",
+    description: "Comprehensive biography of Gilbert Stuart and detailed analysis of the Athenaeum portrait of Washington. Confirms that an engraving of this unfinished 1796 portrait is used on the one-dollar bill, making it the most recognizable image of Washington.",
+    source: "Mount Vernon Digital Encyclopedia",
+    type: "Museum Resource",
+    tags: ["gilbert-stuart", "athenaeum-portrait", "dollar-bill", "1796", "portrait-artist", "unfinished-portrait"],
+    period: "1755-1828",
+    reliability: "High",
+    relatedSections: ["washington-currency", "legacy"]
+  },
+  {
+    id: "franconia-museum-slavery-complexity",
+    title: "Slavery at Mount Vernon (Historical Marker)",
+    url: "https://franconiahistory.com/historic-sites/slavery-at-mount-vernon-(historical-marker)",
+    description: "Historical marker information about slavery at Mount Vernon, including Washington's contradictory attitudes and the 317 enslaved people at his death.",
+    source: "Franconia Museum",
+    type: "Museum Resource",
+    tags: ["slavery", "mount-vernon", "contradiction", "legacy"],
+    period: "1799",
+    reliability: "High",
+    relatedSections: ["slavery"]
+  },
+  {
+    id: "boston-tea-party-title-precedents",
+    title: "George Washington Facts",
+    url: "https://www.bostonteapartyship.com/george-washington-facts",
+    description: "Comprehensive facts about Washington including his addition of 'So help me God' to the Presidential Oath and establishment of the title 'Mr. President.'",
+    source: "Boston Tea Party Ship & Museum",
+    type: "Educational Resource",
+    tags: ["presidential-precedents", "oath", "title", "inauguration"],
+    period: "1789",
+    reliability: "Medium",
+    relatedSections: ["presidency"]
   }
 ];
 
-// Helper functions for filtering and searching
 export const getSourcesBySection = (sectionId: string): Source[] => {
   return sourcesDatabase.filter(source => 
     source.relatedSections.includes(sectionId) || source.relatedSections.includes("all")

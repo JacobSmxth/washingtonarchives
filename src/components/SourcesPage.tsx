@@ -17,11 +17,14 @@ const sourceTypeColors = {
   "Museum Resource": "bg-green-100 text-green-800",
   "Historical Analysis": "bg-orange-100 text-orange-800",
   "Educational Resource": "bg-yellow-100 text-yellow-800",
-  "Military History": "bg-red-100 text-red-800",
   "Reference Work": "bg-gray-100 text-gray-800",
-  "Official Government Source": "bg-blue-100 text-blue-800",
-  "Academic Paper": "bg-indigo-100 text-indigo-800",
-  "Academic Research": "bg-purple-100 text-purple-800"
+  "Official Government Source": "bg-blue-100 text-blue-800"
+};
+
+const reliabilityColors = {
+  "High": "bg-green-100 text-green-800 border-green-200",
+  "Medium": "bg-yellow-100 text-yellow-800 border-yellow-200", 
+  "Low": "bg-red-100 text-red-800 border-red-200"
 };
 
 export default function SourcesPage({ isOpen, onClose }: SourcesPageProps) {
@@ -56,26 +59,20 @@ export default function SourcesPage({ isOpen, onClose }: SourcesPageProps) {
     }
   };
 
-  // Filter and sort sources based on current filters
   const getFilteredSources = (): Source[] => {
     let filtered = sourcesDatabase;
 
-    // Apply search
     if (searchQuery.trim()) {
       filtered = searchSources(searchQuery);
     }
 
-    // Apply type filter
     if (selectedType !== 'all') {
       filtered = filtered.filter(source => source.type === selectedType);
     }
 
-    // Apply tag filter
     if (selectedTag !== 'all') {
       filtered = filtered.filter(source => source.tags.includes(selectedTag));
     }
-
-    // Apply sorting
     return filtered.sort((a, b) => {
       switch (sortBy) {
         case 'title':
@@ -110,7 +107,7 @@ export default function SourcesPage({ isOpen, onClose }: SourcesPageProps) {
           exit="exit"
           className="relative w-full max-w-6xl max-h-[90vh] bg-white rounded-2xl shadow-2xl overflow-hidden"
         >
-          {/* Header */}
+          
           <div className="bg-gradient-to-r from-museum-navy to-museum-navy-dark text-white p-6">
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-3">
@@ -132,9 +129,9 @@ export default function SourcesPage({ isOpen, onClose }: SourcesPageProps) {
               </motion.button>
             </div>
 
-            {/* Search and Filters */}
+            
             <div className="mt-6 space-y-4">
-              {/* Search Bar */}
+              
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/60" />
                 <input
@@ -146,7 +143,7 @@ export default function SourcesPage({ isOpen, onClose }: SourcesPageProps) {
                 />
               </div>
 
-              {/* Filter Toggle */}
+              
               <div className="flex items-center justify-between">
                 <div className="text-sm text-white/80">
                   Showing {filteredSources.length} of {sourcesDatabase.length} sources
@@ -162,7 +159,7 @@ export default function SourcesPage({ isOpen, onClose }: SourcesPageProps) {
                 </motion.button>
               </div>
 
-              {/* Expandable Filters */}
+              
               <AnimatePresence>
                 {showFilters && (
                   <motion.div
@@ -171,7 +168,7 @@ export default function SourcesPage({ isOpen, onClose }: SourcesPageProps) {
                     exit={{ opacity: 0, height: 0 }}
                     className="grid grid-cols-1 md:grid-cols-3 gap-4 overflow-hidden"
                   >
-                    {/* Type Filter */}
+                    
                     <div>
                       <label className="block text-sm font-medium text-white/90 mb-2">Source Type</label>
                       <select
@@ -186,7 +183,7 @@ export default function SourcesPage({ isOpen, onClose }: SourcesPageProps) {
                       </select>
                     </div>
 
-                    {/* Tag Filter */}
+                    
                     <div>
                       <label className="block text-sm font-medium text-white/90 mb-2">Topic Tag</label>
                       <select
@@ -203,7 +200,7 @@ export default function SourcesPage({ isOpen, onClose }: SourcesPageProps) {
                       </select>
                     </div>
 
-                    {/* Sort Filter */}
+                    
                     <div>
                       <label className="block text-sm font-medium text-white/90 mb-2">Sort By</label>
                       <select
@@ -222,10 +219,10 @@ export default function SourcesPage({ isOpen, onClose }: SourcesPageProps) {
             </div>
           </div>
 
-          {/* Content */}
+          
           <div className="p-6 overflow-y-auto max-h-[calc(90vh-300px)]">
             <div className="space-y-8">
-              {/* Primary Sources */}
+              
               {primarySources.length > 0 && (
                 <motion.section
                   initial={{ opacity: 0, y: 20 }}
@@ -246,7 +243,7 @@ export default function SourcesPage({ isOpen, onClose }: SourcesPageProps) {
                 </motion.section>
               )}
 
-              {/* Secondary Sources */}
+              
               {secondarySources.length > 0 && (
                 <motion.section
                   initial={{ opacity: 0, y: 20 }}
@@ -267,7 +264,7 @@ export default function SourcesPage({ isOpen, onClose }: SourcesPageProps) {
                 </motion.section>
               )}
 
-              {/* No Results */}
+              
               {filteredSources.length === 0 && (
                 <motion.div
                   initial={{ opacity: 0 }}
@@ -285,7 +282,6 @@ export default function SourcesPage({ isOpen, onClose }: SourcesPageProps) {
               )}
             </div>
 
-            {/* Research Methodology Note */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -298,8 +294,8 @@ export default function SourcesPage({ isOpen, onClose }: SourcesPageProps) {
                   <h3 className="font-display text-lg font-semibold text-museum-ink mb-2">
                     Research Methodology
                   </h3>
-                  <p className="text-museum-sepia text-sm leading-relaxed mb-3">
-                    Extensive research was conducted using the <a 
+                  <p className="text-museum-sepia text-sm leading-relaxed">
+                    I did way too much research using the <a 
                       href="https://founders.archives.gov/?q=%20Author%3A%22Washington%2C%20George%22" 
                       target="_blank" 
                       rel="noopener noreferrer"
@@ -307,14 +303,13 @@ export default function SourcesPage({ isOpen, onClose }: SourcesPageProps) {
                     >
                       Founders Online database
                     </a>, which contains over 31,000 searchable documents authored by George Washington. 
-                    This National Archives resource required extensive scrolling and document review to locate 
-                    appropriate quotations and verify historical context.
+                    This is my project for HIST 2111, and I hope my time doesn't go unnoticed. I explored 
+                    both his achievements and contradictions as a man of his time.
                   </p>
                 </div>
               </div>
             </motion.div>
 
-            {/* Source Reliability Note */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -330,43 +325,21 @@ export default function SourcesPage({ isOpen, onClose }: SourcesPageProps) {
                     Source Reliability Note
                   </h3>
                   <p className="text-museum-sepia text-sm leading-relaxed">
-                    While this archive strives for historical accuracy, some sources may vary in reliability. 
-                    Wikipedia entries and general websites should be cross-referenced with academic sources. 
+                    This is a student project for HIST 2111, so some sources may vary in reliability. 
+                    Wikipedia and general websites should be cross-referenced with more authoritative sources. 
                     Primary sources from the National Archives and established institutions like Mount Vernon 
-                    are generally most reliable. Always verify information for academic work.
+                    are generally most reliable. Always double-check information for your own research.
                   </p>
                 </div>
               </div>
             </motion.div>
 
-            {/* Citation Note */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1.0 }}
-              className="bg-gradient-to-r from-museum-cream to-museum-cream-dark p-6 rounded-xl border border-museum-gold/20 mt-4"
-            >
-              <div className="flex items-start space-x-3">
-                <Archive className="w-5 h-5 text-museum-navy mt-1 flex-shrink-0" />
-                <div>
-                  <h3 className="font-display text-lg font-semibold text-museum-ink mb-2">
-                    Academic Standards
-                  </h3>
-                  <p className="text-museum-sepia text-sm leading-relaxed">
-                    WashingtonArchive.org follows academic standards for historical research and presentation. 
-                    All quotations and facts are sourced from the primary and secondary materials listed above. 
-                    When citing this resource, please reference both this archive and the original source materials.
-                  </p>
-                </div>
-              </div>
-            </motion.div>
           </div>
 
-          {/* Footer */}
           <div className="px-8 py-4 bg-museum-parchment border-t border-museum-navy/10">
             <div className="flex items-center justify-between text-sm text-museum-sepia">
               <span>Total Sources: {sourcesDatabase.length}</span>
-              <span>WashingtonArchive.org • HIST 2111</span>
+              <span>Created for HIST 2111 to show off George Washington. I did so much research because I thought if I was making a website, I should make it portfolio worthy</span>
             </div>
           </div>
         </motion.div>
@@ -375,7 +348,6 @@ export default function SourcesPage({ isOpen, onClose }: SourcesPageProps) {
   );
 }
 
-// Source Card Component
 function SourceCard({ source, index }: { source: Source; index: number }) {
   return (
     <motion.div
@@ -401,6 +373,12 @@ function SourceCard({ source, index }: { source: Source; index: number }) {
         </div>
         <div className="flex items-center space-x-2 ml-4 flex-shrink-0">
           <span className={cn(
+            "px-2 py-1 rounded-full text-xs font-medium border",
+            reliabilityColors[source.reliability]
+          )}>
+            {source.reliability} Reliability
+          </span>
+          <span className={cn(
             "px-2 py-1 rounded-full text-xs font-medium",
             sourceTypeColors[source.type] || "bg-gray-100 text-gray-800"
           )}>
@@ -414,7 +392,7 @@ function SourceCard({ source, index }: { source: Source; index: number }) {
         {source.description}
       </p>
 
-      {/* Tags */}
+      
       {source.tags.length > 0 && (
         <div className="flex flex-wrap gap-1">
           {source.tags.slice(0, 3).map((tag) => (

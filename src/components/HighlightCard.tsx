@@ -14,7 +14,7 @@ export default function HighlightCard({ highlight }: HighlightCardProps) {
       hover-lift glow-border
     ">
       <div className="space-y-4">
-        {/* Icon placeholder - you can add actual icons here */}
+        
         <div className="w-12 h-12 bg-gradient-to-br from-museum-brown to-museum-brown-light 
                         rounded-full flex items-center justify-center
                         group-hover:scale-110 transition-transform duration-300">
@@ -33,7 +33,7 @@ export default function HighlightCard({ highlight }: HighlightCardProps) {
         </p>
       </div>
       
-      {/* Decorative element */}
+      
       <div className="mt-4 w-full h-1 bg-gradient-to-r from-museum-brown/20 to-transparent 
                       group-hover:from-museum-brown/40 transition-all duration-300 rounded-full">
       </div>

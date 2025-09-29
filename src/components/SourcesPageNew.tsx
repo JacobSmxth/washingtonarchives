@@ -54,21 +54,17 @@ export default function SourcesPage({ isOpen, onClose }: SourcesPageProps) {
     }
   };
 
-  // Filter sources based on current filters
   const getFilteredSources = (): Source[] => {
     let filtered = sourcesDatabase;
 
-    // Apply search
     if (searchQuery.trim()) {
       filtered = searchSources(searchQuery);
     }
 
-    // Apply type filter
     if (selectedType !== 'all') {
       filtered = filtered.filter(source => source.type === selectedType);
     }
 
-    // Apply tag filter
     if (selectedTag !== 'all') {
       filtered = filtered.filter(source => source.tags.includes(selectedTag));
     }
@@ -95,7 +91,7 @@ export default function SourcesPage({ isOpen, onClose }: SourcesPageProps) {
           exit="exit"
           className="relative w-full max-w-6xl max-h-[90vh] bg-white rounded-2xl shadow-2xl overflow-hidden"
         >
-          {/* Header */}
+          
           <div className="bg-gradient-to-r from-museum-navy to-museum-navy-dark text-white p-6">
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-3">
@@ -117,9 +113,9 @@ export default function SourcesPage({ isOpen, onClose }: SourcesPageProps) {
               </motion.button>
             </div>
 
-            {/* Search and Filters */}
+            
             <div className="mt-6 space-y-4">
-              {/* Search Bar */}
+              
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/60" />
                 <input
@@ -131,7 +127,7 @@ export default function SourcesPage({ isOpen, onClose }: SourcesPageProps) {
                 />
               </div>
 
-              {/* Filter Toggle */}
+              
               <div className="flex items-center justify-between">
                 <div className="text-sm text-white/80">
                   Showing {filteredSources.length} of {sourcesDatabase.length} sources
@@ -147,7 +143,7 @@ export default function SourcesPage({ isOpen, onClose }: SourcesPageProps) {
                 </motion.button>
               </div>
 
-              {/* Expandable Filters */}
+              
               <AnimatePresence>
                 {showFilters && (
                   <motion.div
@@ -156,7 +152,7 @@ export default function SourcesPage({ isOpen, onClose }: SourcesPageProps) {
                     exit={{ opacity: 0, height: 0 }}
                     className="grid grid-cols-1 md:grid-cols-2 gap-4 overflow-hidden"
                   >
-                    {/* Type Filter */}
+                    
                     <div>
                       <label className="block text-sm font-medium text-white/90 mb-2">Source Type</label>
                       <select
@@ -171,7 +167,7 @@ export default function SourcesPage({ isOpen, onClose }: SourcesPageProps) {
                       </select>
                     </div>
 
-                    {/* Tag Filter */}
+                    
                     <div>
                       <label className="block text-sm font-medium text-white/90 mb-2">Topic Tag</label>
                       <select
@@ -193,10 +189,10 @@ export default function SourcesPage({ isOpen, onClose }: SourcesPageProps) {
             </div>
           </div>
 
-          {/* Content */}
+          
           <div className="p-6 overflow-y-auto max-h-[calc(90vh-300px)]">
             <div className="space-y-8">
-              {/* Primary Sources */}
+              
               {primarySources.length > 0 && (
                 <motion.section
                   initial={{ opacity: 0, y: 20 }}
@@ -217,7 +213,7 @@ export default function SourcesPage({ isOpen, onClose }: SourcesPageProps) {
                 </motion.section>
               )}
 
-              {/* Secondary Sources */}
+              
               {secondarySources.length > 0 && (
                 <motion.section
                   initial={{ opacity: 0, y: 20 }}
@@ -238,7 +234,7 @@ export default function SourcesPage({ isOpen, onClose }: SourcesPageProps) {
                 </motion.section>
               )}
 
-              {/* No Results */}
+              
               {filteredSources.length === 0 && (
                 <motion.div
                   initial={{ opacity: 0 }}
@@ -256,7 +252,7 @@ export default function SourcesPage({ isOpen, onClose }: SourcesPageProps) {
               )}
             </div>
 
-            {/* Research Methodology Note */}
+            
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -285,7 +281,7 @@ export default function SourcesPage({ isOpen, onClose }: SourcesPageProps) {
               </div>
             </motion.div>
 
-            {/* Source Reliability Note */}
+            
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -310,7 +306,7 @@ export default function SourcesPage({ isOpen, onClose }: SourcesPageProps) {
               </div>
             </motion.div>
 
-            {/* Citation Note */}
+            
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -333,7 +329,7 @@ export default function SourcesPage({ isOpen, onClose }: SourcesPageProps) {
             </motion.div>
           </div>
 
-          {/* Footer */}
+          
           <div className="px-8 py-4 bg-museum-parchment border-t border-museum-navy/10">
             <div className="flex items-center justify-between text-sm text-museum-sepia">
               <span>Total Sources: {sourcesDatabase.length}</span>
@@ -346,7 +342,6 @@ export default function SourcesPage({ isOpen, onClose }: SourcesPageProps) {
   );
 }
 
-// Source Card Component
 function SourceCard({ source, index }: { source: Source; index: number }) {
   return (
     <motion.div
@@ -385,7 +380,7 @@ function SourceCard({ source, index }: { source: Source; index: number }) {
         {source.description}
       </p>
 
-      {/* Tags */}
+      
       {source.tags.length > 0 && (
         <div className="flex flex-wrap gap-1">
           {source.tags.slice(0, 3).map((tag) => (

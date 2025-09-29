@@ -47,11 +47,11 @@ export default function Section({ section, isActive }: SectionProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="bg-white rounded-museum-lg shadow-museum overflow-hidden">
             
-            {/* Home Section - Special Layout */}
+            
             {section.id === 'home' && (
               <>
                 <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 p-8 lg:p-12 items-center">
-                  {/* Image */}
+                  
                   {section.content.images && section.content.images[0] && (
                     <div className="order-2 lg:order-1 text-center">
                       <img
@@ -67,7 +67,7 @@ export default function Section({ section, isActive }: SectionProps) {
                     </div>
                   )}
                   
-                  {/* Text Content */}
+                  
                   <div className="order-1 lg:order-2 space-y-6">
                     <h2 className="font-display text-4xl lg:text-5xl font-bold text-museum-brown leading-tight">
                       {section.title}
@@ -83,7 +83,7 @@ export default function Section({ section, isActive }: SectionProps) {
                   </div>
                 </div>
 
-                {/* Highlights Grid */}
+                
                 {section.content.highlights && (
                   <div className="bg-gradient-to-br from-museum-quote-bg to-museum-quote-border p-8 lg:p-12">
                     <h3 className="font-display text-2xl lg:text-3xl font-semibold text-museum-brown text-center mb-8">
@@ -99,10 +99,10 @@ export default function Section({ section, isActive }: SectionProps) {
               </>
             )}
 
-            {/* Other Sections - Standard Layout */}
+            
             {section.id !== 'home' && (
               <div className="grid lg:grid-cols-3 gap-8 lg:gap-12 p-8 lg:p-12">
-                {/* Main Content */}
+                
                 <div className="lg:col-span-2 space-y-8">
                   <h2 className="font-display text-3xl lg:text-4xl font-bold text-museum-brown leading-tight">
                     {section.title}
@@ -114,7 +114,7 @@ export default function Section({ section, isActive }: SectionProps) {
                     </p>
                   )}
 
-                  {/* Subsections */}
+                  
                   {section.content.subsections && (
                     <div className="space-y-6">
                       {section.content.subsections.map((subsection) => (
@@ -130,13 +130,13 @@ export default function Section({ section, isActive }: SectionProps) {
                     </div>
                   )}
 
-                  {/* Quote */}
+                  
                   {section.content.quote && (
                     <QuoteBlock quote={section.content.quote} />
                   )}
                 </div>
 
-                {/* Sidebar with Images */}
+                
                 <div className="space-y-6">
                   {section.content.images?.map((image) => (
                     <div key={image.id} className="text-center space-y-4">
@@ -158,7 +158,7 @@ export default function Section({ section, isActive }: SectionProps) {
         </div>
       </section>
 
-      {/* Image Modal */}
+      
       {selectedImage && (
         <ImageModal
           src={selectedImage.src}
