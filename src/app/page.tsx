@@ -1,103 +1,157 @@
-import Image from "next/image";
+'use client';
+
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { sections } from '@/data/sections';
+import EnhancedNavigation from '@/components/EnhancedNavigation';
+import EnhancedSection from '@/components/EnhancedSection';
+import EnhancedLoadingScreen from '@/components/EnhancedLoadingScreen';
+import AttributionButton from '@/components/AttributionButton';
 
 export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const [activeSection, setActiveSection] = useState('home');
+  const [isLoading, setIsLoading] = useState(true);
+  const [mounted, setMounted] = useState(false);
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!mounted) return;
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      const currentIndex = sections.findIndex(section => section.id === activeSection);
+      
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+        e.preventDefault();
+        if (currentIndex < sections.length - 1) {
+          setActiveSection(sections[currentIndex + 1].id);
+        }
+      } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+        e.preventDefault();
+        if (currentIndex > 0) {
+          setActiveSection(sections[currentIndex - 1].id);
+        }
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [activeSection, mounted]);
+
+  // Ensure we start at the top of the page
+  useEffect(() => {
+    if (!mounted) return;
+    window.scrollTo(0, 0);
+  }, [mounted]);
+
+  const handleSectionChange = (sectionId: string) => {
+    setActiveSection(sectionId);
+    // Always ensure we're at the top of the page
+    window.scrollTo(0, 0);
+  };
+
+  const handleLoadingComplete = () => {
+    setIsLoading(false);
+  };
+
+  if (!mounted) {
+    return null; // Prevent hydration mismatch
+  }
+
+  if (isLoading) {
+    return <EnhancedLoadingScreen onComplete={handleLoadingComplete} />;
+  }
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-museum-parchment via-white to-warm-50">
+      <EnhancedNavigation 
+        activeSection={activeSection} 
+        onSectionChange={handleSectionChange} 
+      />
+      
+      <main className="relative overflow-hidden pt-20">
+        {sections.map((section, index) => (
+          <EnhancedSection
+            key={section.id}
+            section={section}
+            isActive={activeSection === section.id}
+            sectionIndex={index}
+          />
+        ))}
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+
+      <motion.footer 
+        className="relative bg-gradient-to-r from-museum-ink via-museum-ink-light to-museum-ink text-white py-16 overflow-hidden"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.5, duration: 0.8 }}
+      >
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div 
+            className="absolute inset-0 bg-repeat"
+            style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23f59e0b' fill-opacity='0.4'%3E%3Cpath d='M20 20c0-11.046-8.954-20-20-20v20h20z'/%3E%3C/g%3E%3C/svg%3E")`,
+            }}
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        </div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.7, duration: 0.6 }}
+            className="space-y-4"
+          >
+            <h3 className="font-display text-2xl lg:text-3xl font-bold text-museum-gold">
+              Thank You for Visiting WashingtonArchive.org
+            </h3>
+            <p className="font-body text-lg max-w-2xl mx-auto opacity-90">
+              © 2025 WashingtonArchive.org • HIST 2111 Academic Research Project
+            </p>
+          </motion.div>
+          
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.9, duration: 0.6 }}
+            className="max-w-4xl mx-auto"
+          >
+            <p className="font-body text-base opacity-80 italic leading-relaxed">
+              This digital archive presents Washington's life through primary sources and historical analysis, 
+              exploring both his achievements and contradictions as a man of his time. Created for HIST 2111 
+              to demonstrate rigorous historical research and digital presentation methods.
+            </p>
+          </motion.div>
+          
+          <motion.div 
+            className="pt-8 border-t border-museum-gold/30"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.1, duration: 0.6 }}
+          >
+            <div className="flex flex-wrap justify-center items-center gap-6 text-sm opacity-70">
+              <span className="flex items-center gap-2">
+                <span className="w-2 h-2 bg-museum-gold rounded-full"></span>
+                Navigate with arrow keys
+              </span>
+              <span className="flex items-center gap-2">
+                <span className="w-2 h-2 bg-museum-gold rounded-full"></span>
+                Click images to enlarge
+              </span>
+              <span className="flex items-center gap-2">
+                <span className="w-2 h-2 bg-museum-gold rounded-full"></span>
+                Experience history interactively
+              </span>
+            </div>
+          </motion.div>
+        </div>
+      </motion.footer>
+      
+      {/* Attribution Button */}
+      <AttributionButton />
     </div>
   );
 }
