@@ -12,7 +12,7 @@ interface NavigationProps {
   onSectionChange: (sectionId: string) => void;
 }
 
-// organize navigation items into themed dropdown groups
+// organized navigation items into themed dropdown groups
 // 0-3: home, youth, early military
 // 3-5: revolutionary war, constitutional convention
 // 5-8: presidency, farewell address, legacy

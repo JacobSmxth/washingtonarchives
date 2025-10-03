@@ -38,8 +38,8 @@ export function useIntersectionObserver(
         entries.forEach(callback);
       },
       {
-        threshold: 0.1, // trigger when 10% of element is visible
-        rootMargin: '50px', // start observing 50px before element enters viewport
+        threshold: 0.1, // trigger when a sliver of element is visible
+        rootMargin: '50px', // start observing right before element enters viewport
         ...options,
       }
     );
