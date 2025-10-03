@@ -1,8 +1,8 @@
 'use client';
 
 import { useRef, useState } from 'react';
-import { motion } from 'framer-motion';
-import { ExternalLink, Award, Archive, ChevronRight } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ExternalLink, Award, Archive, ChevronRight, ChevronDown, ChevronUp } from 'lucide-react';
 import { Section as SectionType, Highlight } from '@/types';
 import { getSourcesBySection } from '@/data/sources';
 import { cn } from '@/lib/utils';
@@ -23,6 +23,7 @@ export default function EnhancedSection({ section, isActive, sectionIndex }: Sec
   const [selectedImage, setSelectedImage] = useState<{src: string, alt: string} | null>(null);
   const [selectedHighlight, setSelectedHighlight] = useState<Highlight | null>(null);
   const [exploredHighlights, setExploredHighlights] = useState<Set<string>>(new Set());
+  const [isSourcesExpanded, setIsSourcesExpanded] = useState(false);
   
 
   const handleHighlightClick = (highlight: Highlight) => {
@@ -117,7 +118,7 @@ export default function EnhancedSection({ section, isActive, sectionIndex }: Sec
                   
                   {section.content.images?.[0] && (
                     <motion.div 
-                      className="relative order-2 lg:order-1"
+                      className="relative order-1 lg:order-1"
                       whileHover={{ scale: 1.02 }}
                       transition={{ duration: 0.3 }}
                     >
@@ -161,7 +162,7 @@ export default function EnhancedSection({ section, isActive, sectionIndex }: Sec
                   
                   
                   <motion.div 
-                    className="order-1 lg:order-2 space-y-8"
+                    className="order-2 lg:order-2 space-y-8"
                     variants={itemVariants}
                   >
                     <div className="space-y-4">
@@ -286,7 +287,7 @@ export default function EnhancedSection({ section, isActive, sectionIndex }: Sec
                 <div className="grid lg:grid-cols-3 gap-12 lg:gap-16">
                   
                   <motion.div 
-                    className="lg:col-span-2 space-y-12"
+                    className="lg:col-span-2 space-y-12 order-2 lg:order-1"
                     variants={itemVariants}
                   >
                     
@@ -408,7 +409,7 @@ export default function EnhancedSection({ section, isActive, sectionIndex }: Sec
 
                   
                   <motion.div 
-                    className="space-y-8"
+                    className="space-y-8 order-1 lg:order-2"
                     variants={itemVariants}
                   >
                         {section.content.images?.map((image) => (
@@ -465,36 +466,58 @@ export default function EnhancedSection({ section, isActive, sectionIndex }: Sec
                       return sectionSources.length > 0 && (
                         <motion.div
                           variants={itemVariants}
-                          className="bg-white/60 backdrop-blur-sm rounded-2xl p-6 shadow-museum border border-museum-navy/10"
+                          className="bg-white/60 backdrop-blur-sm rounded-2xl shadow-museum border border-museum-navy/10 overflow-hidden"
                         >
-                          <h3 className="font-display text-lg font-semibold text-museum-ink mb-4 flex items-center">
-                            <Archive className="w-5 h-5 mr-2 text-museum-navy" />
-                            Sources Used
-                          </h3>
-                          <div className="space-y-3">
-                            {sectionSources.map((source) => (
-                              <motion.a
-                                key={source.id}
-                                href={source.url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="block p-3 rounded-lg bg-white/50 hover:bg-white/80 transition-colors group"
-                                whileHover={{ scale: 1.02 }}
+                          <button
+                            onClick={() => setIsSourcesExpanded(!isSourcesExpanded)}
+                            className="w-full p-6 flex items-center justify-between hover:bg-white/50 transition-colors"
+                          >
+                            <h3 className="font-display text-lg font-semibold text-museum-ink flex items-center">
+                              <Archive className="w-5 h-5 mr-2 text-museum-navy" />
+                              Sources Used ({sectionSources.length})
+                            </h3>
+                            {isSourcesExpanded ? (
+                              <ChevronUp className="w-5 h-5 text-museum-navy" />
+                            ) : (
+                              <ChevronDown className="w-5 h-5 text-museum-navy" />
+                            )}
+                          </button>
+                          <AnimatePresence>
+                            {isSourcesExpanded && (
+                              <motion.div
+                                initial={{ height: 0, opacity: 0 }}
+                                animate={{ height: 'auto', opacity: 1 }}
+                                exit={{ height: 0, opacity: 0 }}
+                                transition={{ duration: 0.3 }}
+                                className="overflow-hidden"
                               >
-                                <div className="flex items-start justify-between">
-                                  <div className="flex-1">
-                                    <p className="font-medium text-museum-ink text-sm leading-tight group-hover:text-museum-navy">
-                                      {source.title}
-                                    </p>
-                                    <p className="text-xs text-museum-sepia mt-1">
-                                      {source.type}
-                                    </p>
-                                  </div>
-                                  <ChevronRight className="w-4 h-4 text-museum-sepia group-hover:text-museum-navy ml-2 flex-shrink-0" />
+                                <div className="px-6 pb-6 space-y-3">
+                                  {sectionSources.map((source) => (
+                                    <motion.a
+                                      key={source.id}
+                                      href={source.url}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      className="block p-3 rounded-lg bg-white/50 hover:bg-white/80 transition-colors group"
+                                      whileHover={{ scale: 1.02 }}
+                                    >
+                                      <div className="flex items-start justify-between">
+                                        <div className="flex-1">
+                                          <p className="font-medium text-museum-ink text-sm leading-tight group-hover:text-museum-navy break-words">
+                                            {source.title}
+                                          </p>
+                                          <p className="text-xs text-museum-sepia mt-1">
+                                            {source.type}
+                                          </p>
+                                        </div>
+                                        <ChevronRight className="w-4 h-4 text-museum-sepia group-hover:text-museum-navy ml-2 flex-shrink-0" />
+                                      </div>
+                                    </motion.a>
+                                  ))}
                                 </div>
-                              </motion.a>
-                            ))}
-                          </div>
+                              </motion.div>
+                            )}
+                          </AnimatePresence>
                         </motion.div>
                       );
                     })()}

@@ -101,13 +101,13 @@ export default function SourcesPage({ isOpen, onClose }: SourcesPageProps) {
 
   return (
     <AnimatePresence>
-      <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
+      <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm overflow-y-auto">
         <motion.div
           variants={pageVariants}
           initial="hidden"
           animate="visible"
           exit="exit"
-          className="relative w-full max-w-6xl max-h-[90vh] bg-white rounded-2xl shadow-2xl overflow-hidden"
+          className="relative w-full max-w-6xl max-h-[90vh] bg-white rounded-2xl shadow-2xl overflow-hidden overflow-x-hidden"
         >
           
           <div className="bg-gradient-to-r from-museum-navy to-museum-navy-dark text-white p-6">
@@ -222,7 +222,7 @@ export default function SourcesPage({ isOpen, onClose }: SourcesPageProps) {
           </div>
 
           
-          <div className="p-6 overflow-y-auto max-h-[calc(90vh-300px)]">
+          <div className="p-6 overflow-y-auto overflow-x-hidden max-h-[calc(90vh-300px)]">
             <div className="space-y-8">
               
               {primarySources.length > 0 && (
@@ -356,29 +356,30 @@ function SourceCard({ source, index }: { source: Source; index: number }) {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.05 }}
-      className="bg-white rounded-xl p-6 shadow-museum border border-museum-navy/10 hover:shadow-museum-hover transition-all group"
+      className="bg-white rounded-xl p-6 shadow-museum border border-museum-navy/10 hover:shadow-museum-hover transition-all group overflow-hidden"
     >
-      <div className="flex items-start justify-between mb-3">
-        <div className="flex-1">
+      <div className="mb-3 space-y-3">
+        <div className="w-full">
           <motion.a
             href={source.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="font-display text-lg font-semibold text-museum-ink group-hover:text-museum-navy transition-colors line-clamp-2"
+            className="font-display text-lg font-semibold text-museum-ink group-hover:text-museum-navy transition-colors break-words flex items-start gap-2"
             whileHover={{ scale: 1.01 }}
           >
-            {source.title}
+            <span className="flex-1">{source.title}</span>
+            <ExternalLink className="w-4 h-4 text-museum-sepia group-hover:text-museum-navy flex-shrink-0 mt-1" />
           </motion.a>
-          <p className="text-sm text-museum-navy font-medium mt-1">
+          <p className="text-sm text-museum-navy font-medium mt-1 break-words">
             {source.source}
           </p>
         </div>
-        <div className="flex items-center space-x-2 ml-4 flex-shrink-0">
+        <div className="flex items-center flex-wrap gap-2">
           <span className={cn(
             "px-2 py-1 rounded-full text-xs font-medium border",
             reliabilityColors[source.reliability]
           )}>
-            {source.reliability} Reliability
+            {source.reliability} <span className="hidden sm:inline">Reliability</span>
           </span>
           <span className={cn(
             "px-2 py-1 rounded-full text-xs font-medium",
@@ -386,7 +387,6 @@ function SourceCard({ source, index }: { source: Source; index: number }) {
           )}>
             {source.type}
           </span>
-          <ExternalLink className="w-4 h-4 text-museum-sepia group-hover:text-museum-navy transition-colors" />
         </div>
       </div>
       

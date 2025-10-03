@@ -178,7 +178,8 @@ export default function EnhancedImageModal({ src, alt, onClose }: ImageModalProp
             transition={{ delay: 0.8, duration: 0.4 }}
           >
             <p className="text-white/60 text-sm font-body">
-              Press <kbd className="px-2 py-1 bg-white/10 rounded">Esc</kbd> to close
+              <span className="hidden sm:inline">Press <kbd className="px-2 py-1 bg-white/10 rounded">Esc</kbd> or </span>
+              <span className="sm:hidden">Tap </span>click the <kbd className="px-2 py-1 bg-white/10 rounded">X</kbd> to close
             </p>
           </motion.div>
         </motion.div>
