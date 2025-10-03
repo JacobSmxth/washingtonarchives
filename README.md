@@ -6,7 +6,7 @@ A comprehensive digital museum exploring the life, leadership, and legacy of Geo
 
 This is an academic project for HIST 2111 that explores George Washington's complex legacy as a founding father, military leader, and first president. I did way too much research because if I was making a website, I wanted it to be portfolio worthy.
 
-Built with modern web technologies (React 19, Next.js 14, and Tailwind CSS) to create a museum-quality experience that brings history to life through interactive storytelling.
+Built with modern web technologies to create a museum-quality experience that brings history to life through interactive storytelling.
 
 ## 🎯 Project Features
 
