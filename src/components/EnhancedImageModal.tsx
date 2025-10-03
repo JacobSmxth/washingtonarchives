@@ -37,6 +37,7 @@ export default function EnhancedImageModal({ src, alt, onClose }: ImageModalProp
     exit: { opacity: 0 }
   };
 
+  // image modal flips in with 3D rotation effect
   const modalVariants = {
     hidden: { 
       opacity: 0, 

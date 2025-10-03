@@ -28,6 +28,7 @@ const categoryColors = {
 export default function HighlightDetailModal({ highlight, isOpen, onClose }: HighlightDetailModalProps) {
   if (!highlight) return null;
 
+  // modal pops up with spring animation when opened
   const modalVariants = {
     hidden: { 
       opacity: 0,

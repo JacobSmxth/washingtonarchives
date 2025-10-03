@@ -20,6 +20,8 @@ export default function Home() {
   useEffect(() => {
     if (!mounted) return;
 
+    // keyboard navigation between sections
+    // right/down go forward, left/up go backward
     const handleKeyDown = (e: KeyboardEvent) => {
       const currentIndex = sections.findIndex(section => section.id === activeSection);
       

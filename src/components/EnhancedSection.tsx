@@ -30,6 +30,7 @@ export default function EnhancedSection({ section, isActive, sectionIndex }: Sec
     setExploredHighlights(prev => new Set([...prev, highlight.id]));
   };
 
+  // slide up and fade in when section becomes active, stagger child animations
   const containerVariants = {
     hidden: { 
       opacity: 0,
@@ -43,7 +44,7 @@ export default function EnhancedSection({ section, isActive, sectionIndex }: Sec
       transition: {
         duration: 0.8,
         ease: [0.25, 0.25, 0, 1],
-        staggerChildren: 0.15,
+        staggerChildren: 0.15, // delay between each child animation
         delayChildren: 0.1,
       },
     },

@@ -12,6 +12,7 @@ interface HighlightCardProps {
   isExplored?: boolean;
 }
 
+// map highlight IDs to their corresponding lucide icons
 const iconMap = {
   'revolutionary-leadership': Sword,
   'constitutional-vision': Landmark,

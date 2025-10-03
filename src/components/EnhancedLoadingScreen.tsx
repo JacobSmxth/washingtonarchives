@@ -22,6 +22,7 @@ export default function EnhancedLoadingScreen({ onComplete }: LoadingScreenProps
   const [isComplete, setIsComplete] = useState(false);
 
   useEffect(() => {
+    // increment by 2 every 60ms = 3 seconds total to reach 100%
     const progressTimer = setInterval(() => {
       setProgress(prev => {
         if (prev >= 100) {
@@ -34,6 +35,7 @@ export default function EnhancedLoadingScreen({ onComplete }: LoadingScreenProps
       });
     }, 60);
 
+    // rotate through facts every 2 seconds
     const factTimer = setInterval(() => {
       setCurrentFact(prev => (prev + 1) % loadingFacts.length);
     }, 2000);
@@ -44,6 +46,7 @@ export default function EnhancedLoadingScreen({ onComplete }: LoadingScreenProps
     };
   }, [onComplete]);
 
+  // fade out and zoom in slightly when loading completes
   const containerVariants = {
     initial: { opacity: 1 },
     exit: {

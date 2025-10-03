@@ -59,6 +59,7 @@ export default function SourcesPage({ isOpen, onClose }: SourcesPageProps) {
     }
   };
 
+  // filter sources by search query, type, and tag
   const getFilteredSources = (): Source[] => {
     let filtered = sourcesDatabase;
 
@@ -73,6 +74,7 @@ export default function SourcesPage({ isOpen, onClose }: SourcesPageProps) {
     if (selectedTag !== 'all') {
       filtered = filtered.filter(source => source.tags.includes(selectedTag));
     }
+    // sort sources alphabetically by title, type, or by reliability (high to low)
     return filtered.sort((a, b) => {
       switch (sortBy) {
         case 'title':

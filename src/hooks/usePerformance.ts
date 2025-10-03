@@ -10,6 +10,7 @@ export function usePerformanceMonitoring() {
       }
     }
     const preloadCriticalImages = () => {
+      // preload the main hero image to avoid loading delay on home page
       const criticalImages = [
         'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Gilbert_Stuart_Williamstown_Portrait_of_George_Washington.jpg/800px-Gilbert_Stuart_Williamstown_Portrait_of_George_Washington.jpg'
       ];
@@ -37,8 +38,8 @@ export function useIntersectionObserver(
         entries.forEach(callback);
       },
       {
-        threshold: 0.1,
-        rootMargin: '50px',
+        threshold: 0.1, // trigger when 10% of element is visible
+        rootMargin: '50px', // start observing 50px before element enters viewport
         ...options,
       }
     );
