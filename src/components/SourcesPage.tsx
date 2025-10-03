@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ExternalLink, BookOpen, Archive, Filter, Search, Tag } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { sourcesDatabase, getUniqueTypes, getUniqueTags, getSourcesByType, getSourcesByTag, searchSources, type Source } from '@/data/sources';
+import { sourcesDatabase, getUniqueTypes, getUniqueTags, searchSources, type Source } from '@/data/sources';
 
 interface SourcesPageProps {
   isOpen: boolean;
@@ -305,7 +305,7 @@ export default function SourcesPage({ isOpen, onClose }: SourcesPageProps) {
                     >
                       Founders Online database
                     </a>, which contains over 31,000 searchable documents authored by George Washington. 
-                    This is my project for HIST 2111, and I hope my time doesn't go unnoticed. I explored 
+                    This is my project for HIST 2111, and I hope my time doesn&apos;t go unnoticed. I explored 
                     both his achievements and contradictions as a man of his time.
                   </p>
                 </div>

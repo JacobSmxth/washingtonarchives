@@ -3,7 +3,6 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { Github, ExternalLink, ChevronUp, ChevronDown } from 'lucide-react';
 import { useState } from 'react';
-import { cn } from '@/lib/utils';
 
 export default function AttributionButton() {
   const [isCollapsed, setIsCollapsed] = useState(false);

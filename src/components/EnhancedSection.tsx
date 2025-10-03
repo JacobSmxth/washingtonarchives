@@ -43,7 +43,7 @@ export default function EnhancedSection({ section, isActive, sectionIndex }: Sec
       scale: 1,
       transition: {
         duration: 0.8,
-        ease: [0.25, 0.25, 0, 1],
+        ease: [0.25, 0.25, 0, 1] as const,
         staggerChildren: 0.15, // delay between each child animation
         delayChildren: 0.1,
       },
@@ -54,7 +54,7 @@ export default function EnhancedSection({ section, isActive, sectionIndex }: Sec
       scale: 0.98,
       transition: {
         duration: 0.4,
-        ease: "easeIn",
+        ease: "easeIn" as const,
       },
     },
   };
@@ -71,7 +71,7 @@ export default function EnhancedSection({ section, isActive, sectionIndex }: Sec
       scale: 1,
       transition: {
         duration: 0.6,
-        ease: [0.25, 0.25, 0, 1],
+        ease: [0.25, 0.25, 0, 1] as const,
       },
     },
   };
@@ -115,7 +115,7 @@ export default function EnhancedSection({ section, isActive, sectionIndex }: Sec
               >
                 <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center min-h-[80vh]">
                   
-                  {section.content.images && section.content.images[0] && (
+                  {section.content.images?.[0] && (
                     <motion.div 
                       className="relative order-2 lg:order-1"
                       whileHover={{ scale: 1.02 }}
@@ -133,8 +133,8 @@ export default function EnhancedSection({ section, isActive, sectionIndex }: Sec
                           className="w-full h-auto rounded-xl shadow-museum-deep cursor-pointer enhanced-image"
                           loading="eager"
                           onClick={() => setSelectedImage({
-                            src: section.content.images[0].src,
-                            alt: section.content.images[0].alt
+                            src: section.content.images![0].src,
+                            alt: section.content.images![0].alt
                           })}
                           whileHover={{ scale: 1.02 }}
                           transition={{ duration: 0.3 }}
@@ -149,8 +149,8 @@ export default function EnhancedSection({ section, isActive, sectionIndex }: Sec
                           whileHover={{ scale: 1.1 }}
                           whileTap={{ scale: 0.9 }}
                           onClick={() => setSelectedImage({
-                            src: section.content.images[0].src,
-                            alt: section.content.images[0].alt
+                            src: section.content.images![0].src,
+                            alt: section.content.images![0].alt
                           })}
                         >
                           <ExternalLink className="w-4 h-4" />
@@ -341,7 +341,7 @@ export default function EnhancedSection({ section, isActive, sectionIndex }: Sec
                     
                     {section.content.subsections && (
                       <div className="space-y-10">
-                        {section.content.subsections.map((subsection, index) => (
+                        {section.content.subsections.map((subsection) => (
                           <motion.div
                             key={subsection.id}
                             variants={itemVariants}
@@ -472,7 +472,7 @@ export default function EnhancedSection({ section, isActive, sectionIndex }: Sec
                             Sources Used
                           </h3>
                           <div className="space-y-3">
-                            {sectionSources.map((source, index) => (
+                            {sectionSources.map((source) => (
                               <motion.a
                                 key={source.id}
                                 href={source.url}

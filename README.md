@@ -13,7 +13,7 @@ Built with modern web technologies to create a museum-quality experience that br
 - **Interactive Navigation**: Smooth transitions between sections with keyboard support (arrow keys)
 - **Immersive Experience**: Beautiful animations, image modals, and engaging visual design
 - **Mobile Friendly**: Fully responsive design that works on all devices
-- **Comprehensive Research**: 53 scholarly sources from primary documents, museums, and historical archives
+- **Comprehensive Research**: 52 scholarly sources from primary documents, museums, and historical archives
 - **Balanced Perspective**: Explores both Washington's achievements and the contradictions of his time
 
 ## 📚 Content Sections
@@ -37,7 +37,7 @@ The museum is organized into 14 themed sections:
 
 ## 🔍 Research & Sources
 
-This project draws from **53 carefully curated sources**, including:
+This project draws from **52 carefully curated sources**, including:
 
 - **Primary Sources**: Letters, speeches, and documents from the Founders Online database (National Archives)
 - **Museum Resources**: Mount Vernon, Library of Congress, and historical institutions

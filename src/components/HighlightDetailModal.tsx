@@ -52,7 +52,7 @@ export default function HighlightDetailModal({ highlight, isOpen, onClose }: Hig
       y: 30,
       transition: {
         duration: 0.3,
-        ease: 'easeIn',
+        ease: 'easeIn' as const,
       }
     }
   };

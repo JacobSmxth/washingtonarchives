@@ -65,7 +65,7 @@ export default function EnhancedLoadingScreen({ onComplete }: LoadingScreenProps
       scale: 1,
       rotate: 0,
       transition: {
-        type: 'spring',
+        type: 'spring' as const,
         damping: 15,
         stiffness: 200,
         delay: 0.2
@@ -81,7 +81,7 @@ export default function EnhancedLoadingScreen({ onComplete }: LoadingScreenProps
       transition: {
         duration: 0.8,
         delay: 0.5,
-        ease: [0.25, 0.25, 0, 1]
+        ease: [0.25, 0.25, 0, 1] as const
       }
     }
   };

@@ -15,7 +15,7 @@ export interface Source {
 export const sourcesDatabase: Source[] = [
   {
     id: "founders-inaugural-address",
-    title: "First Inaugural Address",
+    title: "Avalon Project - First Inaugural Address",
     url: "https://avalon.law.yale.edu/18th_century/washing.asp",
     description: "Washington's first inaugural address, establishing precedents for the presidency and emphasizing virtue in government.",
     source: "Avalon Project, Yale Law School",
@@ -27,7 +27,7 @@ export const sourcesDatabase: Source[] = [
   },
   {
     id: "founders-farewell-address",
-    title: "Farewell Address",
+    title: "Avalon Project - Farewell Address",
     url: "https://avalon.law.yale.edu/18th_century/wash1.asp",
     description: "Washington's farewell address warning against political parties and foreign entanglements.",
     source: "Avalon Project, Yale Law School",
@@ -39,7 +39,7 @@ export const sourcesDatabase: Source[] = [
   },
   {
     id: "founders-youth-journal",
-    title: "Early Life & Education Documents",
+    title: "Founders Online - Early Life & Education Documents",
     url: "https://founders.archives.gov/documents/Washington/01-01-02-0001-0002",
     description: "Early documents regarding Washington's youth, education, and family background.",
     source: "Founders Online, National Archives",
@@ -51,7 +51,7 @@ export const sourcesDatabase: Source[] = [
   },
   {
     id: "founders-constitutional-convention",
-    title: "Constitutional Convention Correspondence",
+    title: "Founders Online - Constitutional Convention Correspondence",
     url: "https://founders.archives.gov/documents/Washington/03-07-02-0358",
     description: "Washington's correspondence during the Constitutional Convention period.",
     source: "Founders Online, National Archives",
@@ -63,7 +63,7 @@ export const sourcesDatabase: Source[] = [
   },
   {
     id: "founders-military-correspondence",
-    title: "Military Correspondence",
+    title: "Founders Online - Military Correspondence",
     url: "https://founders.archives.gov/documents/Washington/03-07-02-0305",
     description: "Military correspondence and orders during Washington's military career.",
     source: "Founders Online, National Archives",
@@ -75,7 +75,7 @@ export const sourcesDatabase: Source[] = [
   },
   {
     id: "mount-vernon-quotes",
-    title: "Washington Quotes Collection",
+    title: "Mount Vernon - Authenticated Quotes Collection",
     url: "https://www.mountvernon.org/library/digitalhistory/past-projects/quotes",
     description: "Authenticated collection of George Washington quotes from various periods.",
     source: "Mount Vernon Digital History",
@@ -87,7 +87,7 @@ export const sourcesDatabase: Source[] = [
   },
   {
     id: "founders-death-rumors",
-    title: "Rumors of His Death (1755)",
+    title: "Founders Online - Death Rumors Letter (1755)",
     url: "https://founders.archives.gov/documents/Washington/02-01-02-0169",
     description: "Washington's humorous letter about rumors of his death after the Battle of Monongahela.",
     source: "Founders Online, National Archives",
@@ -99,7 +99,7 @@ export const sourcesDatabase: Source[] = [
   },
   {
     id: "founders-nephew-advice",
-    title: "Advice to His Nephew (1783)",
+    title: "Founders Online - Advice to Nephew (1783)",
     url: "https://founders.archives.gov/documents/Washington/99-01-02-10429",
     description: "Letter to Bushrod Washington with advice about vanity, gambling, and character.",
     source: "Founders Online, National Archives",
@@ -111,7 +111,7 @@ export const sourcesDatabase: Source[] = [
   },
   {
     id: "miller-center-death",
-    title: "Death of George Washington (1799)",
+    title: "Miller Center - Death of Washington (1799)",
     url: "https://millercenter.org/the-presidency/presidential-speeches/december-19-1799-death-george-washington",
     description: "Primary source documentation of Washington's death in December 1799.",
     source: "Miller Center, University of Virginia",
@@ -124,7 +124,7 @@ export const sourcesDatabase: Source[] = [
 
   {
     id: "ndu-press-strategy",
-    title: "Washington as National Security Strategist",
+    title: "NDU Press - Washington as Security Strategist",
     url: "https://ndupress.ndu.edu/Portals/68/Documents/jfq/jfq-109/jfq-109_33-40_Arnold.pdf?ver=apK3ap1248pELVj_kF1n_Q%3D%3D",
     description: "Academic analysis of Washington's strategic thinking and national security approach.",
     source: "National Defense University Press",
@@ -136,7 +136,7 @@ export const sourcesDatabase: Source[] = [
   },
   {
     id: "johns-hopkins-slavery",
-    title: "George Washington and Slavery",
+    title: "Johns Hopkins - Washington & Slavery Analysis",
     url: "https://hub.jhu.edu/2016/02/19/george-washington-slavery-mount-vernon/",
     description: "Academic examination of Washington's complex relationship with slavery.",
     source: "Johns Hopkins University",
@@ -149,7 +149,7 @@ export const sourcesDatabase: Source[] = [
 
   {
     id: "mount-vernon-biography",
-    title: "George Washington Biography",
+    title: "Mount Vernon - Complete Biography Overview",
     url: "http://mountvernon.org/george-washington/biography",
     description: "Comprehensive biographical overview of Washington's life and achievements.",
     source: "Mount Vernon",
@@ -161,7 +161,7 @@ export const sourcesDatabase: Source[] = [
   },
   {
     id: "mount-vernon-battles",
-    title: "Washington's Revolutionary War Battles",
+    title: "Mount Vernon - Revolutionary War Battles Catalog",
     url: "https://www.mountvernon.org/george-washington/the-revolutionary-war/washingtons-revolutionary-war-battles/",
     description: "Comprehensive coverage of Washington's military campaigns and battle records.",
     source: "Mount Vernon Digital Encyclopedia",
@@ -173,7 +173,7 @@ export const sourcesDatabase: Source[] = [
   },
   {
     id: "mount-vernon-fort-necessity",
-    title: "Fort Necessity",
+    title: "Mount Vernon - Fort Necessity & Surrender",
     url: "https://www.mountvernon.org/library/digitalhistory/digital-encyclopedia/article/fort-necessity",
     description: "Washington's constructed fort at Great Meadows, attacked and forced to surrender, his only military surrender.",
     source: "Mount Vernon Digital Encyclopedia",
@@ -185,7 +185,7 @@ export const sourcesDatabase: Source[] = [
   },
   {
     id: "mount-vernon-shays-rebellion",
-    title: "Shays' Rebellion",
+    title: "Mount Vernon - Shays' Rebellion Impact",
     url: "https://www.mountvernon.org/library/digitalhistory/digital-encyclopedia/article/shays-rebellion",
     description: "Coverage of Shays' Rebellion and its impact on Washington's views on federal government.",
     source: "Mount Vernon Digital Encyclopedia",
@@ -197,7 +197,7 @@ export const sourcesDatabase: Source[] = [
   },
   {
     id: "mount-vernon-16-sided-barn",
-    title: "The 16-Sided Barn",
+    title: "Mount Vernon - 16-Sided Barn Innovation",
     url: "https://www.mountvernon.org/library/digitalhistory/digital-encyclopedia/article/16-sided-barn",
     description: "Detailed information about Washington's innovative 16-sided barn design and agricultural innovations.",
     source: "Mount Vernon Digital Encyclopedia",
@@ -210,7 +210,7 @@ export const sourcesDatabase: Source[] = [
 
   {
     id: "britannica-biography",
-    title: "George Washington Biography",
+    title: "Britannica - Complete Encyclopedia Entry",
     url: "https://www.britannica.com/biography/George-Washington",
     description: "Scholarly encyclopedic article covering all aspects of Washington's life and legacy.",
     source: "Encyclopedia Britannica",
@@ -222,7 +222,7 @@ export const sourcesDatabase: Source[] = [
   },
   {
     id: "britannica-fort-necessity",
-    title: "Battle of Fort Necessity",
+    title: "Britannica - Fort Necessity Battle Details",
     url: "https://www.britannica.com/topic/Battle-of-Fort-Necessity",
     description: "Detailed account of Washington's only military surrender and its significance in his early career.",
     source: "Encyclopedia Britannica",
@@ -234,7 +234,7 @@ export const sourcesDatabase: Source[] = [
   },
   {
     id: "britannica-jumonville-glen",
-    title: "Battle of Jumonville Glen",
+    title: "Britannica - Jumonville Glen Ambush",
     url: "https://www.britannica.com/event/Battle-of-Jumonville-Glen",
     description: "A skirmish in which Washington's men ambushed a French scouting party, often considered the opening military action of the French & Indian War.",
     source: "Encyclopedia Britannica",
@@ -246,7 +246,7 @@ export const sourcesDatabase: Source[] = [
   },
   {
     id: "wikipedia-monongahela",
-    title: "Battle of the Monongahela",
+    title: "Wikipedia - Monongahela & Braddock's Defeat",
     url: "https://en.wikipedia.org/wiki/Battle_of_the_Monongahela",
     description: "Part of Braddock's expedition; Washington served under General Braddock and played a role in managing the retreat after defeat.",
     source: "Wikipedia",
@@ -258,7 +258,7 @@ export const sourcesDatabase: Source[] = [
   },
   {
     id: "wikipedia-french-indian-war",
-    title: "George Washington in the French and Indian War",
+    title: "Wikipedia - French & Indian War Service",
     url: "https://en.wikipedia.org/wiki/George_Washington_in_the_French_and_Indian_War",
     description: "Washington served in the Virginia militia, took part in frontier defense and in the Forbes Expedition that eventually led to capture of French positions.",
     source: "Wikipedia",
@@ -270,7 +270,7 @@ export const sourcesDatabase: Source[] = [
   },
   {
     id: "wikipedia-washington-quarter",
-    title: "Washington Quarter Design Details",
+    title: "Wikipedia - Quarter Design & History",
     url: "https://en.wikipedia.org/wiki/Washington_quarter",
     description: "Detailed information about the quarter's design evolution and specifications.",
     source: "Wikipedia",
@@ -283,7 +283,7 @@ export const sourcesDatabase: Source[] = [
 
   {
     id: "smithsonian-reluctant-president",
-    title: "George Washington - The Reluctant President",
+    title: "Smithsonian - The Reluctant President",
     url: "https://www.smithsonianmag.com/history/george-washington-the-reluctant-president-49492",
     description: "Analysis of Washington's hesitation about accepting presidential power, featured in Fun Facts humor section.",
     source: "Smithsonian Magazine",
@@ -295,7 +295,7 @@ export const sourcesDatabase: Source[] = [
   },
   {
     id: "national-interest-charles-lee",
-    title: "Charles Lee: The General Who Almost Replaced George Washington",
+    title: "National Interest - Charles Lee vs Washington",
     url: "https://nationalinterest.org/blog/reboot/charles-lee-general-who-almost-replaced-george-washington-173343",
     description: "Analysis of European vs. American military tactics during the Revolutionary War period.",
     source: "The National Interest",
@@ -307,7 +307,7 @@ export const sourcesDatabase: Source[] = [
   },
   {
     id: "parrish-washington-character",
-    title: "Washington's Character and Leadership",
+    title: "Parrish - Character & Jefferson's Assessment",
     url: "https://www.donparrish.com/EssayWashington.html",
     description: "Essay including Thomas Jefferson's assessment of Washington's inflexible justice and character.",
     source: "Historical Essay Collection",
@@ -320,7 +320,7 @@ export const sourcesDatabase: Source[] = [
 
   {
     id: "history-com-washington",
-    title: "George Washington Biography",
+    title: "History.com - Complete Life Overview",
     url: "https://www.history.com/articles/george-washington",
     description: "Educational overview of Washington's life and historical significance.",
     source: "History.com",
@@ -333,7 +333,7 @@ export const sourcesDatabase: Source[] = [
 
   {
     id: "battlefields-trust",
-    title: "Military Career and Battlefields",
+    title: "Battlefield Trust - Military Career & Sites",
     url: "https://www.battlefields.org/learn/biographies/george-washington",
     description: "Focus on Washington's military career and the battlefields where he served.",
     source: "American Battlefield Trust",
@@ -346,7 +346,7 @@ export const sourcesDatabase: Source[] = [
 
   {
     id: "us-mint-quarter",
-    title: "Washington Quarter History",
+    title: "U.S. Mint - Official Quarter Information",
     url: "https://www.usmint.gov/learn/coins-and-medals/circulating-coins/quarter",
     description: "Official U.S. Mint information about the Washington quarter design and history.",
     source: "U.S. Mint",
@@ -359,19 +359,19 @@ export const sourcesDatabase: Source[] = [
 
   {
     id: "boston-tea-party-facts",
-    title: "George Washington Facts",
+    title: "Boston Tea Party Museum - Washington Facts & Precedents",
     url: "https://www.bostonteapartyship.com/george-washington-facts",
-    description: "Comprehensive collection of Washington facts including teeth, unanimous election, military rank, and personal details.",
+    description: "Comprehensive collection of Washington facts including teeth, unanimous election, military rank, personal details, presidential oath additions, and the establishment of the title 'Mr. President.'",
     source: "Boston Tea Party Ship & Museum",
     type: "Educational Resource",
-    tags: ["teeth", "unanimous-election", "military-rank", "personal-facts", "fun-facts"],
+    tags: ["teeth", "unanimous-election", "military-rank", "personal-facts", "fun-facts", "presidential-precedents", "oath", "title", "inauguration"],
     period: "1732-1799",
     reliability: "Medium",
-    relatedSections: ["fun-facts"]
+    relatedSections: ["fun-facts", "presidency"]
   },
   {
     id: "wallbuilders-facts",
-    title: "Ten Facts About George Washington",
+    title: "WallBuilders - Cherry Tree Myth & Height Facts",
     url: "https://wallbuilders.com/ten-facts-about-george-washington",
     description: "Historical facts about Washington including cherry tree myth debunking and height details.",
     source: "WallBuilders",
@@ -383,7 +383,7 @@ export const sourcesDatabase: Source[] = [
   },
   {
     id: "lawline-fun-facts",
-    title: "George Washington Top Ten Fun Facts",
+    title: "Lawline Blog - White House & Birthday Facts",
     url: "https://blog.lawline.com/george-washington-top-ten-fun-facts",
     description: "Collection of interesting Washington facts including White House, birthday, and personal quirks.",
     source: "Lawline Blog",
@@ -395,7 +395,7 @@ export const sourcesDatabase: Source[] = [
   },
   {
     id: "history-little-known-facts",
-    title: "George Washington Little Known Facts",
+    title: "History.com - Little Known Facts & Education",
     url: "https://www.history.com/news/george-washington-little-known-facts",
     description: "Historical facts about Washington's education and lesser-known aspects of his life.",
     source: "History.com",
@@ -407,7 +407,7 @@ export const sourcesDatabase: Source[] = [
   },
   {
     id: "history-presidential-veto",
-    title: "Washington Exercises First Presidential Veto",
+    title: "History.com - First Presidential Veto (1792)",
     url: "https://www.history.com/this-day-in-history/April-5/washington-exercises-first-presidential-veto",
     description: "Historical account of Washington's first presidential veto in 1792.",
     source: "History.com",
@@ -419,7 +419,7 @@ export const sourcesDatabase: Source[] = [
   },
   {
     id: "mount-vernon-middle-name",
-    title: "George Washington's Middle Name",
+    title: "Mount Vernon - Why No Middle Name",
     url: "https://www.mountvernon.org/george-washington/middle-name",
     description: "Explanation of Washington's lack of a middle name and naming conventions of the era.",
     source: "Mount Vernon",
@@ -431,7 +431,7 @@ export const sourcesDatabase: Source[] = [
   },
   {
     id: "historynet-delaware-crossing",
-    title: "What's Wrong with Washington Crossing the Delaware",
+    title: "HistoryNet - Delaware Crossing Painting Myths",
     url: "https://www.historynet.com/whats-wrong-washington-crossing-delaware/",
     description: "Analysis of the famous painting's inaccuracies and the reality of the Delaware crossing.",
     source: "HistoryNet",
@@ -443,7 +443,7 @@ export const sourcesDatabase: Source[] = [
   },
   {
     id: "mount-vernon-spymaster",
-    title: "George Washington Spymaster",
+    title: "Mount Vernon - Washington as Spymaster",
     url: "https://www.mountvernon.org/george-washington/the-revolutionary-war/spying-and-espionage/george-washington-spymaster",
     description: "Detailed account of Washington's intelligence network and espionage activities during the Revolution.",
     source: "Mount Vernon",
@@ -455,7 +455,7 @@ export const sourcesDatabase: Source[] = [
   },
   {
     id: "allegany-museum-whiskey-rebellion",
-    title: "Washington's Last Visit to Cumberland - The Only Time a Sitting President Has Led Troops into Battle",
+    title: "Allegany Museum - Whiskey Rebellion Leadership",
     url: "https://allegany-museum.org/washingtons-last-visit-to-cumberland-the-only-time-a-sitting-president-has-led-troops-into-battle/",
     description: "Historical account of Washington leading troops during the Whiskey Rebellion as sitting president.",
     source: "Allegany Museum",
@@ -467,7 +467,7 @@ export const sourcesDatabase: Source[] = [
   },
   {
     id: "history-smallpox-inoculation",
-    title: "Smallpox and George Washington in the Revolutionary War",
+    title: "History.com - Smallpox Inoculation Campaign",
     url: "https://www.history.com/articles/smallpox-george-washington-revolutionary-war",
     description: "Account of Washington's mass inoculation campaign against smallpox in 1777.",
     source: "History.com",
@@ -479,7 +479,7 @@ export const sourcesDatabase: Source[] = [
   },
   {
     id: "world-history-edu-third-term",
-    title: "Why Did George Washington Refuse a Third Term in Office",
+    title: "World History Edu - Refusing Third Term",
     url: "https://worldhistoryedu.com/why-did-george-washington-refuse-a-third-term-in-office/",
     description: "Analysis of Washington's decision to step down after two terms and its democratic significance.",
     source: "World History Edu",
@@ -491,7 +491,7 @@ export const sourcesDatabase: Source[] = [
   },
   {
     id: "constitution-center-fascinating-facts",
-    title: "Fascinating Facts About George Washington for His Real Birthday",
+    title: "Constitution Center - Distillery & Death Facts",
     url: "https://constitutioncenter.org/blog/fascinating-facts-about-george-washington-for-his-real-birthday",
     description: "Collection of interesting Washington facts including distillery and death details.",
     source: "Constitution Center",
@@ -503,7 +503,7 @@ export const sourcesDatabase: Source[] = [
   },
   {
     id: "funkids-washington-facts",
-    title: "Top 10 Facts About George Washington",
+    title: "Fun Kids UK - Dancing & Social Activities",
     url: "https://www.funkidslive.com/learn/top-10-facts-about-george-washington",
     description: "Fun facts about Washington including his love of dancing and social activities.",
     source: "Fun Kids UK",
@@ -515,7 +515,7 @@ export const sourcesDatabase: Source[] = [
   },
   {
     id: "tinybeans-hair-facts",
-    title: "Fun Facts About George Washington",
+    title: "Tinybeans - Hair & Grooming Habits",
     url: "https://tinybeans.com/fun-facts-about-george-washington",
     description: "Personal facts about Washington including his hair style and grooming habits.",
     source: "Tinybeans",
@@ -527,7 +527,7 @@ export const sourcesDatabase: Source[] = [
   },
   {
     id: "patrick-henry-college-barbados",
-    title: "7 Facts About George Washington",
+    title: "Patrick Henry College - Barbados Trip & Smallpox",
     url: "https://www.phc.edu/news/2017/02/20/7-facts-about-george-washington",
     description: "Facts about Washington including his only trip abroad to Barbados and smallpox immunity.",
     source: "Patrick Henry College",
@@ -539,7 +539,7 @@ export const sourcesDatabase: Source[] = [
   },
   {
     id: "pbs-medical-chart",
-    title: "George Washington's Medical Chart",
+    title: "PBS - Washington's Medical History",
     url: "https://www.pbs.org/newshour/health/george-washingtons-medical-chart",
     description: "Medical analysis of Washington's various illnesses and survival through multiple diseases.",
     source: "PBS NewsHour",
@@ -551,7 +551,7 @@ export const sourcesDatabase: Source[] = [
   },
   {
     id: "public-historian-napoleon",
-    title: "Napoleon and Washington",
+    title: "Public Historian - Napoleon's Admiration",
     url: "https://publichistorian.com/2018/06/08/napoleon-washington/",
     description: "Analysis of Napoleon's admiration for Washington and their leadership comparison.",
     source: "Public Historian",
@@ -563,7 +563,7 @@ export const sourcesDatabase: Source[] = [
   },
   {
     id: "heritage-foundation-kingship",
-    title: "The Man Who Would Not Be King",
+    title: "Heritage Foundation - Refusal of Kingship",
     url: "https://www.heritage.org/commentary/the-man-who-would-not-be-king",
     description: "Analysis of Washington's refusal of kingship and commitment to republican government.",
     source: "Heritage Foundation",
@@ -575,7 +575,7 @@ export const sourcesDatabase: Source[] = [
   },
   {
     id: "lives-legacies-dollar-bill",
-    title: "How George Ended Up on the $1 Bill",
+    title: "Lives & Legacies - How He Got on the $1 Bill",
     url: "https://livesandlegaciesblog.org/2019/08/08/how-george-ended-up-on-the-1-bill/",
     description: "Historical analysis of how Washington's portrait came to appear on the $1 bill since 1869.",
     source: "Lives and Legacies Blog",
@@ -587,7 +587,7 @@ export const sourcesDatabase: Source[] = [
   },
   {
     id: "usacoinbook-flanagan-designer",
-    title: "John Flanagan - Coin Engraver and Designer - Washington Quarter",
+    title: "USA Coin Book - Flanagan Quarter Design Story",
     url: "https://www.usacoinbook.com/encyclopedia/coin-designers/john-flanagan/",
     description: "Detailed account of John Flanagan's design process for the 1932 Washington quarter, based on Jean-Antoine Houdon's 1785 bust of Washington. Covers the controversial design competition where Treasury Secretary Andrew Mellon selected Flanagan's design over Laura Gardin Fraser's winning entry.",
     source: "USA Coin Book Encyclopedia",
@@ -599,7 +599,7 @@ export const sourcesDatabase: Source[] = [
   },
   {
     id: "pcgs-quarter-faces",
-    title: "The Many Faces of the George Washington Quarter",
+    title: "PCGS - Quarter Design Evolution History",
     url: "https://www.pcgs.com/news/the-many-faces-of-the-george-washington-quarter",
     description: "Comprehensive history of Washington quarter design evolution from Flanagan's 1932 original through modern variants. Details the Houdon bust basis, William Cousins' 1999 modifications for State Quarters, and Laura Fraser's 2022 appearance on the American Women Quarters.",
     source: "PCGS (Professional Coin Grading Service)",
@@ -611,7 +611,7 @@ export const sourcesDatabase: Source[] = [
   },
   {
     id: "time-dollar-design-history",
-    title: "On the Money: A US Dollar Bill's Design History and Meaning",
+    title: "TIME - Dollar Bill Design History",
     url: "https://time.com/5383055/dollar-bill-design-history/",
     description: "Historical analysis of U.S. dollar bill design from colonial currency through modern security features. Covers Continental Currency, Civil War greenbacks, the 1929 size reduction, and the evolution of Washington's portrait placement.",
     source: "TIME Magazine",
@@ -623,7 +623,7 @@ export const sourcesDatabase: Source[] = [
   },
   {
     id: "mount-vernon-gilbert-stuart",
-    title: "Gilbert Stuart (1755-1828)",
+    title: "Mount Vernon - Gilbert Stuart & Athenaeum Portrait",
     url: "https://www.mountvernon.org/library/digitalhistory/digital-encyclopedia/article/gilbert-stuart-1755-1828",
     description: "Comprehensive biography of Gilbert Stuart and detailed analysis of the Athenaeum portrait of Washington. Confirms that an engraving of this unfinished 1796 portrait is used on the one-dollar bill, making it the most recognizable image of Washington.",
     source: "Mount Vernon Digital Encyclopedia",
@@ -635,7 +635,7 @@ export const sourcesDatabase: Source[] = [
   },
   {
     id: "franconia-museum-slavery-complexity",
-    title: "Slavery at Mount Vernon (Historical Marker)",
+    title: "Franconia Museum - Slavery Historical Marker",
     url: "https://franconiahistory.com/historic-sites/slavery-at-mount-vernon-(historical-marker)",
     description: "Historical marker information about slavery at Mount Vernon, including Washington's contradictory attitudes and the 317 enslaved people at his death.",
     source: "Franconia Museum",
@@ -645,18 +645,6 @@ export const sourcesDatabase: Source[] = [
     reliability: "High",
     relatedSections: ["slavery"]
   },
-  {
-    id: "boston-tea-party-title-precedents",
-    title: "George Washington Facts",
-    url: "https://www.bostonteapartyship.com/george-washington-facts",
-    description: "Comprehensive facts about Washington including his addition of 'So help me God' to the Presidential Oath and establishment of the title 'Mr. President.'",
-    source: "Boston Tea Party Ship & Museum",
-    type: "Educational Resource",
-    tags: ["presidential-precedents", "oath", "title", "inauguration"],
-    period: "1789",
-    reliability: "Medium",
-    relatedSections: ["presidency"]
-  }
 ];
 
 export const getSourcesBySection = (sectionId: string): Source[] => {
