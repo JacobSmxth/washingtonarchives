@@ -2,34 +2,39 @@
 
 import { useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ExternalLink, Award, Archive, ChevronRight, ChevronDown, ChevronUp } from 'lucide-react';
+import { ExternalLink, Archive, ChevronRight, ChevronDown, ChevronUp, User, Sword, Scroll, Landmark, Crown, BookOpen, Mountain } from 'lucide-react';
 import { Section as SectionType, Highlight } from '@/types';
 import { getSourcesBySection } from '@/data/sources';
 import { cn } from '@/lib/utils';
 import EnhancedImageModal from './EnhancedImageModal';
 import EnhancedQuoteBlock from './EnhancedQuoteBlock';
-import EnhancedHighlightCard from './EnhancedHighlightCard';
 import HighlightDetailModal from './HighlightDetailModal';
 import QABox from './QABox';
+import SectionNavigationCard from './SectionNavigationCard';
 
 interface SectionProps {
   section: SectionType;
   isActive: boolean;
   sectionIndex: number;
+  onNavigate?: (sectionId: string) => void;
 }
 
-export default function EnhancedSection({ section, isActive, sectionIndex }: SectionProps) {
+export default function EnhancedSection({ section, isActive, sectionIndex, onNavigate }: SectionProps) {
   const sectionRef = useRef<HTMLElement>(null);
   const [selectedImage, setSelectedImage] = useState<{src: string, alt: string} | null>(null);
   const [selectedHighlight, setSelectedHighlight] = useState<Highlight | null>(null);
-  const [exploredHighlights, setExploredHighlights] = useState<Set<string>>(new Set());
   const [isSourcesExpanded, setIsSourcesExpanded] = useState(false);
-  
 
-  const handleHighlightClick = (highlight: Highlight) => {
-    setSelectedHighlight(highlight);
-    setExploredHighlights(prev => new Set([...prev, highlight.id]));
-  };
+  const navigationSections = [
+    { id: 'youth', title: 'Early Life & Family', icon: User, description: 'Explore Washington\'s childhood, education, and formative years in colonial Virginia.' },
+    { id: 'military-early', title: 'Early Military Experience', icon: Sword, description: 'Discover Washington\'s first battles and lessons learned during the French and Indian War.' },
+    { id: 'revolutionary-war', title: 'Revolutionary War Leadership', icon: Scroll, description: 'Follow Washington\'s command of the Continental Army through triumph and hardship.' },
+    { id: 'constitutional-convention', title: 'Constitutional Convention', icon: Landmark, description: 'Learn about Washington\'s role in creating the framework of American government.' },
+    { id: 'presidency', title: 'The Presidency', icon: Crown, description: 'Examine the precedents and principles Washington established as the first president.' },
+    { id: 'legacy', title: 'Enduring Legacy', icon: BookOpen, description: 'Understand Washington\'s lasting impact on American democracy and values.' },
+    { id: 'slavery', title: 'Washington and Slavery', icon: BookOpen, description: 'Confront the contradiction between liberty and slavery in Washington\'s life.' },
+    { id: 'mount-vernon', title: 'Mount Vernon', icon: Mountain, description: 'Visit Washington\'s beloved estate and explore his life as a Virginia planter.' },
+  ];
 
   // slide up and fade in when section becomes active, stagger child animations
   const containerVariants = {
@@ -206,75 +211,47 @@ export default function EnhancedSection({ section, isActive, sectionIndex }: Sec
                   </motion.div>
                 </div>
 
-                
-                {section.content.highlights && (
+                {/* Section Navigation Cards */}
+                <motion.div
+                  className="mt-24 relative"
+                  variants={itemVariants}
+                >
+                  <div className="text-center mb-16">
+                    <motion.div
+                      initial={{ width: 0 }}
+                      animate={{ width: '6rem' }}
+                      transition={{ delay: 1.2, duration: 0.8 }}
+                      className="h-1 bg-gradient-to-r from-museum-navy to-museum-gold rounded-full mx-auto mb-6"
+                    />
+                    <h2 className="font-display text-3xl lg:text-4xl font-bold text-museum-ink mb-4">
+                      Explore Washington&apos;s Life
+                    </h2>
+                    <p className="text-lg text-museum-sepia font-body max-w-2xl mx-auto">
+                      Journey through the defining moments and complex legacy of America&apos;s first president
+                    </p>
+                  </div>
+
                   <motion.div
-                    className="mt-24 relative"
-                    variants={itemVariants}
+                    className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6"
+                    variants={containerVariants}
                   >
-                    
-                    <div className="text-center mb-16">
+                    {navigationSections.map((navSection, index) => (
                       <motion.div
-                        initial={{ width: 0 }}
-                        animate={{ width: '6rem' }}
-                        transition={{ delay: 1.2, duration: 0.8 }}
-                        className="h-1 bg-gradient-to-r from-museum-navy to-museum-gold rounded-full mx-auto mb-6"
-                      />
-                      <h2 className="font-display text-3xl lg:text-4xl font-bold text-museum-ink mb-4">
-                        Exhibition Highlights
-                      </h2>
-                      <p className="text-lg text-museum-sepia font-body max-w-2xl mx-auto mb-8">
-                        Discover the remarkable journey of America&apos;s first president through interactive exhibits
-                      </p>
-                      
-                      
-                      <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 1.4, duration: 0.6 }}
-                        className="flex items-center justify-center space-x-2 mb-8"
+                        key={navSection.id}
+                        variants={itemVariants}
+                        custom={index}
                       >
-                        <Award className="w-5 h-5 text-museum-gold" />
-                        <span className="text-museum-ink font-medium">
-                          {exploredHighlights.size} of {section.content.highlights.length} exhibits explored
-                        </span>
-                        <div className="w-32 h-2 bg-museum-parchment-dark rounded-full overflow-hidden">
-                          <motion.div
-                            className="h-full bg-gradient-to-r from-museum-navy to-museum-gold"
-                            initial={{ width: 0 }}
-                            animate={{ 
-                              width: `${(exploredHighlights.size / section.content.highlights.length) * 100}%` 
-                            }}
-                            transition={{ duration: 0.5 }}
-                          />
-                        </div>
+                        <SectionNavigationCard
+                          title={navSection.title}
+                          description={navSection.description}
+                          icon={navSection.icon}
+                          index={index}
+                          onClick={() => onNavigate?.(navSection.id)}
+                        />
                       </motion.div>
-                    </div>
-
-
-                    
-                    <motion.div 
-                      className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6"
-                      variants={containerVariants}
-                    >
-                      {section.content.highlights.map((highlight, index) => (
-                        <motion.div
-                          key={highlight.id}
-                          variants={itemVariants}
-                          custom={index}
-                          className="cursor-pointer"
-                          onClick={() => handleHighlightClick(highlight)}
-                        >
-                          <EnhancedHighlightCard 
-                            highlight={highlight} 
-                            index={index}
-                            isExplored={exploredHighlights.has(highlight.id)}
-                          />
-                        </motion.div>
-                      ))}
-                    </motion.div>
+                    ))}
                   </motion.div>
-                )}
+                </motion.div>
               </motion.div>
             )}
 

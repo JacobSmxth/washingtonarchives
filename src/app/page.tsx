@@ -78,6 +78,7 @@ export default function Home() {
             section={section}
             isActive={activeSection === section.id}
             sectionIndex={index}
+            onNavigate={handleSectionChange}
           />
         ))}
       </main>
