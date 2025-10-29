@@ -120,7 +120,7 @@ export default function Home() {
             className="max-w-4xl mx-auto"
           >
             <p className="font-body text-base opacity-80 leading-relaxed">
-              This digital archive presents a comprehensive exploration of George Washington's life, leadership, and enduring legacy. Built for HIST 2111, this project integrates primary source documents, scholarly analysis, and interactive exhibits to provide an immersive educational experience. All content is carefully researched using authoritative historical sources including the Founders Online Archive, Mount Vernon collections, and peer-reviewed academic publications.
+              This digital archive presents a comprehensive exploration of George Washington&apos;s life, leadership, and enduring legacy. Built for HIST 2111, this project integrates primary source documents, scholarly analysis, and interactive exhibits to provide an immersive educational experience. All content is carefully researched using authoritative historical sources including the Founders Online Archive, Mount Vernon collections, and peer-reviewed academic publications.
             </p>
           </motion.div>
           

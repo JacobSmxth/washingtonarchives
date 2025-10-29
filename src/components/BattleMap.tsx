@@ -119,7 +119,7 @@ export default function BattleMap() {
       <div className="mt-4 text-center">
         <p className="text-sm text-museum-sepia/80 italic">
           Note: This map shows major battles where Washington played a significant role. It does not include every engagement or skirmish.
-          I've done my best to verify locations and avoid misinformation while keeping the map performant.
+          I&apos;ve done my best to verify locations and avoid misinformation while keeping the map performant.
         </p>
       </div>
 

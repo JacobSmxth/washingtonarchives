@@ -34,8 +34,8 @@ export default function NotFound() {
             Page Not Found
           </h2>
           <p className="font-body text-lg text-museum-sepia max-w-md mx-auto leading-relaxed">
-            The page you're looking for doesn't exist or has been moved. 
-            Return to the archive to continue exploring George Washington's legacy.
+            The page you&apos;re looking for doesn&apos;t exist or has been moved.
+            Return to the archive to continue exploring George Washington&apos;s legacy.
           </p>
         </motion.div>
 
