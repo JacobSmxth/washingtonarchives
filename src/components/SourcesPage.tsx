@@ -59,7 +59,6 @@ export default function SourcesPage({ isOpen, onClose }: SourcesPageProps) {
     }
   };
 
-  // filter sources by search query, type, and tag
   const getFilteredSources = (): Source[] => {
     let filtered = sourcesDatabase;
 
@@ -74,7 +73,6 @@ export default function SourcesPage({ isOpen, onClose }: SourcesPageProps) {
     if (selectedTag !== 'all') {
       filtered = filtered.filter(source => source.tags.includes(selectedTag));
     }
-    // sort sources alphabetically by title, type, or by reliability (high to low)
     return filtered.sort((a, b) => {
       switch (sortBy) {
         case 'title':
@@ -101,7 +99,7 @@ export default function SourcesPage({ isOpen, onClose }: SourcesPageProps) {
 
   return (
     <AnimatePresence>
-      <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm overflow-y-auto">
+      <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 overflow-y-auto">
         <motion.div
           variants={pageVariants}
           initial="hidden"

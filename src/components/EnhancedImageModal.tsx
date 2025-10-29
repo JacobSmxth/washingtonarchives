@@ -37,7 +37,7 @@ export default function EnhancedImageModal({ src, alt, onClose }: ImageModalProp
     exit: { opacity: 0 }
   };
 
-  // image modal flips in with 3D rotation effect
+  // this 3d flip thing was cool to figure out
   const modalVariants = {
     hidden: { 
       opacity: 0, 
@@ -72,7 +72,7 @@ export default function EnhancedImageModal({ src, alt, onClose }: ImageModalProp
         initial="hidden"
         animate="visible"
         exit="exit"
-        className="fixed inset-0 z-[9999] bg-museum-ink/90 backdrop-blur-xl flex items-center justify-center p-4"
+        className="fixed inset-0 z-[9999] bg-museum-ink/95 flex items-center justify-center p-4"
         onClick={onClose}
       >
         
@@ -102,7 +102,7 @@ export default function EnhancedImageModal({ src, alt, onClose }: ImageModalProp
           >
             <div className="flex items-center space-x-4">
               <motion.button
-                className="p-3 bg-white/10 backdrop-blur-sm rounded-xl text-white hover:bg-white/20 transition-all"
+                className="p-3 bg-white/15 rounded-xl text-white hover:bg-white/25 transition-all"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => window.open(src, '_blank')}
@@ -110,7 +110,7 @@ export default function EnhancedImageModal({ src, alt, onClose }: ImageModalProp
                 <ZoomIn className="w-5 h-5" />
               </motion.button>
               <motion.button
-                className="p-3 bg-white/10 backdrop-blur-sm rounded-xl text-white hover:bg-white/20 transition-all"
+                className="p-3 bg-white/15 rounded-xl text-white hover:bg-white/25 transition-all"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => {
@@ -136,7 +136,7 @@ export default function EnhancedImageModal({ src, alt, onClose }: ImageModalProp
 
           
           <motion.div 
-            className="relative bg-white/5 backdrop-blur-sm rounded-2xl p-6 shadow-museum-deep border border-white/10"
+            className="relative bg-white/10 rounded-2xl p-6 shadow-museum-deep border border-white/20"
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2, duration: 0.4 }}

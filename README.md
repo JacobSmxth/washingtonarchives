@@ -8,10 +8,49 @@ This is an academic project for HIST 2111 that explores George Washington's comp
 
 Built with modern web technologies to create a museum-quality experience that brings history to life through interactive storytelling.
 
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js 18+ and npm
+- A Mapbox account (for the interactive battle map)
+
+### Installation
+
+1. Clone the repository
+```bash
+git clone <repository-url>
+cd projectWebsite
+```
+
+2. Install dependencies
+```bash
+npm install
+```
+
+3. Set up environment variables
+```bash
+cp .env.example .env.local
+```
+
+Edit `.env.local` and add your Mapbox access token:
+```
+NEXT_PUBLIC_MAPBOX_TOKEN=your_mapbox_token_here
+```
+
+Get your Mapbox token from: https://account.mapbox.com/access-tokens/
+
+4. Run the development server
+```bash
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) in your browser.
+
 ## 🎯 Project Features
 
 - **Interactive Navigation**: Smooth transitions between sections with keyboard support (arrow keys)
 - **Immersive Experience**: Beautiful animations, image modals, and engaging visual design
+- **Interactive Battle Map**: Mapbox-powered map showing Washington's military campaigns
 - **Mobile Friendly**: Fully responsive design that works on all devices
 - **Comprehensive Research**: 52 scholarly sources from primary documents, museums, and historical archives
 - **Balanced Perspective**: Explores both Washington's achievements and the contradictions of his time

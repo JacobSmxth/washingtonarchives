@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        'nav': '1365px',
+      },
       colors: {
         museum: {
           navy: '#0f172a',

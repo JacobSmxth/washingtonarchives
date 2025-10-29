@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown, Scroll, User, Landmark, Archive, Smile } from 'lucide-react';
 import { navigationItems } from '@/data/sections';
@@ -12,12 +12,7 @@ interface NavigationProps {
   onSectionChange: (sectionId: string) => void;
 }
 
-// organized navigation items into themed dropdown groups
-// 0-3: home, youth, early military
-// 3-5: revolutionary war, constitutional convention
-// 5-8: presidency, farewell address, legacy
-// 8-10: slavery, mount vernon
-// 10+: humor, battle record, currency, additional facts
+// split up the nav into groups so it's not overwhelming
 const navigationGroups = [
   {
     title: "Early Life",
@@ -51,13 +46,36 @@ export default function EnhancedNavigation({ activeSection, onSectionChange }: N
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [hoveredGroup, setHoveredGroup] = useState<string | null>(null);
   const [isSourcesOpen, setIsSourcesOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const lastScrollY = useRef(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      const currentScrollY = window.scrollY;
+      const scrolled = currentScrollY > 50;
+      
+      setIsScrolled(scrolled);
+
+      // Show nav when at top of page
+      if (currentScrollY < 50) {
+        setIsVisible(true);
+        lastScrollY.current = currentScrollY;
+        return;
+      }
+
+      // Hide when scrolling down, show when scrolling up
+      if (currentScrollY > lastScrollY.current && currentScrollY > 100) {
+        // Scrolling down
+        setIsVisible(false);
+      } else if (currentScrollY < lastScrollY.current) {
+        // Scrolling up
+        setIsVisible(true);
+      }
+
+      lastScrollY.current = currentScrollY;
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -71,15 +89,17 @@ export default function EnhancedNavigation({ activeSection, onSectionChange }: N
       
       <motion.header
         initial={{ y: -100 }}
-        animate={{ y: 0 }}
+        animate={{ 
+          y: isVisible ? 0 : -100,
+          opacity: isVisible ? 1 : 0
+        }}
+        transition={{ duration: 0.3, ease: 'easeInOut' }}
         className={cn(
           "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
-          isScrolled
-            ? "bg-museum-parchment/95 backdrop-blur-xl shadow-layered border-b border-museum-navy/20"
-            : "bg-gradient-to-r from-museum-navy via-museum-navy-light to-museum-navy text-white"
+          "bg-gradient-to-r from-museum-navy via-museum-navy-light to-museum-navy text-white shadow-layered border-b border-white/10"
         )}
       >
-        <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <nav className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12">
           <div className="flex items-center justify-between h-20">
             
             <motion.button 
@@ -90,9 +110,7 @@ export default function EnhancedNavigation({ activeSection, onSectionChange }: N
             >
               <div className={cn(
                 "w-12 h-12 rounded-full flex items-center justify-center transition-colors",
-                isScrolled 
-                  ? "bg-gradient-to-br from-museum-navy to-museum-navy-dark shadow-museum-glow" 
-                  : "bg-white/20 backdrop-blur-sm"
+                "bg-white/20"
               )}>
                 <img 
                   src="/quarter.png" 
@@ -103,21 +121,21 @@ export default function EnhancedNavigation({ activeSection, onSectionChange }: N
               <div>
                 <h1 className={cn(
                   "font-display text-xl lg:text-2xl font-bold transition-colors",
-                  isScrolled ? "text-museum-ink" : "text-white"
+                  "text-white"
                 )}>
                   George Washington
                 </h1>
                 <p className={cn(
                   "font-body text-sm italic transition-colors",
-                  isScrolled ? "text-museum-sepia" : "text-white/90"
+                  "text-white/90"
                 )}>
                   WashingtonArchive.org
                 </p>
               </div>
             </motion.button>
 
-            
-            <div className="hidden lg:flex items-center space-x-1">
+
+            <div className="hidden nav:flex items-center space-x-2">
               {navigationGroups.map((group) => (
                 <div
                   key={group.title}
@@ -127,10 +145,8 @@ export default function EnhancedNavigation({ activeSection, onSectionChange }: N
                 >
                   <motion.button
                     className={cn(
-                      "flex items-center space-x-2 px-4 py-2 rounded-lg font-medium text-sm transition-all",
-                      isScrolled
-                        ? "text-museum-ink hover:bg-museum-navy/10 hover:text-museum-navy"
-                        : "text-white hover:bg-white/10"
+                      "flex items-center space-x-2 px-5 py-2.5 rounded-lg font-medium text-sm transition-all",
+                      "text-white hover:bg-white/10"
                     )}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
@@ -174,15 +190,12 @@ export default function EnhancedNavigation({ activeSection, onSectionChange }: N
                   </AnimatePresence>
                 </div>
               ))}
-              
-              
+
               <motion.button
                 onClick={() => setIsSourcesOpen(true)}
                 className={cn(
-                  "flex items-center space-x-2 px-4 py-2 rounded-lg font-medium text-sm transition-all ml-4",
-                  isScrolled
-                    ? "text-museum-ink hover:bg-museum-navy/10 hover:text-museum-navy border border-museum-navy/20"
-                    : "text-white hover:bg-white/10 border border-white/20"
+                  "flex items-center space-x-2 px-5 py-2.5 rounded-lg font-medium text-sm transition-all",
+                  "text-white hover:bg-white/10 border border-white/20"
                 )}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -192,13 +205,11 @@ export default function EnhancedNavigation({ activeSection, onSectionChange }: N
               </motion.button>
             </div>
 
-            
+
             <motion.button
               className={cn(
-                "lg:hidden p-2 rounded-lg transition-colors",
-                isScrolled
-                  ? "text-museum-ink hover:bg-museum-navy/10"
-                  : "text-white hover:bg-white/10"
+                "nav:hidden p-2 rounded-lg transition-colors",
+                "text-white hover:bg-white/10"
               )}
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               whileHover={{ scale: 1.05 }}
@@ -241,7 +252,7 @@ export default function EnhancedNavigation({ activeSection, onSectionChange }: N
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
+              className="fixed inset-0 bg-black/60 z-40 nav:hidden"
               onClick={() => setIsMobileMenuOpen(false)}
             />
 
@@ -251,7 +262,7 @@ export default function EnhancedNavigation({ activeSection, onSectionChange }: N
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-              className="fixed top-0 right-0 h-full w-80 bg-museum-parchment shadow-museum-deep z-50 lg:hidden overflow-y-auto"
+              className="fixed top-0 right-0 h-full w-80 bg-museum-parchment shadow-museum-deep z-50 nav:hidden overflow-y-auto"
             >
               <div className="p-6">
                 
@@ -316,13 +327,13 @@ export default function EnhancedNavigation({ activeSection, onSectionChange }: N
                       </div>
                     </motion.div>
                   ))}
-                  
-                  
+
+
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: navigationGroups.length * 0.1 }}
-                    className="pt-4 border-t border-museum-navy/10"
+                    className="pt-4 border-t border-museum-navy/10 space-y-2"
                   >
                     <motion.button
                       onClick={() => {

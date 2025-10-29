@@ -132,7 +132,7 @@ export const sourcesDatabase: Source[] = [
     tags: ["strategy", "national-security", "military", "leadership"],
     period: "Analysis",
     reliability: "High",
-    relatedSections: ["revolutionary-war", "battle-record"]
+    relatedSections: ["revolutionary-war", "military-campaigns"]
   },
   {
     id: "johns-hopkins-slavery",
@@ -169,7 +169,7 @@ export const sourcesDatabase: Source[] = [
     tags: ["battles", "revolutionary-war", "military", "campaigns"],
     period: "1775-1783",
     reliability: "High",
-    relatedSections: ["revolutionary-war", "battle-record"]
+    relatedSections: ["revolutionary-war", "military-campaigns"]
   },
   {
     id: "mount-vernon-fort-necessity",
@@ -181,7 +181,7 @@ export const sourcesDatabase: Source[] = [
     tags: ["fort-necessity", "surrender", "french-indian-war", "defeat"],
     period: "1754",
     reliability: "High",
-    relatedSections: ["military-early", "battle-record"]
+    relatedSections: ["military-early", "military-campaigns"]
   },
   {
     id: "mount-vernon-shays-rebellion",
@@ -230,7 +230,7 @@ export const sourcesDatabase: Source[] = [
     tags: ["fort-necessity", "surrender", "french-indian-war", "early-military"],
     period: "1754",
     reliability: "High",
-    relatedSections: ["military-early", "battle-record"]
+    relatedSections: ["military-early", "military-campaigns"]
   },
   {
     id: "britannica-jumonville-glen",
@@ -242,31 +242,127 @@ export const sourcesDatabase: Source[] = [
     tags: ["jumonville-glen", "french-indian-war", "ambush", "first-battle"],
     period: "1754",
     reliability: "High",
-    relatedSections: ["military-early", "battle-record"]
+    relatedSections: ["military-early", "military-campaigns"]
   },
   {
-    id: "wikipedia-monongahela",
-    title: "Wikipedia - Monongahela & Braddock's Defeat",
-    url: "https://en.wikipedia.org/wiki/Battle_of_the_Monongahela",
+    id: "britannica-monongahela",
+    title: "Britannica - Battle of the Monongahela",
+    url: "https://www.britannica.com/event/Battle-of-the-Monongahela",
     description: "Part of Braddock's expedition; Washington served under General Braddock and played a role in managing the retreat after defeat.",
-    source: "Wikipedia",
+    source: "Encyclopedia Britannica",
     type: "Reference Work",
     tags: ["monongahela", "braddock", "retreat", "french-indian-war"],
     period: "1755",
-    reliability: "Medium",
-    relatedSections: ["military-early", "battle-record"]
+    reliability: "High",
+    relatedSections: ["military-early", "military-campaigns"]
   },
   {
-    id: "wikipedia-french-indian-war",
-    title: "Wikipedia - French & Indian War Service",
-    url: "https://en.wikipedia.org/wiki/George_Washington_in_the_French_and_Indian_War",
-    description: "Washington served in the Virginia militia, took part in frontier defense and in the Forbes Expedition that eventually led to capture of French positions.",
+    id: "wikipedia-fort-ligonier",
+    title: "Wikipedia - Battle of Fort Ligonier",
+    url: "https://en.wikipedia.org/wiki/Battle_of_Fort_Ligonier",
+    description: "Successful defense of Fort Ligonier during the Forbes Expedition in 1758.",
     source: "Wikipedia",
     type: "Reference Work",
-    tags: ["french-indian-war", "militia", "frontier", "forbes-expedition"],
-    period: "1754-1758",
+    tags: ["fort-ligonier", "forbes-expedition", "french-indian-war"],
+    period: "1758",
     reliability: "Medium",
-    relatedSections: ["military-early", "battle-record"]
+    relatedSections: ["military-early", "military-campaigns"]
+  },
+  {
+    id: "battlefields-white-plains",
+    title: "Battlefield Trust - Battle of White Plains",
+    url: "https://www.battlefields.org/learn/revolutionary-war/battles/white-plains",
+    description: "British tactical victory but failed to destroy Washington's army in 1776.",
+    source: "American Battlefield Trust",
+    type: "Historical Analysis",
+    tags: ["white-plains", "revolutionary-war", "1776", "retreat"],
+    period: "1776",
+    reliability: "High",
+    relatedSections: ["revolutionary-war", "military-campaigns"]
+  },
+  {
+    id: "battlefields-fort-washington",
+    title: "Battlefield Trust - Battle of Fort Washington",
+    url: "https://www.battlefields.org/learn/revolutionary-war/battles/fort-washington",
+    description: "Devastating loss of the fort and nearly 3,000 American prisoners in 1776.",
+    source: "American Battlefield Trust",
+    type: "Historical Analysis",
+    tags: ["fort-washington", "revolutionary-war", "1776", "defeat"],
+    period: "1776",
+    reliability: "High",
+    relatedSections: ["revolutionary-war", "military-campaigns"]
+  },
+  {
+    id: "battlefields-trenton",
+    title: "Battlefield Trust - Battle of Trenton",
+    url: "https://www.battlefields.org/learn/revolutionary-war/battles/trenton",
+    description: "Famous Christmas crossing of the Delaware River led to crucial victory in 1776.",
+    source: "American Battlefield Trust",
+    type: "Historical Analysis",
+    tags: ["trenton", "delaware-crossing", "revolutionary-war", "1776", "victory"],
+    period: "1776",
+    reliability: "High",
+    relatedSections: ["revolutionary-war", "military-campaigns"]
+  },
+  {
+    id: "battlefields-princeton",
+    title: "Battlefield Trust - Battle of Princeton",
+    url: "https://www.battlefields.org/learn/revolutionary-war/battles/princeton",
+    description: "Bold maneuver after Trenton, further boosting American morale in 1777.",
+    source: "American Battlefield Trust",
+    type: "Historical Analysis",
+    tags: ["princeton", "revolutionary-war", "1777", "victory"],
+    period: "1777",
+    reliability: "High",
+    relatedSections: ["revolutionary-war", "military-campaigns"]
+  },
+  {
+    id: "battlefields-brandywine",
+    title: "Battlefield Trust - Battle of Brandywine",
+    url: "https://www.battlefields.org/learn/revolutionary-war/battles/brandywine",
+    description: "British outflanked Washington, opening the way to Philadelphia in 1777.",
+    source: "American Battlefield Trust",
+    type: "Historical Analysis",
+    tags: ["brandywine", "revolutionary-war", "1777", "defeat"],
+    period: "1777",
+    reliability: "High",
+    relatedSections: ["revolutionary-war", "military-campaigns"]
+  },
+  {
+    id: "battlefields-germantown",
+    title: "Battlefield Trust - Battle of Germantown",
+    url: "https://www.battlefields.org/learn/revolutionary-war/battles/germantown",
+    description: "Complex assault failed due to fog and confusion, but impressed French allies in 1777.",
+    source: "American Battlefield Trust",
+    type: "Historical Analysis",
+    tags: ["germantown", "revolutionary-war", "1777", "defeat"],
+    period: "1777",
+    reliability: "High",
+    relatedSections: ["revolutionary-war", "military-campaigns"]
+  },
+  {
+    id: "battlefields-monmouth",
+    title: "Battlefield Trust - Battle of Monmouth",
+    url: "https://www.battlefields.org/learn/revolutionary-war/battles/monmouth",
+    description: "Washington rallied troops after Charles Lee's retreat; battle ended in stalemate in 1778.",
+    source: "American Battlefield Trust",
+    type: "Historical Analysis",
+    tags: ["monmouth", "charles-lee", "revolutionary-war", "1778", "stalemate"],
+    period: "1778",
+    reliability: "High",
+    relatedSections: ["revolutionary-war", "military-campaigns"]
+  },
+  {
+    id: "battlefields-yorktown",
+    title: "Battlefield Trust - Siege of Yorktown",
+    url: "https://www.battlefields.org/learn/revolutionary-war/battles/yorktown",
+    description: "Decisive victory with French assistance, effectively ending the Revolutionary War in 1781.",
+    source: "American Battlefield Trust",
+    type: "Historical Analysis",
+    tags: ["yorktown", "revolutionary-war", "1781", "victory", "french-alliance"],
+    period: "1781",
+    reliability: "High",
+    relatedSections: ["revolutionary-war", "military-campaigns"]
   },
   {
     id: "wikipedia-washington-quarter",
@@ -382,18 +478,6 @@ export const sourcesDatabase: Source[] = [
     relatedSections: ["fun-facts"]
   },
   {
-    id: "lawline-fun-facts",
-    title: "Lawline Blog - White House & Birthday Facts",
-    url: "https://blog.lawline.com/george-washington-top-ten-fun-facts",
-    description: "Collection of interesting Washington facts including White House, birthday, and personal quirks.",
-    source: "Lawline Blog",
-    type: "Educational Resource",
-    tags: ["white-house", "birthday", "personal", "fun-facts"],
-    period: "1732-1799",
-    reliability: "Medium",
-    relatedSections: ["fun-facts"]
-  },
-  {
     id: "history-little-known-facts",
     title: "History.com - Little Known Facts & Education",
     url: "https://www.history.com/news/george-washington-little-known-facts",
@@ -454,18 +538,6 @@ export const sourcesDatabase: Source[] = [
     relatedSections: ["fun-facts", "revolutionary-war"]
   },
   {
-    id: "allegany-museum-whiskey-rebellion",
-    title: "Allegany Museum - Whiskey Rebellion Leadership",
-    url: "https://allegany-museum.org/washingtons-last-visit-to-cumberland-the-only-time-a-sitting-president-has-led-troops-into-battle/",
-    description: "Historical account of Washington leading troops during the Whiskey Rebellion as sitting president.",
-    source: "Allegany Museum",
-    type: "Museum Resource",
-    tags: ["whiskey-rebellion", "commander-in-chief", "presidency", "military"],
-    period: "1794",
-    reliability: "High",
-    relatedSections: ["fun-facts", "presidency"]
-  },
-  {
     id: "history-smallpox-inoculation",
     title: "History.com - Smallpox Inoculation Campaign",
     url: "https://www.history.com/articles/smallpox-george-washington-revolutionary-war",
@@ -490,18 +562,6 @@ export const sourcesDatabase: Source[] = [
     relatedSections: ["fun-facts", "presidency", "legacy"]
   },
   {
-    id: "constitution-center-fascinating-facts",
-    title: "Constitution Center - Distillery & Death Facts",
-    url: "https://constitutioncenter.org/blog/fascinating-facts-about-george-washington-for-his-real-birthday",
-    description: "Collection of interesting Washington facts including distillery and death details.",
-    source: "Constitution Center",
-    type: "Educational Resource",
-    tags: ["distillery", "death", "birthday", "fascinating-facts"],
-    period: "1732-1799",
-    reliability: "High",
-    relatedSections: ["fun-facts", "mount-vernon"]
-  },
-  {
     id: "funkids-washington-facts",
     title: "Fun Kids UK - Dancing & Social Activities",
     url: "https://www.funkidslive.com/learn/top-10-facts-about-george-washington",
@@ -512,30 +572,6 @@ export const sourcesDatabase: Source[] = [
     period: "1732-1799",
     reliability: "Medium",
     relatedSections: ["fun-facts"]
-  },
-  {
-    id: "tinybeans-hair-facts",
-    title: "Tinybeans - Hair & Grooming Habits",
-    url: "https://tinybeans.com/fun-facts-about-george-washington",
-    description: "Personal facts about Washington including his hair style and grooming habits.",
-    source: "Tinybeans",
-    type: "Educational Resource",
-    tags: ["hair", "grooming", "personal", "appearance"],
-    period: "1732-1799",
-    reliability: "Medium",
-    relatedSections: ["fun-facts"]
-  },
-  {
-    id: "patrick-henry-college-barbados",
-    title: "Patrick Henry College - Barbados Trip & Smallpox",
-    url: "https://www.phc.edu/news/2017/02/20/7-facts-about-george-washington",
-    description: "Facts about Washington including his only trip abroad to Barbados and smallpox immunity.",
-    source: "Patrick Henry College",
-    type: "Educational Resource",
-    tags: ["barbados", "smallpox", "travel", "immunity"],
-    period: "1751",
-    reliability: "High",
-    relatedSections: ["fun-facts", "youth"]
   },
   {
     id: "pbs-medical-chart",

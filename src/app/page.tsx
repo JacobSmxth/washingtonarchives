@@ -7,6 +7,7 @@ import EnhancedNavigation from '@/components/EnhancedNavigation';
 import EnhancedSection from '@/components/EnhancedSection';
 import EnhancedLoadingScreen from '@/components/EnhancedLoadingScreen';
 import AttributionButton from '@/components/AttributionButton';
+import Chatbot from '@/components/Chatbot';
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState('home');
@@ -20,8 +21,7 @@ export default function Home() {
   useEffect(() => {
     if (!mounted) return;
 
-    // keyboard navigation between sections
-    // right/down go forward, left/up go backward
+    // arrow keys to navigate, pretty cool feature tbh
     const handleKeyDown = (e: KeyboardEvent) => {
       const currentIndex = sections.findIndex(section => section.id === activeSection);
       
@@ -66,11 +66,11 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-museum-parchment via-white to-warm-50">
-      <EnhancedNavigation 
-        activeSection={activeSection} 
-        onSectionChange={handleSectionChange} 
+      <EnhancedNavigation
+        activeSection={activeSection}
+        onSectionChange={handleSectionChange}
       />
-      
+
       <main className="relative overflow-hidden pt-20">
         {sections.map((section, index) => (
           <EnhancedSection
@@ -119,8 +119,8 @@ export default function Home() {
             transition={{ delay: 0.9, duration: 0.6 }}
             className="max-w-4xl mx-auto"
           >
-            <p className="font-body text-base opacity-80 italic leading-relaxed">
-              Created for HIST 2111 to show off George Washington. I did so much research because I thought if I was making a website, I should make it portfolio worthy.
+            <p className="font-body text-base opacity-80 leading-relaxed">
+              This digital archive presents a comprehensive exploration of George Washington's life, leadership, and enduring legacy. Built for HIST 2111, this project integrates primary source documents, scholarly analysis, and interactive exhibits to provide an immersive educational experience. All content is carefully researched using authoritative historical sources including the Founders Online Archive, Mount Vernon collections, and peer-reviewed academic publications.
             </p>
           </motion.div>
           
@@ -147,8 +147,9 @@ export default function Home() {
           </motion.div>
         </div>
       </motion.footer>
-      
+
       <AttributionButton />
+      <Chatbot onNavigate={handleSectionChange} />
     </div>
   );
 }

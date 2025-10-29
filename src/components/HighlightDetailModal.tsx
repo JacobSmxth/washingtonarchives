@@ -28,7 +28,7 @@ const categoryColors = {
 export default function HighlightDetailModal({ highlight, isOpen, onClose }: HighlightDetailModalProps) {
   if (!highlight) return null;
 
-  // modal pops up with spring animation when opened
+  // spring animation looks nice
   const modalVariants = {
     hidden: { 
       opacity: 0,
@@ -78,7 +78,7 @@ export default function HighlightDetailModal({ highlight, isOpen, onClose }: Hig
         >
           
           <motion.div
-            className="absolute inset-0 bg-museum-ink/70 backdrop-blur-sm"
+            className="absolute inset-0 bg-museum-ink/80"
             onClick={onClose}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

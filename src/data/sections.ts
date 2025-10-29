@@ -12,7 +12,7 @@ export const navigationItems: NavigationItem[] = [
   { id: "slavery", label: "On Slavery" },
   { id: "mount-vernon", label: "Mount Vernon" },
   { id: "washington-humor", label: "Washington's Humor" },
-  { id: "battle-record", label: "Battle Record" },
+  { id: "military-campaigns", label: "Military Campaigns" },
   { id: "washington-currency", label: "On the Currency" },
   { id: "additional-facts", label: "Additional Facts" },
 ];
@@ -36,7 +36,7 @@ export const sections: Section[] = [
           category: "Military",
           year: "1775-1783",
           icon: "sword",
-          detailedDescription: "Washington became America's first national security strategist, wielding diplomatic, informational, military, and economic instruments of power. His 38-page memorandum to Congress was a 'minor masterpiece of military administration' that 'ultimately laid the basis for victory at Monmouth and Yorktown.' Though he faced intelligence failures like Brandywine in 1777, he mastered brilliant deception at Yorktown in 1781, convincing the British an attack on New York was coming while moving on Virginia.",
+          detailedDescription: "Washington coordinated diplomatic, military, and logistical efforts to sustain the Continental Army through eight years of war. He communicated regularly with Congress about the army's needs and strategic options. At Yorktown in 1781, he employed deception to convince the British that an attack on New York was imminent while moving forces to Virginia.",
           keyPoints: [
             "In December 1776, when enlistments were expiring, told Congress: 'Desperate diseases require desperate remedies'",
             "Insisted he had 'no lust after power' and wished only to 'turn the sword into a ploughshare'",
@@ -70,7 +70,7 @@ export const sections: Section[] = [
           category: "Leadership",
           year: "1789-1797",
           icon: "crown",
-          detailedDescription: "Washington reluctantly accepted the presidency in 1789, telling colleagues his 'movements to the chair of government will be accompanied by feelings not unlike those of a culprit who is going to the place of his execution.' By making clear his reluctance, Washington sent a powerful message: the presidency was not a prize to be sought, but a duty to be shouldered.",
+          detailedDescription: "Washington reluctantly accepted the presidency in 1789, telling colleagues his 'movements to the chair of government will be accompanied by feelings not unlike those of a culprit who is going to the place of his execution.' By making clear his reluctance, Washington sent a powerful message. The presidency was not a prize to be sought, but a duty to be shouldered.",
           keyPoints: [
             "Argued there is 'an indissoluble union between virtue and happiness' and that the destiny of republican government is staked on their experiment",
             "Advised Congress that national policy should be laid in 'pure and immutable principles of private morality'",
@@ -161,7 +161,7 @@ export const sections: Section[] = [
     content: {
       paragraphs: [
         "Washington's military career began when he joined the Virginia militia in 1752, quickly rising to major and then lieutenant colonel. His first major assignment came in 1753 when Virginia's Lieutenant Governor sent him on a winter journey to Fort Le Boeuf to deliver Britain's demand that the French leave the Ohio Valley.",
-        "In May 1754, Washington led an attack on a French detachment at Jumonville Glen where Joseph Coulon de Jumonville was killed. This clash escalated into the French and Indian War, marking Washington's entry into international conflict. Later that year, after constructing Fort Necessity, he was forced to surrender to superior French forces - the only surrender of his military career.",
+        "In May 1754, Washington led an attack on a French detachment at Jumonville Glen where Joseph Coulon de Jumonville was killed. This clash escalated into the French and Indian War, marking Washington's entry into international conflict. Later that year, after constructing Fort Necessity, he was forced to surrender to superior French forces, the only surrender of his military career.",
         "Washington's service as aide-de-camp to British General Edward Braddock proved equally instructive. When Braddock was mortally wounded in 1755, Washington helped organize the retreat and learned that European military tactics were often unsuited to American frontier conditions."
       ],
       qaItems: [
@@ -217,21 +217,21 @@ export const sections: Section[] = [
     content: {
       paragraphs: [
         "When Washington was unanimously chosen to command the Continental Army in June 1775, he lacked experience with large formations but quickly learned to keep the army together despite chronic shortages of men and supplies. His greatest challenge came during the winter of 1777-78 at Valley Forge, where his army suffered from cold, hunger, and desertion.",
-        "Washington's strategic genius lay not in grand battles but in preserving his army as a symbol of American resistance. He embraced guerrilla tactics, avoided decisive battles when possible, and focused on outlasting British resolve. His bold attack on Trenton in December 1776 revived American morale and demonstrated his ability to strike when least expected.",
+        "Washington's strategic approach focused on preserving his army as a fighting force rather than seeking decisive battles that could destroy it. He adapted his tactics to circumstances, sometimes attacking boldly as at Trenton in December 1776, and sometimes withdrawing to avoid destruction. His strategy centered on outlasting British resolve while maintaining the Continental Army as a symbol of American resistance.",
         "With French assistance, Washington's forces trapped General Cornwallis's army at Yorktown in 1781, effectively ending the war. In victory, he told Americans they now held \"absolute freedom and Independency\" and were \"Lords and Proprietors of a vast Tract of Continent,\" with an \"opportunity for political happiness\" unparalleled in history."
       ],
       qaItems: [
         {
-          question: "What did Washington mean by \"desperate diseases require desperate remedies\"?",
-          answer: "In December 1776, facing expiring enlistments and inadequate artillery, Washington wrote to Congress justifying dramatic measures to save the army. He warned that short enlistments and reliance on militia were \"the origin of all our misfortunes\" and argued that desperate times required bold action."
+          question: "Context of \"desperate diseases require desperate remedies\"",
+          answer: "In December 1776, facing expiring enlistments and inadequate artillery, Washington wrote to Congress justifying dramatic measures to save the army. He warned that short enlistments and reliance on militia were \"the origin of all our misfortunes\" and argued that the crisis demanded bold action."
         },
         {
-          question: "How did Washington show he had \"no lust for power\"?",
-          answer: "Despite commanding the Continental Army for eight years, Washington declared he wished only to \"turn the sword into a ploughshare.\" His willingness to share hardships with his troops and his eventual surrender of military command proved his commitment to republican ideals over personal ambition."
+          question: "Washington's view on military power",
+          answer: "Despite commanding the Continental Army for eight years, Washington declared he wished only to \"turn the sword into a ploughshare.\" His surrender of military command to civilian authority in December 1783 demonstrated his commitment to republican government over personal ambition."
         },
         {
-          question: "What made his Valley Forge leadership so important?",
-          answer: "Washington's leadership during the brutal winter of 1777-78 kept the Continental Army from disintegrating. His 38-page memorandum to Congress was a \"minor masterpiece of military administration\" that ultimately laid the foundation for victories at Monmouth and Yorktown."
+          question: "Valley Forge's significance",
+          answer: "Washington's leadership during the winter of 1777-78 kept the Continental Army from disintegrating. He communicated regularly with Congress about the army's organizational needs and supply problems. The army that emerged from Valley Forge demonstrated improved discipline and training."
         }
       ],
       quote: {
@@ -305,12 +305,12 @@ export const sections: Section[] = [
         {
           id: "organizing-executive",
           title: "Organizing the Executive Branch",
-          content: "Washington created the first presidential cabinet and appointed capable leaders such as Alexander Hamilton, Thomas Jefferson and Henry Knox. He exercised executive authority with fairness and integrity; Thomas Jefferson said his justice was 'the most inflexible I have ever known.'"
+          content: "Washington created the first presidential cabinet and appointed capable leaders such as Alexander Hamilton, Thomas Jefferson and Henry Knox. He exercised executive authority with fairness and integrity. Thomas Jefferson said his justice was 'the most inflexible I have ever known.'"
         },
         {
           id: "title-precedents",
-          title: "Presidential Title Precedents",
-          content: "Washington added the phrase \"So help me God\" to the Presidential Oath of Office during his inauguration, and it was his idea to call the chief executive \"Mr. President.\" These decisions shaped presidential tradition for centuries, establishing the formal language and titles that continue to define the office today."
+          title: "Presidential Title and Protocol",
+          content: "Washington supported the simple title \"Mr. President\" for the chief executive, which the Senate adopted after debate. Though later presidents have added \"So help me God\" to the oath of office, no contemporary evidence confirms Washington did so at his 1789 inauguration. His approach to presidential protocol emphasized republican simplicity over monarchical formality."
         },
         {
           id: "domestic-challenges",
@@ -436,22 +436,22 @@ export const sections: Section[] = [
     content: {
       paragraphs: [
         "At Washington's death in 1799, more than 300 enslaved people labored at his Mount Vernon estate, which encompassed about 8,000 acres with five farms. He owned 123 enslaved people outright and held another 153 through his wife's estate. According to historian Philip Morgan, Washington tied himself into \"moral knots\" over slavery, reportedly calling the practice \"an abomination\" while also being known as a \"stern taskmaster.\"",
-        "The reality of slavery at Mount Vernon was harsh. Enslaved people developed specialized skills and worked from daybreak through dusk, making the estate self-sufficient and enriching Washington. About fifty slaves escaped over the years, though many were recaptured. Washington's actions could be severe: he threatened to hang slaves' dogs to prevent escape and bought teeth from enslaved people for his dentures.",
+        "The reality of slavery at Mount Vernon was harsh. Enslaved people developed specialized skills and worked from daybreak through dusk, making the estate self-sufficient and enriching Washington. About fifty slaves escaped over the years, though many were recaptured. Washington's actions could be severe. He threatened to hang slaves' dogs to prevent escape and bought teeth from enslaved people for his dentures.",
         "In his will, Washington emancipated the 123 enslaved people that he personally owned after Martha's death, making him unique among the leading founders. However, this did not free the majority of enslaved people at Mount Vernon, who were \"dower\" slaves belonging to the Custis estate and could not legally be freed by Washington.",
         "Washington's contradictory attitudes toward slavery are one of the great mysteries of his life and legacy. At his death, 317 enslaved people lived at Mount Vernon, and in his will he ordered those he directly owned to be freed. This contradiction between fighting for liberty while benefiting from slavery represents one of the fundamental tensions in his legacy."
       ],
       qaItems: [
         {
-          question: "How did Washington justify slavery while fighting for liberty?",
-          answer: "This contradiction reveals the fundamental moral compromise of the founding era. Washington benefited enormously from enslaved labor while publicly championing freedom and natural rights. He never resolved this tension, embodying the broader contradictions of American society."
+          question: "Washington's contradiction on slavery and liberty",
+          answer: "Washington benefited from enslaved labor while championing liberty and natural rights. This contradiction reflects the fundamental moral compromises of the founding era. He never resolved this tension during his lifetime."
         },
         {
-          question: "Why didn't Washington free all the enslaved people at Mount Vernon?",
-          answer: "Many of the enslaved people at Mount Vernon were \"dower\" slaves who came through Martha's first marriage to the Custis family. Virginia law prevented Washington from freeing these individuals, as they were considered property of Martha's estate, not his personal property."
+          question: "Legal constraints on emancipation at Mount Vernon",
+          answer: "Many enslaved people at Mount Vernon were \"dower\" slaves from Martha's first marriage to the Custis family. Virginia law classified them as property of Martha's estate, preventing Washington from freeing them even through his will."
         },
         {
-          question: "What do modern historians say about Washington and slavery?",
-          answer: "Scholars today consider Washington's relationship with slavery one of the fundamental contradictions in his legacy. He fought for liberty while building his wealth and status on enslaved labor, representing the broader tensions and moral compromises of the founding era that continue to shape American history."
+          question: "Historical assessment of Washington and slavery",
+          answer: "Scholars recognize Washington's relationship with slavery as a central contradiction in his legacy. He fought for liberty while his wealth and status depended on enslaved labor, embodying the tensions and moral compromises that characterized the founding era."
         }
       ],
       quote: {
@@ -506,9 +506,9 @@ export const sections: Section[] = [
         }
       ],
       quote: {
-        text: "I had rather be on my farm than be emperor of the world.",
-        author: "George Washington to Marquis de Lafayette",
-        year: "1797"
+        text: "I can truly say I had rather be at Mount Vernon with a friend or two about me, than to be attended at the Seat of Government by the Officers of State and the Representatives of every Power in Europe.",
+        author: "George Washington to David Stuart",
+        year: "June 15, 1790"
       },
       images: [
         {
@@ -524,45 +524,45 @@ export const sections: Section[] = [
     id: "washington-humor",
     title: "Washington's Humor",
     content: {
-      intro: "George Washington's public image was one of stern dignity and unwavering seriousness, yet his personal correspondence reveals a dry wit and remarkable ability to find humor even in the darkest circumstances. Unlike the humorless marble statues that later immortalized him, the real Washington appreciated wordplay, told jokes, and used sarcasm with precision.",
+      intro: "Washington's public image emphasized stern dignity and seriousness, but his personal correspondence reveals occasional dry wit and irony. His letters contain moments of humor, particularly when discussing military frustrations or offering advice to younger relatives.",
       paragraphs: [
-        "These glimpses of Washington's lighter side remind us that the \"Father of His Country\" was actually a human being with a sense of humor. His wit ranged from gentle irony to sharp sarcasm, particularly when dealing with bureaucratic frustrations or military incompetence."
+        "Washington's correspondence demonstrates that beneath his formal public persona existed a man capable of wry observations and self-deprecating remarks."
       ],
       subsections: [
         {
           id: "death-rumors-humor",
-          title: "Humor About His Own Death (1755)",
-          content: "After the bloody Battle of Monongahela in 1755, rumors spread that Washington had been killed. In a letter to his brother, he displayed his characteristic dry humor: 'You may, indeed, tell the world that I have heard the bullets whistle; and believe me, there is something charming in the sound.' When word of his supposed death circulated in Virginia, he joked that 'though people were kindly circulating a full account of my death and dying Speech, I have not yet written it because I was very much alive.'"
+          title: "Youthful Bravado (1754)",
+          content: "After the skirmish at Jumonville Glen on May 31, 1754, the young Washington wrote to his brother: 'You may, indeed, tell the world that I have heard the bullets whistle; and believe me, there is something charming in the sound.' This letter reflects the perspective of a 22-year-old officer experiencing his first combat."
         },
         {
           id: "presidential-drama",
-          title: "Presidential Inauguration Drama (1789)",
-          content: "Washington's famous description of his inauguration reveals his theatrical flair and self-awareness: 'My movements to the chair of government will be accompanied by feelings not unlike those of a culprit who is going to the place of his execution.' This dramatic comparison shows Washington's ability to turn even reluctant heroism into compelling narrative."
+          title: "Presidential Reluctance (1789)",
+          content: "Washington described his feelings about assuming the presidency with characteristic self-deprecation: 'My movements to the chair of government will be accompanied by feelings not unlike those of a culprit who is going to the place of his execution.' This comparison reflected his genuine reluctance to leave retirement and his anxiety about the new office."
         },
         {
           id: "nephew-advice-humor",
-          title: "Witty Advice to His Nephew (1783)",
-          content: "To his nephew Bushrod, Washington offered both guidance and gentle humor about youthful vanity: 'Do not conceive that fine Clothes make fine Men, any more than fine feathers make fine Birds. A man who has been dressing all his life has more in his head than his heels.' His warning about gambling included a particularly witty observation: 'This is a vice which is productive of every possible evil,' mixing moral advice with practical wisdom."
+          title: "Advice to His Nephew (1783)",
+          content: "In a letter to his nephew Bushrod, Washington offered guidance with occasional wit: 'Do not conceive that fine Clothes make fine Men, any more than fine feathers make fine Birds. A man who has been dressing all his life has more in his head than his heels.' He also warned against gambling, calling it 'a vice which is productive of every possible evil.'"
         },
         {
           id: "military-sarcasm-examples",
-          title: "Military Sarcasm and Wit",
-          content: "Washington's wit often emerged in response to military bureaucracy and incompetence. During the Revolutionary War, he once wrote of an incompetent officer: 'There are some men who would rather lose friends than lose their opinions.' On another occasion, reflecting on the Continental Army's challenges, he observed: 'The reflection upon my situation and that of this Army produces many an uneasy hour when all around me are wrapped in sleep.' This blend of personal reflection and institutional criticism shows his sophisticated sense of irony."
+          title: "Military Observations",
+          content: "Washington's correspondence occasionally revealed frustration with military challenges. He wrote of stubborn officers: 'There are some men who would rather lose friends than lose their opinions.' Reflecting on his responsibilities, he observed: 'The reflection upon my situation and that of this Army produces many an uneasy hour when all around me are wrapped in sleep.'"
         },
         {
           id: "social-humor-examples",
-          title: "Social Humor and Clever Responses",
-          content: "Washington's Rules of Civility, which he copied as a youth, provided the foundation for both proper conduct and clever conversation. Despite maintaining formal dignity, he could deliver subtle compliments and sarcastic observations with precision. When a French officer complimented his height, Washington reportedly replied: 'We have been working hard for America, and our stature shows it.' His ability to turn even physical descriptions into patriotic statements demonstrates his wit at work."
+          title: "Social Conduct",
+          content: "Washington copied the Rules of Civility as a youth, establishing his foundation for proper conduct. He maintained formal dignity in social situations while occasionally offering subtle observations. Anecdotes about his social wit exist, though many lack primary source verification."
         },
         {
           id: "farming-humor",
-          title: "Farming and Agricultural Humor",
-          content: "Washington often used humor when discussing his beloved Mount Vernon. He once wrote to a friend about his agricultural experiments: 'I am endeavoring to get into the mode of farming, but I confess I find it a very difficult task.' His self-deprecating humor about farming contrasted sharply with his military and political confidence, showing his human side."
+          title: "Agricultural Interests",
+          content: "Washington wrote frequently about his farming efforts at Mount Vernon. In correspondence about his agricultural experiments, he acknowledged challenges: 'I am endeavoring to get into the mode of farming, but I confess I find it a very difficult task.' These remarks revealed his serious commitment to improving agricultural practices."
         },
         {
           id: "political-humor",
-          title: "Political Humor and Irony",
-          content: "Washington's political humor often revealed his frustration with the new government's challenges. He once joked about the difficulty of finding qualified people for government positions: 'I am much at a loss to know what to do with the applications for office. I have not yet learned to say no with a good grace.' This shows his ability to find humor even in the most serious of circumstances."
+          title: "Presidential Challenges",
+          content: "Washington's letters about governing revealed the pressures of the presidency. Regarding appointments, he wrote: 'I am much at a loss to know what to do with the applications for office. I have not yet learned to say no with a good grace.' This comment reflected the genuine difficulty of managing patronage requests."
         }
       ],
       quote: {
@@ -590,218 +590,19 @@ export const sections: Section[] = [
     }
   },
   {
-    id: "battle-record",
-    title: "Washington's Battle Record",
+    id: "military-campaigns",
+    title: "Military Campaigns",
     content: {
-      intro: "George Washington's military career spanned over four decades, from the French and Indian War through the Revolutionary War. His battle record reveals a commander who learned from defeats, capitalized on victories, and ultimately emerged with one of history's most consequential military legacies.",
+      intro: "From the wilderness of the French and Indian War to the decisive victory at Yorktown, George Washington personally led troops in over 20 major battles and sieges. This interactive map shows where Washington fought and ultimately secured American independence.",
       paragraphs: [
-        "Washington's willingness to learn from his mistakes transformed him from a young, inexperienced officer into one of the most capable military leaders of his era. His defeats proved as valuable as his victories in shaping both his character and America's destiny."
+        "Washington's military genius wasn't in winning every battle. He lost more than he won. His true brilliance was in keeping his army together through brutal winters, devastating defeats, and chronic supply shortages. He understood that the Continental Army's survival was more important than any single victory."
       ],
-      subsections: [
-        {
-          id: "revolutionary-war-battles",
-          title: "Revolutionary War Battles",
-          content: "Washington commanded American forces in numerous engagements during the Revolutionary War, learning from defeats and capitalizing on victories. His strategic leadership transformed a collection of militia units into a professional Continental Army capable of standing against British regulars.",
-          highlights: [
-            {
-              id: "battle-of-brandywine",
-              title: "Battle of Brandywine",
-              location: "Chadds Ford, Pennsylvania",
-              opponent: "Gen. Sir William Howe (with Lt. Gen. Charles Cornwallis)",
-              result: "British Victory"
-            },
-            {
-              id: "battle-of-the-clouds",
-              title: "Battle of the Clouds",
-              location: "Near Malvern, Pennsylvania",
-              opponent: "Gen. Sir William Howe (action aborted by torrential rain)",
-              result: "Inconclusive"
-            },
-            {
-              id: "battle-of-fort-washington",
-              title: "Battle of Fort Washington",
-              location: "Northern Manhattan, New York",
-              opponent: "Lt. Gen. Wilhelm von Knyphausen and Gen. Sir William Howe",
-              result: "British Victory"
-            },
-            {
-              id: "battle-of-germantown",
-              title: "Battle of Germantown",
-              location: "Germantown (Philadelphia), Pennsylvania",
-              opponent: "Gen. Sir William Howe",
-              result: "British Victory"
-            },
-            {
-              id: "battle-of-harlem-heights",
-              title: "Battle of Harlem Heights",
-              location: "Morningside Heights/West Harlem, Manhattan, New York",
-              opponent: "Maj. Gen. Alexander Leslie (British light infantry)",
-              result: "American Victory"
-            },
-            {
-              id: "battle-of-long-island",
-              title: "Battle of Long Island (Brooklyn)",
-              location: "Brooklyn, New York",
-              opponent: "Gen. Sir William Howe and Lt. Gen. Charles Cornwallis",
-              result: "British Victory"
-            },
-            {
-              id: "battle-of-monmouth",
-              title: "Battle of Monmouth",
-              location: "Monmouth County near Freehold, New Jersey",
-              opponent: "Gen. Sir Henry Clinton (with Lt. Gen. Charles Cornwallis)",
-              result: "Inconclusive"
-            },
-            {
-              id: "battle-of-princeton",
-              title: "Battle of Princeton",
-              location: "Princeton, New Jersey",
-              opponent: "Lt. Col. Charles Mawhood",
-              result: "American Victory"
-            },
-            {
-              id: "battle-of-assunpink-creek",
-              title: "Battle of the Assunpink Creek (Second Trenton)",
-              location: "Trenton, New Jersey",
-              opponent: "Lt. Gen. Charles Cornwallis",
-              result: "American Victory"
-            },
-            {
-              id: "battle-of-trenton",
-              title: "Battle of Trenton",
-              location: "Trenton, New Jersey",
-              opponent: "Col. Johann Rall (Hessian)",
-              result: "American Victory"
-            },
-            {
-              id: "battle-of-white-marsh",
-              title: "Battle of White Marsh (Edge Hill)",
-              location: "Whitemarsh Township, Pennsylvania",
-              opponent: "Gen. Sir William Howe with Lt. Gen. Charles Cornwallis and Lt. Gen. Wilhelm von Knyphausen",
-              result: "Inconclusive"
-            },
-            {
-              id: "battle-of-white-plains",
-              title: "Battle of White Plains",
-              location: "White Plains, New York",
-              opponent: "Gen. Sir William Howe",
-              result: "British Victory"
-            },
-            {
-              id: "fortification-of-dorchester-heights",
-              title: "Fortification of Dorchester Heights",
-              location: "Boston, Massachusetts",
-              opponent: "Gen. William Howe (relieving Gen. Thomas Gage)",
-              result: "American Victory"
-            },
-            {
-              id: "landing-at-kips-bay",
-              title: "Landing at Kip's Bay",
-              location: "East River shore, Manhattan, New York",
-              opponent: "Gen. Sir William Howe (amphibious landing covered by Royal Navy)",
-              result: "British Victory"
-            },
-            {
-              id: "siege-of-boston",
-              title: "Siege of Boston",
-              location: "Boston, Massachusetts",
-              opponent: "Gen. Thomas Gage (until Sept 1775) and Gen. William Howe (to Mar 1776)",
-              result: "American Victory"
-            },
-            {
-              id: "siege-of-yorktown",
-              title: "Siege of Yorktown",
-              location: "Yorktown, Virginia",
-              opponent: "Lt. Gen. Charles Cornwallis",
-              result: "American Victory"
-            }
-          ]
-        },
-        {
-          id: "french-indian-war-battles",
-          title: "French and Indian War Battles",
-          content: "Washington's early military experience in the French and Indian War provided crucial lessons that shaped his later leadership. These early campaigns taught him about frontier warfare, supply lines, and the challenges of commanding in difficult terrain.",
-          highlights: [
-            {
-              id: "battle-of-fort-ligonier",
-              title: "Battle of Fort Ligonier (Loyalhanna)",
-              location: "Present-day Ligonier, Pennsylvania",
-              opponent: "Capt. Charles Philippe Aubry (French) and Delaware allies",
-              result: "British Victory"
-            },
-            {
-              id: "battle-of-fort-necessity",
-              title: "Battle of Fort Necessity (Great Meadows)",
-              location: "Near Farmington, Pennsylvania",
-              opponent: "Louis Coulon de Villiers (French)",
-              result: "French Victory"
-            },
-            {
-              id: "battle-of-jumonville-glen",
-              title: "Battle of Jumonville Glen",
-              location: "Near present-day Uniontown, Pennsylvania",
-              opponent: "Joseph Coulon de Villiers de Jumonville (French)",
-              result: "British Victory"
-            },
-            {
-              id: "battle-of-monongahela",
-              title: "Battle of the Monongahela (Braddock's Defeat)",
-              location: "Near present-day Braddock, Pennsylvania",
-              opponent: "Capt. Daniel Liénard de Beaujeu (killed early), succeeded by Capt. Jean-Daniel Dumas",
-              result: "French Victory"
-            },
-            {
-              id: "skirmish-near-loyalhanna",
-              title: "Skirmish near Loyalhanna (friendly-fire incident during the Forbes Expedition)",
-              location: "Near Fort Ligonier, Pennsylvania",
-              opponent: "French raiding party; later accidental exchange of fire with Virginia troops",
-              result: "Inconclusive"
-            }
-          ]
-        },
-        {
-          id: "strategic-operations",
-          title: "Strategic Operations and Sieges",
-          content: "Beyond individual battles, Washington excelled at strategic operations, sieges, and army preservation. His ability to maintain his forces through difficult winters and strategic withdrawals proved as important as battlefield victories."
-        }
-      ],
+      subsections: [],
       quote: {
         text: "Desperate diseases require desperate remedies. I have no lust after power, and wish with as much fervency as any man upon this wide extended continent for an opportunity of turning the sword into a ploughshare.",
         author: "George Washington to John Hancock",
         year: "December 20, 1776"
-      },
-      sources: [
-        {
-          title: "Washington's Revolutionary War Battles",
-          url: "https://www.mountvernon.org/george-washington/the-revolutionary-war/washingtons-revolutionary-war-battles/",
-          type: "Museum Resource"
-        },
-        {
-          title: "Battle of Jumonville Glen (1754)",
-          url: "https://www.britannica.com/event/Battle-of-Jumonville-Glen",
-          type: "Reference Source"
-        },
-        {
-          title: "Fort Necessity (1754)",
-          url: "https://www.mountvernon.org/library/digitalhistory/digital-encyclopedia/article/fort-necessity",
-          type: "Museum Resource"
-        },
-        {
-          title: "Battle of the Monongahela (1755)",
-          url: "https://en.wikipedia.org/wiki/Battle_of_the_Monongahela",
-          type: "Reference Source"
-        },
-        {
-          title: "French and Indian War Service",
-          url: "https://en.wikipedia.org/wiki/George_Washington_in_the_French_and_Indian_War",
-          type: "Reference Source"
-        },
-        {
-          title: "Battle of Fort Necessity",
-          url: "https://www.britannica.com/topic/Battle-of-Fort-Necessity",
-          type: "Reference Source"
-        }
-      ]
+      }
     }
   },
   {
@@ -840,9 +641,9 @@ export const sections: Section[] = [
         },
       ],
       quote: {
-        text: "I had rather be on my farm than be emperor of the world.",
-        author: "George Washington to Marquis de Lafayette",
-        year: "1797"
+        text: "I can truly say I had rather be at Mount Vernon with a friend or two about me, than to be attended at the Seat of Government by the Officers of State and the Representatives of every Power in Europe.",
+        author: "George Washington to David Stuart",
+        year: "June 15, 1790"
       },
       images: [
         {
@@ -881,15 +682,15 @@ export const sections: Section[] = [
     id: "additional-facts",
     title: "Additional Facts",
     content: {
-      intro: "Beyond the myths and legends, George Washington's life was filled with fascinating details that reveal the complex man behind the marble monuments. These additional facts separate truth from fiction and showcase Washington's remarkable achievements, personal quirks, and lasting impact on American history.",
+      intro: "George Washington's life included many details that complicate his popular image. These facts distinguish documented history from later mythology and illustrate various aspects of his personal life and public career.",
       paragraphs: [
-        "From debunking popular myths to revealing little-known achievements, these facts paint a more complete picture of America's first president. Washington's life was far more interesting than the simplified stories we often hear."
+        "These facts provide context for understanding Washington beyond simplified popular narratives."
       ],
       subsections: [
         {
           id: "foundational-facts",
           title: "Foundational & Debunking Facts",
-          content: "Many popular stories about Washington are actually myths created after his death. The real facts are often more interesting than the legends."
+          content: "Many popular stories about Washington are myths created after his death by biographers seeking to illustrate his character."
         },
         {
           id: "teeth-myth",
@@ -904,7 +705,7 @@ export const sections: Section[] = [
         {
           id: "unanimous-president",
           title: "Unanimous President",
-          content: "Washington is the only president to receive all electoral votes unanimously, achieving this for both of his terms. This remarkable achievement reflects his unique status and the trust placed in him by the new nation."
+          content: "Washington is the only president to receive all electoral votes unanimously for both of his terms. This outcome reflected his unique status and the trust placed in him by the new nation."
         },
         {
           id: "white-house-fact",
@@ -924,7 +725,7 @@ export const sections: Section[] = [
         {
           id: "title-precedents",
           title: "Presidential Precedents",
-          content: "Washington added the phrase \"So help me God\" to the Presidential Oath of Office during his inauguration, and it was his idea to call the chief executive \"Mr. President.\" These decisions shaped presidential tradition for centuries."
+          content: "Washington established numerous precedents as first president, including the two-term tradition and the creation of a cabinet. He supported the simple title \"Mr. President,\" which Congress adopted after debate, rejecting more grandiose alternatives."
         },
         {
           id: "no-political-party",
@@ -944,7 +745,7 @@ export const sections: Section[] = [
         {
           id: "no-middle-name",
           title: "No Middle Name",
-          content: "His full legal name was simply George Washington. Middle names were uncommon in colonial Virginia, and Washington never adopted one despite his later fame."
+          content: "His full legal name was George Washington. Middle names were uncommon in colonial Virginia, and Washington never adopted one."
         },
         {
           id: "delaware-crossing-reality",
@@ -954,42 +755,42 @@ export const sections: Section[] = [
       ],
       qaItems: [
         {
-          question: "What was Washington's most surprising personal habit?",
-          answer: "Washington was an excellent horseman and bred dogs with humorous names like \"Drunkard,\" \"Tipsy,\" and \"Sweet Lips.\" He also loved to dance and often stayed at balls until late into the night."
+          question: "Personal habits and interests",
+          answer: "Washington was an accomplished horseman and bred hounds for fox hunting, giving them names like \"Drunkard,\" \"Tipsy,\" and \"Sweet Lips.\" He enjoyed dancing and frequently attended social gatherings."
         },
         {
-          question: "How did Washington's height compare to others of his era?",
-          answer: "Washington was about 6'2\", which was tall for his era, but later stories inflated him to nearly 6'6\". His height contributed to his commanding presence and leadership image."
+          question: "Physical stature",
+          answer: "Washington stood approximately 6'2\", which was tall for his era. Later accounts sometimes exaggerated his height to nearly 6'6\". His stature contributed to his commanding presence."
         },
         {
-          question: "What was Washington's favorite food?",
-          answer: "Washington loved hoecakes, cornmeal pancakes served with butter and honey, often for breakfast. This simple frontier food remained his preference throughout his life."
+          question: "Dietary preferences",
+          answer: "Washington frequently ate hoecakes, cornmeal pancakes served with butter and honey, particularly at breakfast. This simple food remained a preference throughout his life."
         },
         {
-          question: "Did Washington wear a wig?",
-          answer: "No, Washington's white hair was his own. He powdered it, rather than wearing a wig, as was the fashion of the time. This was part of his careful attention to appearance and dignity."
+          question: "Hair and appearance",
+          answer: "Washington did not wear a wig. He powdered his own white hair, following the fashion of the time. This practice reflected his attention to proper appearance and formal presentation."
         },
         {
-          question: "What was Washington's only trip abroad?",
-          answer: "Washington left North America only once, sailing to Barbados in 1751 with his half-brother Lawrence. There he contracted smallpox and survived, leaving him immune for life, a crucial advantage during the Revolutionary War."
+          question: "International travel",
+          answer: "Washington left North America only once, traveling to Barbados in 1751 with his half-brother Lawrence. During this trip he contracted smallpox and survived, gaining lifelong immunity that would prove valuable during his military service."
         },
         {
-          question: "How did Washington die?",
-          answer: "On December 13, 1799, Washington developed a sore throat and died within 48 hours, likely from acute epiglottitis. His death was sudden and shocked the nation."
+          question: "Death and final illness",
+          answer: "On December 13, 1799, Washington developed a severe throat infection and died within 48 hours, likely from acute epiglottitis. His sudden death shocked the nation."
         },
         {
-          question: "Why does Washington have two birthdays?",
-          answer: "Washington was born on February 11, 1731, but after adoption of the Gregorian calendar, his birthday shifted to February 22, 1732, the date still celebrated today."
+          question: "Calendar and birthdate",
+          answer: "Washington was born on February 11, 1731 under the Julian calendar. After Britain adopted the Gregorian calendar in 1752, his birthdate became February 22, 1732, the date now celebrated."
         },
         {
-          question: "What illnesses did Washington survive?",
-          answer: "Washington survived smallpox, tuberculosis, malaria, dysentery, and pneumonia, yet lived to 67, which was quite old for his era. His survival through multiple diseases shows his remarkable constitution."
+          question: "Health and resilience",
+          answer: "Washington survived smallpox, tuberculosis, malaria, dysentery, and pneumonia during his lifetime. He lived to 67, a considerable age for the 18th century."
         }
       ],
       quote: {
-        text: "I had rather be on my farm than be emperor of the world.",
-        author: "George Washington to Marquis de Lafayette",
-        year: "1797"
+        text: "I can truly say I had rather be at Mount Vernon with a friend or two about me, than to be attended at the Seat of Government by the Officers of State and the Representatives of every Power in Europe.",
+        author: "George Washington to David Stuart",
+        year: "June 15, 1790"
       }
     }
   }

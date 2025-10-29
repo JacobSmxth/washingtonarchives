@@ -11,6 +11,7 @@ import EnhancedQuoteBlock from './EnhancedQuoteBlock';
 import HighlightDetailModal from './HighlightDetailModal';
 import QABox from './QABox';
 import SectionNavigationCard from './SectionNavigationCard';
+import BattleMap from './BattleMap';
 
 interface SectionProps {
   section: SectionType;
@@ -151,7 +152,7 @@ export default function EnhancedSection({ section, isActive, sectionIndex, onNav
                         
                         
                         <motion.button
-                          className="absolute top-8 right-8 p-3 bg-black/50 backdrop-blur-sm rounded-full text-white opacity-0 hover:opacity-100 transition-opacity"
+                          className="absolute top-8 right-8 p-3 bg-black/70 rounded-full text-white opacity-0 hover:opacity-100 transition-opacity"
                           whileHover={{ scale: 1.1 }}
                           whileTap={{ scale: 0.9 }}
                           onClick={() => setSelectedImage({
@@ -316,7 +317,13 @@ export default function EnhancedSection({ section, isActive, sectionIndex, onNav
                       </div>
                     )}
 
-                    
+
+                    {section.id === 'military-campaigns' && (
+                      <motion.div variants={itemVariants} className="w-full">
+                        <BattleMap />
+                      </motion.div>
+                    )}
+
                     {section.content.subsections && (
                       <div className="space-y-10">
                         {section.content.subsections.map((subsection) => (
@@ -325,7 +332,7 @@ export default function EnhancedSection({ section, isActive, sectionIndex, onNav
                             variants={itemVariants}
                             className="relative"
                           >
-                            <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-8 shadow-museum border border-museum-navy/10">
+                            <div className="bg-white/90 rounded-2xl p-8 shadow-museum border border-museum-navy/10">
                               <h2 className="font-display text-2xl lg:text-3xl font-semibold text-museum-ink mb-4">
                                 {subsection.title}
                               </h2>
@@ -421,7 +428,7 @@ export default function EnhancedSection({ section, isActive, sectionIndex, onNav
                           
                           
                           <motion.div
-                            className="absolute inset-4 rounded-lg bg-black/50 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+                            className="absolute inset-4 rounded-lg bg-black/70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
                             initial={false}
                           >
                             <motion.button
@@ -443,7 +450,7 @@ export default function EnhancedSection({ section, isActive, sectionIndex, onNav
                       return sectionSources.length > 0 && (
                         <motion.div
                           variants={itemVariants}
-                          className="bg-white/60 backdrop-blur-sm rounded-2xl shadow-museum border border-museum-navy/10 overflow-hidden"
+                          className="bg-white/90 rounded-2xl shadow-museum border border-museum-navy/10 overflow-hidden"
                         >
                           <button
                             onClick={() => setIsSourcesExpanded(!isSourcesExpanded)}

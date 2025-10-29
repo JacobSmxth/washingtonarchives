@@ -313,3 +313,17 @@ img {
 .glow-border:hover::before {
   opacity: 1;
 }
+
+/* Mapbox GL JS Styles - Fix for Tailwind CSS conflicts */
+.mapboxgl-map {
+  font-family: inherit;
+}
+
+.mapboxgl-popup-content {
+  padding: 0;
+  border-radius: 8px;
+}
+
+.mapboxgl-popup-tip {
+  border-top-color: white !important;
+}
